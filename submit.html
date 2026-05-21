@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit a Spot | Indy Matcha</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Be+Vietnam+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-variant": "#d8e6dc", "surface-tint": "#43655c",
+            "on-primary-fixed": "#00201a", "on-secondary-fixed": "#002114",
+            "secondary": "#2c694e", "inverse-surface": "#27332d",
+            "tertiary-fixed-dim": "#b5ccba", "tertiary": "#112519",
+            "on-tertiary-container": "#8ea594", "surface-container-high": "#deece2",
+            "on-tertiary": "#ffffff", "on-background": "#121e18",
+            "primary-fixed": "#c5eadf", "surface-container-lowest": "#ffffff",
+            "background": "#effdf3", "secondary-container": "#aeeecb",
+            "secondary-fixed": "#b1f0ce", "primary-fixed-dim": "#aacec3",
+            "tertiary-container": "#273b2e", "tertiary-fixed": "#d1e8d6",
+            "outline": "#717976", "surface-container": "#e3f1e7",
+            "on-surface": "#121e18", "on-secondary-fixed-variant": "#0e5138",
+            "on-secondary-container": "#316e52", "on-tertiary-fixed-variant": "#374b3e",
+            "on-error": "#ffffff", "error": "#ba1a1a",
+            "surface-dim": "#cfddd4", "on-primary": "#ffffff",
+            "inverse-on-surface": "#e6f4ea", "on-primary-fixed-variant": "#2b4d44",
+            "surface": "#effdf3", "surface-container-highest": "#d8e6dc",
+            "on-primary-container": "#83a69c", "on-tertiary-fixed": "#0b1f14",
+            "primary": "#01261f", "primary-container": "#1a3c34",
+            "outline-variant": "#c1c8c4", "error-container": "#ffdad6",
+            "on-secondary": "#ffffff", "on-error-container": "#93000a",
+            "on-surface-variant": "#414846", "secondary-fixed-dim": "#95d4b3",
+            "surface-container-low": "#e9f7ed", "inverse-primary": "#aacec3",
+            "surface-bright": "#effdf3"
+          },
+          borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+          spacing: {
+            "container-max": "1280px",
+            "margin-mobile": "20px",
+            "margin-desktop": "64px"
+          },
+          fontFamily: {
+            "headline-xl": ["Bricolage Grotesque"], "body-lg": ["Be Vietnam Pro"],
+            "label-bold": ["Be Vietnam Pro"], "headline-md": ["Bricolage Grotesque"],
+            "headline-lg": ["Bricolage Grotesque"], "body-md": ["Be Vietnam Pro"]
+          },
+          fontSize: {
+            "headline-xl":      ["64px", {"lineHeight":"1.1","letterSpacing":"-0.04em","fontWeight":"800"}],
+            "body-lg":          ["18px", {"lineHeight":"1.6","fontWeight":"400"}],
+            "label-bold":       ["14px", {"lineHeight":"1.2","letterSpacing":"0.05em","fontWeight":"700"}],
+            "headline-md":      ["32px", {"lineHeight":"1.2","fontWeight":"700"}],
+            "headline-lg":      ["48px", {"lineHeight":"1.1","letterSpacing":"-0.03em","fontWeight":"800"}],
+            "headline-lg-mobile":["36px",{"lineHeight":"1.2","fontWeight":"800"}],
+            "body-md":          ["16px", {"lineHeight":"1.6","fontWeight":"400"}]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .matcha-blob-mask {
+      mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FF0066' d='M44.7,-76.4C58.2,-69.2,70.1,-58.5,77.5,-45.4C84.8,-32.3,87.7,-16.1,86.5,-0.7C85.3,14.8,80.1,29.6,71.9,42.4C63.7,55.1,52.5,65.8,39.6,73.4C26.6,80.9,11.8,85.4,-2.4,89.5C-16.6,93.6,-33.2,97.3,-46.7,91.1C-60.2,84.9,-70.7,68.8,-77.9,53.4C-85.1,38,-89.1,23.3,-90.6,8.4C-92.1,-6.6,-91.1,-21.7,-84.9,-35.1C-78.7,-48.5,-67.2,-60.2,-54.2,-67.8C-41.2,-75.4,-26.7,-78.9,-12.3,-80.4C2.1,-82,16.5,-81.6,31.2,-80.3C35.9,-79.8,40.4,-78.7,44.7,-76.4Z' transform='translate(100 100)' /%3E%3C/svg%3E");
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+    }
+    .neo-pop-shadow { box-shadow: 4px 4px 0px 0px #1A3C34; }
+    .neo-pop-button:active { transform: translate(2px, 2px); box-shadow: 0 0 0 0 #1A3C34; }
+    .custom-scrollbar::-webkit-scrollbar { width: 8px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #2D6A4F; border-radius: 20px; }
+
+    @keyframes bubble-rise {
+      0%   { transform: translateY(0) translateX(0); opacity: 0.6; }
+      100% { transform: translateY(-110vh) translateX(var(--drift)); opacity: 0; }
+    }
+    .bubble { animation: bubble-rise 18s ease-in forwards; }
+  </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md overflow-x-hidden min-h-screen">
+
+<!-- ── Navigation ─────────────────────────────────────────────────────────── -->
+<nav class="sticky top-0 z-50 bg-primary backdrop-blur-md">
+  <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+    <a href="index.html" class="font-headline-md text-headline-md font-extrabold text-on-primary hover:opacity-90 transition-opacity">
+      Indy Matcha
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="index.html"   class="font-label-bold text-label-bold text-on-primary/70 hover:text-on-primary transition-colors">Find Matcha</a>
+      <a href="submit.html"  class="font-label-bold text-label-bold text-on-primary border-b-2 border-on-primary pb-1">Submit a Spot</a>
+    </div>
+    <button class="md:hidden text-on-primary">
+      <span class="material-symbols-outlined text-4xl">menu</span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── Main content ────────────────────────────────────────────────────────── -->
+<main class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+  <div class="grid lg:grid-cols-12 gap-12 items-start">
+
+    <!-- Left: Copy & decoration -->
+    <div class="lg:col-span-5 space-y-8 sticky top-32">
+      <div class="space-y-4">
+        <span class="bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full font-label-bold text-sm inline-block">
+          COMMUNITY SUBMISSION
+        </span>
+        <h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">
+          Matcha lovers, unite!
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+          Found a hidden gem? Share your favorite spot with the Indy community and help us map the city's best ceremonial and culinary matcha.
+        </p>
+      </div>
+
+      <div class="relative w-full aspect-square max-w-sm mx-auto lg:mx-0">
+        <div class="absolute inset-0 bg-primary-container matcha-blob-mask opacity-10 animate-pulse" style="transform:scale(1.2) rotate(15deg);"></div>
+        <img
+          class="w-full h-full object-cover matcha-blob-mask shadow-2xl"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzmaGmV3vfPgMxEozx3AAmR0cxm12pVFawdgJrlHxX4QOgzACAB5EH-e8he3lusjTsBDHdBUhqHLkzlfOyF1fTLfv_lgfXKJs8sxtG4w-faHAxpvK_RqmSfLIlOv1dgC9KIyeKJEHzn8u691Uh-CalLAkSpcWIVjbJC8V_Obs9sevSojXOtcWiRzu8cgMCFe4u-JncqPgmRG-A09j4GOQ_hrfcfkuWhuMNWa63MhXahc2PCGudO7bT9v0RYO8O8BYyLvz04RUNzps"
+          alt="Matcha being whisked in a ceramic bowl"
+        >
+        <div class="absolute -bottom-6 -right-6 bg-tertiary-fixed p-6 rounded-lg neo-pop-shadow border-2 border-primary rotate-6 hidden md:block">
+          <span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings:'FILL' 1;">favorite</span>
+          <p class="font-label-bold text-on-tertiary-fixed mt-2">Community Map</p>
+        </div>
+      </div>
+
+      <p class="text-on-surface-variant text-sm font-body-md max-w-xs leading-relaxed">
+        <span class="material-symbols-outlined text-secondary align-middle mr-1" style="font-size:16px;">info</span>
+        Submissions are reviewed before appearing on the map. Usually approved within 48 hours.
+      </p>
+    </div>
+
+    <!-- Right: Form -->
+    <div class="lg:col-span-7">
+      <div class="bg-surface-container-low rounded-lg p-8 md:p-12 border-2 border-primary neo-pop-shadow">
+
+        <!-- Success state (hidden by default) -->
+        <div id="success-state" class="hidden text-center py-8">
+          <div class="w-20 h-20 bg-secondary-container rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="material-symbols-outlined text-5xl text-secondary" style="font-variation-settings:'FILL' 1;">check_circle</span>
+          </div>
+          <h2 class="font-headline-md text-headline-md text-primary mb-3">Spot submitted!</h2>
+          <p class="text-on-surface-variant font-body-md mb-8 max-w-sm mx-auto">
+            Thanks for sharing! Your spot will appear on the map once it's been reviewed — usually within 48 hours.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button id="submit-another" class="bg-surface-container-highest text-primary px-8 py-4 rounded-full font-label-bold hover:bg-surface-container-high transition-colors">
+              Submit another
+            </button>
+            <a href="index.html" class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-bold hover:opacity-90 transition-opacity text-center">
+              View the map →
+            </a>
+          </div>
+        </div>
+
+        <!-- The form -->
+        <form id="submit-spot-form" class="space-y-10" novalidate>
+
+          <!-- Section: Details -->
+          <div class="space-y-6">
+            <h2 class="font-headline-md text-headline-md text-primary flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary">storefront</span>
+              The Details
+            </h2>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label class="font-label-bold text-label-bold text-primary px-2" for="cafe-name">
+                  Cafe Name <span class="text-error">*</span>
+                </label>
+                <input id="cafe-name" type="text" required
+                  class="w-full px-6 py-4 rounded-full border-2 border-outline focus:border-secondary focus:ring-0 bg-white font-body-md transition-all"
+                  placeholder="e.g., The Frothy Whisk">
+                <p class="hidden text-error text-xs px-2 font-label-bold" id="cafe-name-error">Please enter the cafe name.</p>
+              </div>
+              <div class="space-y-2">
+                <label class="font-label-bold text-label-bold text-primary px-2" for="cafe-address">
+                  Location Address <span class="text-error">*</span>
+                </label>
+                <div class="relative">
+                  <input id="cafe-address" type="text" required
+                    class="w-full px-6 py-4 rounded-full border-2 border-outline focus:border-secondary focus:ring-0 bg-white font-body-md pr-12 transition-all"
+                    placeholder="Street, Indianapolis, IN">
+                  <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline">location_on</span>
+                </div>
+                <p class="hidden text-error text-xs px-2 font-label-bold" id="cafe-address-error">Please enter the address.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section: Matcha Grade -->
+          <div class="space-y-6">
+            <h2 class="font-headline-md text-headline-md text-primary flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary">eco</span>
+              Matcha Grade
+            </h2>
+            <div class="grid md:grid-cols-2 gap-4">
+              <label class="relative flex items-center p-6 rounded-lg border-2 border-outline-variant bg-white cursor-pointer hover:border-secondary transition-all has-[:checked]:border-secondary has-[:checked]:bg-secondary-fixed/20">
+                <input class="hidden peer" type="radio" name="grade" value="Ceremonial">
+                <div class="flex-1">
+                  <p class="font-label-bold text-lg text-primary">Ceremonial</p>
+                  <p class="text-xs text-on-surface-variant mt-0.5">Top-tier, vibrant green, smooth finish.</p>
+                </div>
+                <span class="material-symbols-outlined text-secondary opacity-0 peer-checked:opacity-100 transition-opacity" style="font-variation-settings:'FILL' 1;">check_circle</span>
+              </label>
+              <label class="relative flex items-center p-6 rounded-lg border-2 border-outline-variant bg-white cursor-pointer hover:border-secondary transition-all has-[:checked]:border-secondary has-[:checked]:bg-secondary-fixed/20">
+                <input class="hidden peer" type="radio" name="grade" value="Culinary">
+                <div class="flex-1">
+                  <p class="font-label-bold text-lg text-primary">Culinary</p>
+                  <p class="text-xs text-on-surface-variant mt-0.5">Perfect for lattes and baking.</p>
+                </div>
+                <span class="material-symbols-outlined text-secondary opacity-0 peer-checked:opacity-100 transition-opacity" style="font-variation-settings:'FILL' 1;">check_circle</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Section: Why we love it -->
+          <div class="space-y-6">
+            <h2 class="font-headline-md text-headline-md text-primary flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary">chat_bubble</span>
+              Why we love it
+            </h2>
+            <textarea id="cafe-notes" rows="5"
+              class="w-full px-8 py-6 rounded-lg border-2 border-outline focus:border-secondary focus:ring-0 bg-white font-body-md custom-scrollbar resize-none transition-all"
+              placeholder="Tell the community about the vibe, the whisking technique, that secret oat milk they use…"></textarea>
+          </div>
+
+          <!-- Error banner -->
+          <div id="error-banner" class="hidden bg-error-container text-on-error-container px-6 py-4 rounded-lg flex items-start gap-3">
+            <span class="material-symbols-outlined flex-shrink-0 mt-0.5">error_outline</span>
+            <div>
+              <p class="font-label-bold text-sm mb-0.5">Something went wrong</p>
+              <p id="error-message" class="text-sm"></p>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <div class="pt-2">
+            <button type="submit" id="submit-btn"
+              class="w-full bg-primary text-on-primary py-6 rounded-full font-headline-md text-headline-md flex items-center justify-center gap-4 hover:scale-[1.02] active:scale-[0.98] transition-all neo-pop-shadow neo-pop-button group">
+              <span id="btn-label">Share the Love</span>
+              <span id="btn-icon" class="material-symbols-outlined transition-transform group-hover:translate-x-2">send</span>
+            </button>
+            <p class="text-center mt-5 text-on-surface-variant font-label-bold text-xs">
+              By submitting, you agree to our Community Guidelines.
+            </p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<script>
+// ── CONFIGURATION ─────────────────────────────────────────────────────────────
+// 1. Go to https://airtable.com/create/tokens
+// 2. Create a token with scopes: data.records:read AND data.records:write  on the "matcha" base
+// 3. Paste it below
+const AIRTABLE_TOKEN = 'patoO4IGP4ESJoWnD.a05da83d9b8e7a4f9808aa5cf85cf4e26b6971aa287b0bdaf76ffab3c76ec21e';
+const BASE_ID        = 'apph243NPR5JjRPav';
+const TABLE_ID       = 'tblRNrmF9zlhpC9fh';
+// ─────────────────────────────────────────────────────────────────────────────
+
+const form       = document.getElementById('submit-spot-form');
+const submitBtn  = document.getElementById('submit-btn');
+const btnLabel   = document.getElementById('btn-label');
+const btnIcon    = document.getElementById('btn-icon');
+
+form.addEventListener('submit', async function (e) {
+  e.preventDefault();
+
+  // ── Gather values
+  const name    = document.getElementById('cafe-name').value.trim();
+  const address = document.getElementById('cafe-address').value.trim();
+  const grade   = document.querySelector('input[name="grade"]:checked')?.value || '';
+  const notes   = document.getElementById('cafe-notes').value.trim();
+
+  // ── Validate required fields
+  let valid = true;
+  ['cafe-name', 'cafe-address'].forEach(id => {
+    const input = document.getElementById(id);
+    const err   = document.getElementById(`${id}-error`);
+    if (!input.value.trim()) {
+      err.classList.remove('hidden');
+      input.classList.add('border-error');
+      valid = false;
+    } else {
+      err.classList.add('hidden');
+      input.classList.remove('border-error');
+    }
+  });
+  if (!valid) return;
+
+  // ── Loading state
+  setLoading(true);
+  hideError();
+
+  try {
+    const body = {
+      fields: {
+        Name: name,
+        Address: address,
+        Additional: notes || undefined
+      }
+    };
+    if (grade) body.fields.Grade = grade;
+
+    const res = await fetch(
+      `https://api.airtable.com/v0/${BASE_ID}/${TABLE_ID}`,
+      {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${AIRTABLE_TOKEN}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(body)
+      }
+    );
+
+    if (!res.ok) {
+      const data = await res.json().catch(() => ({}));
+      throw new Error(data?.error?.message || `Airtable error ${res.status}`);
+    }
+
+    // ── Success
+    form.classList.add('hidden');
+    document.getElementById('success-state').classList.remove('hidden');
+    spawnConfetti();
+
+  } catch (err) {
+    showError(err.message);
+    console.error('[IndyMatcha submit]', err);
+  } finally {
+    setLoading(false);
+  }
+});
+
+// "Submit another" resets the form
+document.getElementById('submit-another').addEventListener('click', () => {
+  form.reset();
+  form.classList.remove('hidden');
+  document.getElementById('success-state').classList.add('hidden');
+});
+
+// Inline validation: clear error on input
+['cafe-name', 'cafe-address'].forEach(id => {
+  document.getElementById(id).addEventListener('input', function () {
+    if (this.value.trim()) {
+      document.getElementById(`${id}-error`).classList.add('hidden');
+      this.classList.remove('border-error');
+    }
+  });
+});
+
+function setLoading(on) {
+  submitBtn.disabled = on;
+  submitBtn.classList.toggle('opacity-75', on);
+  btnLabel.textContent = on ? 'Submitting…' : 'Share the Love';
+  btnIcon.textContent  = on ? 'hourglass_empty' : 'send';
+  if (on) btnIcon.classList.add('animate-spin');
+  else    btnIcon.classList.remove('animate-spin');
+}
+
+function showError(msg) {
+  document.getElementById('error-banner').classList.remove('hidden');
+  document.getElementById('error-message').textContent = msg;
+  document.getElementById('error-banner').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function hideError() {
+  document.getElementById('error-banner').classList.add('hidden');
+}
+
+// ── Floating bubble atmosphere ────────────────────────────────────────────────
+function spawnBubble() {
+  const el   = document.createElement('div');
+  const size = Math.random() * 60 + 20;
+  el.style.cssText = `
+    position: fixed;
+    width: ${size}px; height: ${size}px;
+    background: rgba(44,105,78,0.08);
+    border-radius: 50%;
+    filter: blur(16px);
+    pointer-events: none;
+    z-index: -1;
+    left: ${Math.random() * 100}vw;
+    bottom: -${size}px;
+    --drift: ${(Math.random() * 120 - 60).toFixed(1)}px;
+  `;
+  el.className = 'bubble';
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 18500);
+}
+
+// ── Confetti burst on success ─────────────────────────────────────────────────
+function spawnConfetti() {
+  const colors = ['#b1f0ce','#aacec3','#01261f','#2c694e','#d1e8d6'];
+  for (let i = 0; i < 40; i++) {
+    const el = document.createElement('div');
+    const size = Math.random() * 10 + 5;
+    el.style.cssText = `
+      position: fixed;
+      width: ${size}px; height: ${size}px;
+      background: ${colors[Math.floor(Math.random() * colors.length)]};
+      border-radius: ${Math.random() > 0.5 ? '50%' : '2px'};
+      top: ${Math.random() * 40 + 20}%;
+      left: ${Math.random() * 100}%;
+      opacity: 1;
+      pointer-events: none;
+      z-index: 999;
+      transition: transform ${1 + Math.random() * 1.5}s ease-out, opacity ${0.8 + Math.random()}s ease-out ${0.5}s;
+    `;
+    document.body.appendChild(el);
+    requestAnimationFrame(() => {
+      el.style.transform = `translateY(${Math.random() * 200 + 100}px) rotate(${Math.random() * 720}deg)`;
+      el.style.opacity   = '0';
+    });
+    setTimeout(() => el.remove(), 3000);
+  }
+}
+
+setInterval(spawnBubble, 3500);
+for (let i = 0; i < 4; i++) setTimeout(spawnBubble, i * 800);
+</script>
+</body>
+</html>

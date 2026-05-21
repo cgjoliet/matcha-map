@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indy Matcha | Find a Spot</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Be+Vietnam+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-variant": "#d8e6dc", "surface-tint": "#43655c",
+            "on-primary-fixed": "#00201a", "on-secondary-fixed": "#002114",
+            "secondary": "#2c694e", "inverse-surface": "#27332d",
+            "tertiary-fixed-dim": "#b5ccba", "tertiary": "#112519",
+            "on-tertiary-container": "#8ea594", "surface-container-high": "#deece2",
+            "on-tertiary": "#ffffff", "on-background": "#121e18",
+            "primary-fixed": "#c5eadf", "surface-container-lowest": "#ffffff",
+            "background": "#effdf3", "secondary-container": "#aeeecb",
+            "secondary-fixed": "#b1f0ce", "primary-fixed-dim": "#aacec3",
+            "tertiary-container": "#273b2e", "tertiary-fixed": "#d1e8d6",
+            "outline": "#717976", "surface-container": "#e3f1e7",
+            "on-surface": "#121e18", "on-secondary-fixed-variant": "#0e5138",
+            "on-secondary-container": "#316e52", "on-tertiary-fixed-variant": "#374b3e",
+            "on-error": "#ffffff", "error": "#ba1a1a",
+            "surface-dim": "#cfddd4", "on-primary": "#ffffff",
+            "inverse-on-surface": "#e6f4ea", "on-primary-fixed-variant": "#2b4d44",
+            "surface": "#effdf3", "surface-container-highest": "#d8e6dc",
+            "on-primary-container": "#83a69c", "on-tertiary-fixed": "#0b1f14",
+            "primary": "#01261f", "primary-container": "#1a3c34",
+            "outline-variant": "#c1c8c4", "error-container": "#ffdad6",
+            "on-secondary": "#ffffff", "on-error-container": "#93000a",
+            "on-surface-variant": "#414846", "secondary-fixed-dim": "#95d4b3",
+            "surface-container-low": "#e9f7ed", "inverse-primary": "#aacec3",
+            "surface-bright": "#effdf3"
+          },
+          borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+          fontFamily: {
+            "headline-xl": ["Bricolage Grotesque"], "body-lg": ["Be Vietnam Pro"],
+            "label-bold": ["Be Vietnam Pro"], "headline-md": ["Bricolage Grotesque"],
+            "body-md": ["Be Vietnam Pro"]
+          },
+          fontSize: {
+            "headline-xl": ["64px", {"lineHeight":"1.1","letterSpacing":"-0.04em","fontWeight":"800"}],
+            "body-lg": ["18px", {"lineHeight":"1.6","fontWeight":"400"}],
+            "label-bold": ["14px", {"lineHeight":"1.2","letterSpacing":"0.05em","fontWeight":"700"}],
+            "headline-md": ["32px", {"lineHeight":"1.2","fontWeight":"700"}],
+            "body-md": ["16px", {"lineHeight":"1.6","fontWeight":"400"}]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #b1f0ce; border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: #95d4b3; }
+
+    .sidebar { height: calc(100vh - 64px); overflow-y: auto; }
+    .map-section { height: calc(100vh - 64px); }
+    #map-canvas { width: 100%; height: 100%; }
+
+    .spot-card.active { border-color: #2c694e !important; background: #e9f7ed; }
+
+    .matcha-marker {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25), 0 0 0 3px #b1f0ce;
+      cursor: pointer;
+      transition: transform 0.2s cubic-bezier(0.175,0.885,0.32,1.275);
+    }
+    .matcha-marker:hover { transform: scale(1.2) translateY(-2px); }
+    .matcha-marker.ceremonial { background: #01261f; box-shadow: 0 4px 14px rgba(0,0,0,0.3), 0 0 0 3px #aacec3; }
+    .matcha-marker.culinary   { background: #2c694e; }
+    .matcha-marker.default    { background: #43655c; }
+    .matcha-marker span { font-size: 20px; color: white; line-height: 1; }
+
+    .leaflet-popup-content-wrapper {
+      border-radius: 14px !important;
+      border: 2px solid #01261f;
+      box-shadow: 4px 4px 0 rgba(1,38,31,0.15) !important;
+      font-family: 'Be Vietnam Pro', sans-serif;
+      padding: 0 !important;
+    }
+    .leaflet-popup-content { margin: 0 !important; }
+    .leaflet-popup-tip-container { margin-top: -1px; }
+    .leaflet-popup-tip { background: white; }
+    .leaflet-container a.leaflet-popup-close-button {
+      top: 8px; right: 10px; color: #414846; font-size: 18px;
+    }
+
+    .filter-btn.active {
+      background: #01261f !important;
+      color: white !important;
+      border-color: #01261f !important;
+    }
+
+    .card-accent-bar { height: 5px; }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spinner { animation: spin 0.9s linear infinite; }
+  </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md overflow-hidden">
+
+<!-- ── Navigation ─────────────────────────────────────────────────────────── -->
+<nav class="flex justify-between items-center w-full px-6 md:px-14 h-16 bg-primary sticky top-0 z-[500]">
+  <a href="index.html" class="font-headline-md text-[22px] font-extrabold text-on-primary hover:opacity-90 transition-opacity">
+    Indy Matcha
+  </a>
+  <div class="hidden md:flex items-center gap-8">
+    <a href="index.html" class="font-label-bold text-label-bold text-on-primary border-b-2 border-on-primary pb-0.5">Find Matcha</a>
+    <a href="submit.html" class="font-label-bold text-label-bold text-on-primary/70 hover:text-on-primary transition-colors">Submit a Spot</a>
+  </div>
+  <a href="submit.html" class="bg-secondary text-on-secondary px-5 py-2 rounded-full font-label-bold text-sm shadow-[3px_3px_0px_rgba(255,255,255,0.15)] hover:scale-105 active:scale-95 transition-all">
+    + Add Spot
+  </a>
+</nav>
+
+<!-- ── Main layout ─────────────────────────────────────────────────────────── -->
+<main class="flex overflow-hidden" style="height: calc(100vh - 64px);">
+
+  <!-- Sidebar -->
+  <aside class="sidebar w-full md:w-[390px] bg-surface flex-shrink-0 border-r-2 border-surface-variant">
+    <div class="p-5">
+
+      <!-- Header -->
+      <div class="flex items-center justify-between mb-4">
+        <h1 class="font-headline-md text-[20px] text-primary">Spots in Indy</h1>
+        <span id="spot-count" class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-bold text-xs opacity-0 transition-opacity duration-300"></span>
+      </div>
+
+      <!-- Search -->
+      <div class="relative mb-4">
+        <input id="search-input" type="text" placeholder="Search by name, vibe, or drink…"
+          class="w-full h-12 bg-white rounded-full px-11 border-2 border-outline-variant focus:border-secondary focus:ring-0 font-body-md text-sm transition-colors">
+        <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-secondary" style="font-size:20px;">search</span>
+      </div>
+
+      <!-- Grade filters -->
+      <div class="flex gap-2 mb-5">
+        <button class="filter-btn active px-4 py-2 rounded-full font-label-bold text-xs border-2 transition-all" data-grade="all">All</button>
+        <button class="filter-btn px-4 py-2 rounded-full font-label-bold text-xs border-2 border-outline-variant bg-white text-primary transition-all hover:border-primary" data-grade="Ceremonial">
+          <span class="material-symbols-outlined text-xs mr-0.5" style="font-size:13px;vertical-align:-2px;">local_cafe</span>Ceremonial
+        </button>
+        <button class="filter-btn px-4 py-2 rounded-full font-label-bold text-xs border-2 border-outline-variant bg-white text-primary transition-all hover:border-primary" data-grade="Culinary">
+          <span class="material-symbols-outlined text-xs mr-0.5" style="font-size:13px;vertical-align:-2px;">eco</span>Culinary
+        </button>
+      </div>
+
+      <!-- Cards list -->
+      <div id="spots-list">
+        <div id="loading-state" class="text-center py-14 text-on-surface-variant">
+          <div class="w-9 h-9 border-4 border-secondary-container border-t-secondary rounded-full spinner mx-auto mb-4"></div>
+          <p class="font-body-md text-sm">Loading spots…</p>
+        </div>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- Map -->
+  <section class="map-section flex-grow relative">
+    <div id="map-canvas"></div>
+
+    <!-- Empty state overlay -->
+    <div id="empty-state" class="hidden absolute inset-0 flex items-center justify-center bg-surface/70 z-10 pointer-events-none">
+      <div class="text-center bg-white rounded-lg p-10 border-2 border-primary shadow-[4px_4px_0_#1a3c34] max-w-sm pointer-events-auto">
+        <span class="material-symbols-outlined text-5xl text-secondary mb-4 block" style="font-variation-settings:'FILL' 1;">energy_savings_leaf</span>
+        <h2 class="font-headline-md text-[20px] text-primary mb-2">No spots yet!</h2>
+        <p class="text-on-surface-variant text-sm mb-6">Be the first to put Indy's best matcha on the map.</p>
+        <a href="submit.html" class="inline-block bg-primary text-on-primary px-7 py-3 rounded-full font-label-bold hover:scale-105 transition-transform shadow-[3px_3px_0_#1a3c34]">
+          Submit a Spot
+        </a>
+      </div>
+    </div>
+
+    <!-- Custom zoom controls -->
+    <div class="absolute bottom-6 right-6 z-[400] flex flex-col gap-1 bg-white/90 backdrop-blur-md p-2 rounded-lg border border-surface-variant shadow-lg">
+      <button id="zoom-in"  class="w-10 h-10 flex items-center justify-center rounded-md hover:bg-surface-container transition-colors text-primary" title="Zoom in">
+        <span class="material-symbols-outlined">add</span>
+      </button>
+      <div class="h-px bg-surface-variant mx-1"></div>
+      <button id="zoom-out" class="w-10 h-10 flex items-center justify-center rounded-md hover:bg-surface-container transition-colors text-primary" title="Zoom out">
+        <span class="material-symbols-outlined">remove</span>
+      </button>
+    </div>
+
+    <!-- My location -->
+    <button id="my-location" title="My location"
+      class="absolute bottom-6 left-6 z-[400] w-14 h-14 bg-primary text-on-primary rounded-full shadow-xl shadow-primary/30 flex items-center justify-center hover:scale-110 active:scale-95 transition-all">
+      <span class="material-symbols-outlined">my_location</span>
+    </button>
+  </section>
+
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+// ── CONFIGURATION ─────────────────────────────────────────────────────────────
+// 1. Go to https://airtable.com/create/tokens
+// 2. Create a token with scope: data.records:read  on the "matcha" base
+// 3. Paste it below
+const AIRTABLE_TOKEN = 'patoO4IGP4ESJoWnD.a05da83d9b8e7a4f9808aa5cf85cf4e26b6971aa287b0bdaf76ffab3c76ec21e';
+const BASE_ID        = 'apph243NPR5JjRPav';
+const TABLE_ID       = 'tblRNrmF9zlhpC9fh';
+// ─────────────────────────────────────────────────────────────────────────────
+
+let map;
+const markerMap = {};  // record.id → Leaflet marker
+
+// ── Map init ──────────────────────────────────────────────────────────────────
+function initMap() {
+  map = L.map('map-canvas', { zoomControl: false })
+    .setView([39.7684, -86.1581], 13);
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    maxZoom: 19
+  }).addTo(map);
+
+  document.getElementById('zoom-in').addEventListener('click',  () => map.zoomIn());
+  document.getElementById('zoom-out').addEventListener('click', () => map.zoomOut());
+  document.getElementById('my-location').addEventListener('click', () =>
+    map.locate({ setView: true, maxZoom: 16 })
+  );
+}
+
+// ── Fetch published spots from Airtable ───────────────────────────────────────
+async function fetchSpots() {
+  const formula = encodeURIComponent("{publish}='publish'");
+  const res = await fetch(
+    `https://api.airtable.com/v0/${BASE_ID}/${TABLE_ID}?filterByFormula=${formula}&pageSize=100`,
+    { headers: { Authorization: `Bearer ${AIRTABLE_TOKEN}` } }
+  );
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`Airtable ${res.status}: ${body}`);
+  }
+  return (await res.json()).records || [];
+}
+
+// ── Custom marker icon ────────────────────────────────────────────────────────
+function buildIcon(grade) {
+  const cls = grade === 'Ceremonial' ? 'ceremonial' : grade === 'Culinary' ? 'culinary' : 'default';
+  return L.divIcon({
+    html: `<div class="matcha-marker ${cls}">
+             <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">local_cafe</span>
+           </div>`,
+    className: '',
+    iconSize:   [44, 44],
+    iconAnchor: [22, 22],
+    popupAnchor:[0, -28]
+  });
+}
+
+// ── Sidebar card ──────────────────────────────────────────────────────────────
+function buildCard(record) {
+  const f     = record.fields;
+  const name  = f.Name    || 'Unnamed Spot';
+  const addr  = f.Address || '';
+  const grade = f.Grade?.name ?? f.Grade ?? '';
+  const notes = f.Additional || '';
+  const env   = (f.Environment || []).map(e => e.name ?? e);
+  const menu  = (f.Menu        || []).map(m => m.name ?? m);
+  const tags  = [...env, ...menu].slice(0, 3);
+
+  const gradePill = grade === 'Ceremonial'
+    ? 'bg-primary text-on-primary'
+    : grade === 'Culinary'
+      ? 'bg-secondary text-on-secondary'
+      : '';
+  const accentGradient = grade === 'Ceremonial'
+    ? 'background: linear-gradient(90deg,#01261f,#1a3c34);'
+    : grade === 'Culinary'
+      ? 'background: linear-gradient(90deg,#2c694e,#43655c);'
+      : 'background: linear-gradient(90deg,#43655c,#b1f0ce);';
+
+  const ratingBar = (val, max = 5) =>
+    Array.from({ length: max }, (_, i) =>
+      `<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${i < val ? '#2c694e' : '#c1c8c4'};margin-right:2px;"></span>`
+    ).join('');
+
+  const el = document.createElement('div');
+  el.className   = 'spot-card group relative bg-surface-container-low rounded-lg border-2 border-transparent hover:border-secondary transition-all cursor-pointer overflow-hidden';
+  el.dataset.id    = record.id;
+  el.dataset.grade = grade;
+
+  el.innerHTML = `
+    <div class="card-accent-bar" style="${accentGradient}"></div>
+    <div class="p-4">
+      <div class="flex justify-between items-start mb-2 gap-2">
+        <div class="flex-1 min-w-0">
+          <h3 class="font-headline-md text-[17px] text-primary leading-tight mb-0.5 truncate">${esc(name)}</h3>
+          ${addr ? `<p class="text-on-surface-variant text-xs flex items-center gap-0.5 truncate">
+            <span class="material-symbols-outlined" style="font-size:13px;">location_on</span>${esc(addr)}
+          </p>` : ''}
+        </div>
+        ${grade && gradePill ? `<span class="${gradePill} px-2 py-0.5 rounded-full font-label-bold text-[10px] whitespace-nowrap flex-shrink-0 self-start mt-0.5">${esc(grade)}</span>` : ''}
+      </div>
+
+      ${tags.length ? `<div class="flex flex-wrap gap-1 mb-2">
+        ${tags.map(t => `<span class="bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full font-label-bold text-[10px]">${esc(t)}</span>`).join('')}
+      </div>` : ''}
+
+      ${notes ? `<p class="text-on-surface-variant text-xs mb-2 line-clamp-2 leading-relaxed">${esc(notes)}</p>` : ''}
+
+      ${(f.Grassy || f.Sweet) ? `<div class="flex gap-4 mb-3">
+        ${f.Grassy ? `<div class="flex items-center gap-1.5"><span class="text-xs text-on-surface-variant font-label-bold">Grassy</span>${ratingBar(f.Grassy)}</div>` : ''}
+        ${f.Sweet  ? `<div class="flex items-center gap-1.5"><span class="text-xs text-on-surface-variant font-label-bold">Sweet</span>${ratingBar(f.Sweet)}</div>`   : ''}
+      </div>` : ''}
+
+      <button class="view-btn w-full py-2.5 bg-surface-container-highest rounded-full font-label-bold text-xs text-primary group-hover:bg-primary group-hover:text-on-primary transition-all flex items-center justify-center gap-1">
+        View on map <span class="material-symbols-outlined" style="font-size:15px;">arrow_forward</span>
+      </button>
+    </div>
+  `;
+  return el;
+}
+
+// ── Load & render ─────────────────────────────────────────────────────────────
+async function renderSpots() {
+  const list = document.getElementById('spots-list');
+
+  try {
+    const records = await fetchSpots();
+    const spots   = records.filter(r => r.fields.Latitude && r.fields.Longitude);
+
+    list.innerHTML = '';
+
+    const countEl = document.getElementById('spot-count');
+    countEl.textContent = `${spots.length} spot${spots.length !== 1 ? 's' : ''}`;
+    countEl.classList.remove('opacity-0');
+
+    if (spots.length === 0) {
+      document.getElementById('empty-state').classList.remove('hidden');
+      list.innerHTML = `<p class="text-center text-on-surface-variant text-sm py-10">
+        No published spots yet.<br>
+        <a href="submit.html" class="text-secondary underline font-label-bold mt-1 inline-block">Be the first to submit one →</a>
+      </p>`;
+      return;
+    }
+
+    const bounds = [];
+
+    spots.forEach(record => {
+      const f     = record.fields;
+      const lat   = f.Latitude;
+      const lng   = f.Longitude;
+      const grade = f.Grade?.name ?? f.Grade ?? '';
+
+      // ── Marker
+      const marker = L.marker([lat, lng], { icon: buildIcon(grade) }).addTo(map);
+      marker.bindPopup(`
+        <div style="padding:14px 16px 12px;min-width:190px;">
+          <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:15px;font-weight:700;color:#01261f;margin-bottom:4px;">${esc(f.Name || '')}</div>
+          ${f.Address ? `<div style="font-size:12px;color:#414846;margin-bottom:6px;">${esc(f.Address)}</div>` : ''}
+          ${grade ? `<span style="font-size:10px;font-weight:700;letter-spacing:.05em;color:#2c694e;background:#aeeecb;padding:2px 8px;border-radius:999px;">${esc(grade)}</span>` : ''}
+        </div>
+      `);
+      markerMap[record.id] = marker;
+      bounds.push([lat, lng]);
+
+      // ── Card
+      const card = buildCard(record);
+      list.appendChild(card);
+
+      // card "View on map" → fly + popup
+      card.querySelector('.view-btn').addEventListener('click', e => {
+        e.stopPropagation();
+        flyToSpot(record.id, lat, lng, marker, card);
+      });
+      // whole card click → same
+      card.addEventListener('click', () => flyToSpot(record.id, lat, lng, marker, card));
+
+      // marker click → highlight card
+      marker.on('click', () => {
+        activateCard(record.id);
+        card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    });
+
+    if (bounds.length === 1) {
+      map.setView(bounds[0], 15);
+    } else {
+      map.fitBounds(bounds, { padding: [60, 60], maxZoom: 15 });
+    }
+
+  } catch (err) {
+    list.innerHTML = `
+      <div class="p-6 text-center">
+        <span class="material-symbols-outlined text-3xl text-error mb-2 block">error_outline</span>
+        <p class="font-label-bold text-sm text-error mb-1">Couldn't load spots</p>
+        <p class="text-on-surface-variant text-xs">${esc(err.message)}</p>
+        <p class="text-on-surface-variant text-xs mt-2">Check that your AIRTABLE_TOKEN is set in index.html.</p>
+      </div>`;
+    console.error('[IndyMatcha]', err);
+  }
+}
+
+function flyToSpot(id, lat, lng, marker, card) {
+  map.flyTo([lat, lng], 16, { animate: true, duration: 1.1 });
+  setTimeout(() => marker.openPopup(), 1200);
+  activateCard(id);
+}
+
+function activateCard(id) {
+  document.querySelectorAll('.spot-card').forEach(c => c.classList.remove('active'));
+  document.querySelector(`.spot-card[data-id="${id}"]`)?.classList.add('active');
+}
+
+// ── Search ────────────────────────────────────────────────────────────────────
+document.getElementById('search-input').addEventListener('input', function () {
+  const q = this.value.toLowerCase().trim();
+  document.querySelectorAll('.spot-card').forEach(card => {
+    card.style.display = (!q || card.textContent.toLowerCase().includes(q)) ? '' : 'none';
+  });
+});
+
+// ── Grade filter ──────────────────────────────────────────────────────────────
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function () {
+    document.querySelectorAll('.filter-btn').forEach(b => {
+      b.classList.remove('active');
+      b.classList.add('bg-white', 'text-primary', 'border-outline-variant');
+    });
+    this.classList.add('active');
+    this.classList.remove('bg-white', 'border-outline-variant');
+
+    const grade = this.dataset.grade;
+    document.querySelectorAll('.spot-card').forEach(card => {
+      card.style.display = (grade === 'all' || card.dataset.grade === grade) ? '' : 'none';
+    });
+  });
+});
+
+// ── XSS helper ────────────────────────────────────────────────────────────────
+function esc(s) {
+  return String(s ?? '')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;').replace(/'/g,'&#039;');
+}
+
+// ── Boot ──────────────────────────────────────────────────────────────────────
+initMap();
+renderSpots();
+</script>
+</body>
+</html>
