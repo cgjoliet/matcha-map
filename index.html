@@ -290,8 +290,32 @@ function parseCoordsFromUrl(url) {
 }
 
 // ── Fetch live place details using Places API (New) ───────────────────────────
-// Requires "Places API (New)" enabled in Google Cloud Console
+// Results are cached in localStorage for 23 hours so each spot costs at most
+// one SearchTextRequest per day instead of one per page load.
+const PLACES_CACHE_KEY = 'indyMatcha_places';
+const PLACES_CACHE_TTL = 23 * 60 * 60 * 1000;
+
+function readPlaceCache(name) {
+  try {
+    const store = JSON.parse(localStorage.getItem(PLACES_CACHE_KEY) || '{}');
+    const hit   = store[name];
+    if (hit && Date.now() - hit.ts < PLACES_CACHE_TTL) return hit.data;
+  } catch {}
+  return undefined; // undefined = miss; null = "not found" was cached
+}
+
+function writePlaceCache(name, data) {
+  try {
+    const store = JSON.parse(localStorage.getItem(PLACES_CACHE_KEY) || '{}');
+    store[name] = { ts: Date.now(), data };
+    localStorage.setItem(PLACES_CACHE_KEY, JSON.stringify(store));
+  } catch {}
+}
+
 async function fetchPlaceDetails(name) {
+  const cached = readPlaceCache(name);
+  if (cached !== undefined) return cached;
+
   try {
     const { Place } = await google.maps.importLibrary('places');
     const { places } = await Place.searchByText({
@@ -299,7 +323,20 @@ async function fetchPlaceDetails(name) {
       fields: ['regularOpeningHours', 'rating', 'userRatingCount', 'nationalPhoneNumber', 'websiteURI', 'businessStatus'],
       maxResultCount: 1,
     });
-    return places?.[0] ?? null;
+    const p = places?.[0] ?? null;
+
+    // Normalize to a plain JSON-serializable object so it survives localStorage
+    const data = p ? {
+      rating:               p.rating              ?? null,
+      userRatingCount:      p.userRatingCount      ?? null,
+      weekdayDescriptions:  p.regularOpeningHours?.weekdayDescriptions || [],
+      isOpenNow:            p.regularOpeningHours?.isOpen?.()          ?? null,
+      nationalPhoneNumber:  p.nationalPhoneNumber  ?? null,
+      websiteURI:           p.websiteURI           ?? null,
+    } : null;
+
+    writePlaceCache(name, data);
+    return data;
   } catch (err) {
     console.warn('[Places API]', err.message);
     return null;
@@ -385,8 +422,8 @@ function markerIcon(grade) {
 // ── Rich InfoWindow HTML ──────────────────────────────────────────────────────
 function buildInfoContent(f, place) {
   const grade    = f.Grade?.name ?? f.Grade ?? '';
-  const isOpen   = place?.regularOpeningHours?.isOpen?.() ?? null;
-  const weekdays = place?.regularOpeningHours?.weekdayDescriptions || [];
+  const isOpen   = place?.isOpenNow              ?? null;
+  const weekdays = place?.weekdayDescriptions    || [];
 
   // Today's hours (weekdayDescriptions is Mon-Sun 0-6, JS getDay() is Sun=0)
   const dayIndex  = (new Date().getDay() + 6) % 7;
@@ -473,7 +510,7 @@ function buildCard(record, place) {
   const notes = f.Additional || '';
   const matcha = (f['The Matcha'] || []).map(t => t.name ?? t);
   const space  = (f['The Space']  || []).map(t => t.name ?? t);
-  const isOpen = place?.regularOpeningHours?.isOpen?.() ?? null;
+  const isOpen = place?.isOpenNow ?? null;
 
   const gradePill = grade === 'Ceremonial' ? 'bg-primary text-on-primary'
     : grade === 'Culinary' ? 'bg-secondary text-on-secondary' : '';
