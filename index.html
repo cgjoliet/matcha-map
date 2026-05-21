@@ -70,7 +70,7 @@
 
     .spot-card.active { border-color: #2c694e !important; background: #e9f7ed; }
 
-    .filter-btn.active {
+    .filter-chip.active {
       background: #01261f !important;
       color: white !important;
       border-color: #01261f !important;
@@ -140,14 +140,54 @@
         <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-secondary" style="font-size:20px;">search</span>
       </div>
 
-      <div class="flex gap-2 mb-5">
-        <button class="filter-btn active px-4 py-2 rounded-full font-label-bold text-xs border-2 transition-all" data-grade="all">All</button>
-        <button class="filter-btn px-4 py-2 rounded-full font-label-bold text-xs border-2 border-outline-variant bg-white text-primary transition-all hover:border-primary" data-grade="Ceremonial">
-          <span class="material-symbols-outlined mr-0.5" style="font-size:13px;vertical-align:-2px;">local_cafe</span>Ceremonial
-        </button>
-        <button class="filter-btn px-4 py-2 rounded-full font-label-bold text-xs border-2 border-outline-variant bg-white text-primary transition-all hover:border-primary" data-grade="Culinary">
-          <span class="material-symbols-outlined mr-0.5" style="font-size:13px;vertical-align:-2px;">eco</span>Culinary
-        </button>
+      <!-- Filters -->
+      <div class="mb-5">
+        <div class="flex items-center justify-between mb-2">
+          <p class="font-label-bold text-[10px] text-on-surface-variant uppercase tracking-widest">Filters</p>
+          <button id="clear-filters" class="hidden font-label-bold text-[10px] text-secondary underline">Clear all</button>
+        </div>
+
+        <div class="flex gap-3">
+          <!-- The Matcha -->
+          <div class="flex-1 min-w-0">
+            <button class="filter-toggle w-full flex items-center justify-between mb-1.5" data-target="matcha-chips">
+              <span class="font-label-bold text-[10px] text-primary uppercase tracking-wider flex items-center gap-1">
+                <span class="material-symbols-outlined" style="font-size:11px;">local_cafe</span> The Matcha
+              </span>
+              <svg class="toggle-caret flex-shrink-0 text-primary" style="transition:transform 0.2s ease;" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 3.5L5 6.5L8.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div id="matcha-chips" class="flex flex-wrap gap-1.5">
+              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="matcha" data-value="hand-whisked">hand-whisked</button>
+              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="matcha" data-value="creative signature lattes">creative signature lattes</button>
+              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="matcha" data-value="rotating specials">rotating specials</button>
+              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="matcha" data-value="milkshake>matcha">milkshake&gt;matcha</button>
+              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="matcha" data-value="matcha>milkshake">matcha&gt;milkshake</button>
+              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="matcha" data-value="byo straw">byo straw</button>
+            </div>
+          </div>
+
+          <!-- The Space -->
+          <div class="flex-1 min-w-0">
+            <button class="filter-toggle w-full flex items-center justify-between mb-1.5" data-target="space-chips">
+              <span class="font-label-bold text-[10px] text-primary uppercase tracking-wider flex items-center gap-1">
+                <span class="material-symbols-outlined" style="font-size:11px;">storefront</span> The Space
+              </span>
+              <svg class="toggle-caret flex-shrink-0 text-primary" style="transition:transform 0.2s ease;" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 3.5L5 6.5L8.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div id="space-chips" class="flex flex-wrap gap-1.5">
+              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="space" data-value="outdoor space">outdoor space</button>
+              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="space" data-value="booth seating">booth seating</button>
+              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="space" data-value="couches and fun chairs">couches and fun chairs</button>
+              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="space" data-value="no seating">no seating</button>
+              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="space" data-value="limited seating">limited seating</button>
+              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="space" data-value="dog-friendly">dog-friendly</button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div id="spots-list">
@@ -388,9 +428,8 @@ function buildCard(record, place) {
   const addr  = f.Address || '';
   const grade = f.Grade?.name ?? f.Grade ?? '';
   const notes = f.Additional || '';
-  const env   = (f.Environment || []).map(e => e.name ?? e);
-  const menu  = (f.Menu        || []).map(m => m.name ?? m);
-  const tags  = [...env, ...menu].slice(0, 3);
+  const matcha = (f['The Matcha'] || []).map(t => t.name ?? t);
+  const space  = (f['The Space']  || []).map(t => t.name ?? t);
   const isOpen = place?.regularOpeningHours?.isOpen?.() ?? null;
 
   const gradePill = grade === 'Ceremonial' ? 'bg-primary text-on-primary'
@@ -405,9 +444,11 @@ function buildCard(record, place) {
     Array.from({length:max},(_,i)=>`<span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:${i<val?'#2c694e':'#c1c8c4'};margin-right:2px;"></span>`).join('');
 
   const el = document.createElement('div');
-  el.className     = 'spot-card group relative bg-surface-container-low rounded-lg border-2 border-transparent hover:border-secondary transition-all cursor-pointer overflow-hidden';
-  el.dataset.id    = record.id;
-  el.dataset.grade = grade;
+  el.className      = 'spot-card group relative bg-surface-container-low rounded-lg border-2 border-transparent hover:border-secondary transition-all cursor-pointer overflow-hidden';
+  el.dataset.id     = record.id;
+  el.dataset.grade  = grade;
+  el.dataset.matcha = JSON.stringify(matcha);
+  el.dataset.space  = JSON.stringify(space);
 
   el.innerHTML = `
     <div class="card-accent-bar" style="${accentGrad}"></div>
@@ -429,8 +470,11 @@ function buildCard(record, place) {
         <span class="font-label-bold text-xs text-primary">${place.rating}</span>
         <span class="text-on-surface-variant text-xs">(${(place.userRatingCount||0).toLocaleString()})</span>
       </div>` : ''}
-      ${tags.length ? `<div class="flex flex-wrap gap-1 mb-2">
-        ${tags.map(t=>`<span class="bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full font-label-bold text-[10px]">${esc(t)}</span>`).join('')}
+      ${matcha.length ? `<div class="flex flex-wrap gap-1 mb-1">
+        ${matcha.map(t=>`<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-label-bold text-[10px]">${esc(t)}</span>`).join('')}
+      </div>` : ''}
+      ${space.length ? `<div class="flex flex-wrap gap-1 mb-2">
+        ${space.map(t=>`<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-2 py-0.5 rounded-full font-label-bold text-[10px]">${esc(t)}</span>`).join('')}
       </div>` : ''}
       ${notes ? `<p class="text-on-surface-variant text-xs mb-2 line-clamp-2 leading-relaxed italic">"${esc(notes)}"</p>` : ''}
       ${(f.Grassy||f.Sweet) ? `<div class="flex gap-4 mb-3">
@@ -543,18 +587,52 @@ document.getElementById('search-input').addEventListener('input', function () {
   });
 });
 
-document.querySelectorAll('.filter-btn').forEach(btn => {
+// ── Tag filters (AND between categories, OR within) ───────────────────────────
+const activeFilters = new Set();
+
+function applyFilters() {
+  const matchaActive = [...activeFilters].filter(f => f.startsWith('matcha:')).map(f => f.slice(7));
+  const spaceActive  = [...activeFilters].filter(f => f.startsWith('space:')).map(f  => f.slice(6));
+
+  document.querySelectorAll('.spot-card').forEach(card => {
+    const cardMatcha = JSON.parse(card.dataset.matcha || '[]');
+    const cardSpace  = JSON.parse(card.dataset.space  || '[]');
+    const matchOk = matchaActive.length === 0 || matchaActive.some(v => cardMatcha.includes(v));
+    const spaceOk = spaceActive.length  === 0 || spaceActive.some(v  => cardSpace.includes(v));
+    card.style.display = (matchOk && spaceOk) ? '' : 'none';
+  });
+
+  document.getElementById('clear-filters').classList.toggle('hidden', activeFilters.size === 0);
+}
+
+document.querySelectorAll('.filter-chip').forEach(btn => {
   btn.addEventListener('click', function () {
-    document.querySelectorAll('.filter-btn').forEach(b => {
-      b.classList.remove('active');
-      b.classList.add('bg-white', 'text-primary', 'border-outline-variant');
-    });
-    this.classList.add('active');
-    this.classList.remove('bg-white', 'border-outline-variant');
-    const grade = this.dataset.grade;
-    document.querySelectorAll('.spot-card').forEach(c => {
-      c.style.display = (grade === 'all' || c.dataset.grade === grade) ? '' : 'none';
-    });
+    const key = `${this.dataset.category}:${this.dataset.value}`;
+    if (activeFilters.has(key)) {
+      activeFilters.delete(key);
+      this.classList.remove('active');
+    } else {
+      activeFilters.add(key);
+      this.classList.add('active');
+    }
+    applyFilters();
+  });
+});
+
+document.getElementById('clear-filters').addEventListener('click', () => {
+  activeFilters.clear();
+  document.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.spot-card').forEach(c => c.style.display = '');
+  document.getElementById('clear-filters').classList.add('hidden');
+});
+
+// ── Collapsible filter sections ───────────────────────────────────────────────
+document.querySelectorAll('.filter-toggle').forEach(btn => {
+  btn.addEventListener('click', function () {
+    const chips = document.getElementById(this.dataset.target);
+    const caret = this.querySelector('.toggle-caret');
+    const isNowHidden = chips.classList.toggle('hidden');
+    caret.style.transform = isNowHidden ? 'rotate(-90deg)' : 'rotate(0deg)';
   });
 });
 
