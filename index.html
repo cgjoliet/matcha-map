@@ -158,14 +158,7 @@
                 <path d="M1.5 3.5L5 6.5L8.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
-            <div id="matcha-chips" class="flex flex-wrap gap-1.5">
-              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="matcha" data-value="hand-whisked">hand-whisked</button>
-              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="matcha" data-value="creative signature lattes">creative signature lattes</button>
-              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="matcha" data-value="rotating specials">rotating specials</button>
-              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="matcha" data-value="milkshake>matcha">milkshake&gt;matcha</button>
-              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="matcha" data-value="matcha>milkshake">matcha&gt;milkshake</button>
-              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="matcha" data-value="byo straw">byo straw</button>
-            </div>
+            <div id="matcha-chips" class="flex flex-wrap gap-1.5"></div>
           </div>
 
           <!-- The Space -->
@@ -178,14 +171,7 @@
                 <path d="M1.5 3.5L5 6.5L8.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
-            <div id="space-chips" class="flex flex-wrap gap-1.5">
-              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="space" data-value="outdoor space">outdoor space</button>
-              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="space" data-value="booth seating">booth seating</button>
-              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="space" data-value="couches and fun chairs">couches and fun chairs</button>
-              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="space" data-value="no seating">no seating</button>
-              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="space" data-value="limited seating">limited seating</button>
-              <button class="filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary" data-category="space" data-value="dog-friendly">dog-friendly</button>
-            </div>
+            <div id="space-chips" class="flex flex-wrap gap-1.5"></div>
           </div>
         </div>
       </div>
@@ -275,7 +261,12 @@ window.initApp = async function () {
     );
   });
 
-  await renderSpots();
+  // Load filter chips from Airtable schema + spot cards in parallel
+  const [filterOpts] = await Promise.all([fetchFilterOptions(), renderSpots()]);
+  if (filterOpts) {
+    renderFilterChips('matcha', 'matcha-chips', filterOpts.matcha);
+    renderFilterChips('space',  'space-chips',  filterOpts.space);
+  }
 };
 
 // ── Parse lat/lng from a Google Maps URL ──────────────────────────────────────
@@ -306,6 +297,51 @@ async function fetchPlaceDetails(name) {
     console.warn('[Places API]', err.message);
     return null;
   }
+}
+
+// ── Fetch filter choices from all records ─────────────────────────────────────
+// Scans every record (published + drafts) for "The Matcha" / "The Space" values
+// so any new choice assigned in Airtable automatically appears as a filter chip.
+// Uses only data.records:read — no extra token scope required.
+async function fetchFilterOptions() {
+  try {
+    const res = await fetch(
+      `https://api.airtable.com/v0/${BASE_ID}/${TABLE_ID}?fields[]=The+Matcha&fields[]=The+Space&pageSize=100`,
+      { headers: { Authorization: `Bearer ${AIRTABLE_TOKEN}` } }
+    );
+    if (!res.ok) return null;
+    const { records } = await res.json();
+    const matchaSet = new Set();
+    const spaceSet  = new Set();
+    records?.forEach(r => {
+      (r.fields['The Matcha'] || []).forEach(v => matchaSet.add(v.name ?? v));
+      (r.fields['The Space']  || []).forEach(v => spaceSet.add(v.name ?? v));
+    });
+    return { matcha: [...matchaSet], space: [...spaceSet] };
+  } catch (err) {
+    console.warn('[FilterOptions]', err.message);
+    return null;
+  }
+}
+
+function renderFilterChips(category, containerId, values) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  container.innerHTML = '';
+  values.forEach(value => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary transition-all hover:border-secondary';
+    btn.dataset.category = category;
+    btn.dataset.value    = value;
+    btn.textContent      = value;
+    btn.addEventListener('click', function () {
+      const key = `${this.dataset.category}:${this.dataset.value}`;
+      if (activeFilters.has(key)) { activeFilters.delete(key); this.classList.remove('active'); }
+      else                        { activeFilters.add(key);    this.classList.add('active');    }
+      applyFilters();
+    });
+    container.appendChild(btn);
+  });
 }
 
 // ── Airtable fetch ────────────────────────────────────────────────────────────
@@ -605,19 +641,6 @@ function applyFilters() {
   document.getElementById('clear-filters').classList.toggle('hidden', activeFilters.size === 0);
 }
 
-document.querySelectorAll('.filter-chip').forEach(btn => {
-  btn.addEventListener('click', function () {
-    const key = `${this.dataset.category}:${this.dataset.value}`;
-    if (activeFilters.has(key)) {
-      activeFilters.delete(key);
-      this.classList.remove('active');
-    } else {
-      activeFilters.add(key);
-      this.classList.add('active');
-    }
-    applyFilters();
-  });
-});
 
 document.getElementById('clear-filters').addEventListener('click', () => {
   activeFilters.clear();
