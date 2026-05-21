@@ -8,7 +8,6 @@
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Be+Vietnam+Pro:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
   <script id="tailwind-config">
     tailwind.config = {
@@ -65,39 +64,11 @@
     ::-webkit-scrollbar-thumb { background: #b1f0ce; border-radius: 10px; }
     ::-webkit-scrollbar-thumb:hover { background: #95d4b3; }
 
-    .sidebar { height: calc(100vh - 64px); overflow-y: auto; }
+    .sidebar     { height: calc(100vh - 64px); overflow-y: auto; }
     .map-section { height: calc(100vh - 64px); }
-    #map-canvas { width: 100%; height: 100%; }
+    #map-canvas  { width: 100%; height: 100%; }
 
     .spot-card.active { border-color: #2c694e !important; background: #e9f7ed; }
-
-    .matcha-marker {
-      width: 44px; height: 44px;
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.25), 0 0 0 3px #b1f0ce;
-      cursor: pointer;
-      transition: transform 0.2s cubic-bezier(0.175,0.885,0.32,1.275);
-    }
-    .matcha-marker:hover { transform: scale(1.2) translateY(-2px); }
-    .matcha-marker.ceremonial { background: #01261f; box-shadow: 0 4px 14px rgba(0,0,0,0.3), 0 0 0 3px #aacec3; }
-    .matcha-marker.culinary   { background: #2c694e; }
-    .matcha-marker.default    { background: #43655c; }
-    .matcha-marker span { font-size: 20px; color: white; line-height: 1; }
-
-    .leaflet-popup-content-wrapper {
-      border-radius: 14px !important;
-      border: 2px solid #01261f;
-      box-shadow: 4px 4px 0 rgba(1,38,31,0.15) !important;
-      font-family: 'Be Vietnam Pro', sans-serif;
-      padding: 0 !important;
-    }
-    .leaflet-popup-content { margin: 0 !important; }
-    .leaflet-popup-tip-container { margin-top: -1px; }
-    .leaflet-popup-tip { background: white; }
-    .leaflet-container a.leaflet-popup-close-button {
-      top: 8px; right: 10px; color: #414846; font-size: 18px;
-    }
 
     .filter-btn.active {
       background: #01261f !important;
@@ -109,12 +80,37 @@
 
     @keyframes spin { to { transform: rotate(360deg); } }
     .spinner { animation: spin 0.9s linear infinite; }
+
+    /* ── Google Maps InfoWindow styling ──────────────────────────────────── */
+    .gm-style .gm-style-iw-c {
+      border-radius: 14px !important;
+      border: 2px solid #01261f !important;
+      box-shadow: 4px 4px 0 rgba(1,38,31,0.12) !important;
+      padding: 0 !important;
+      overflow: hidden;
+    }
+    .gm-style .gm-style-iw-d { overflow: auto !important; }
+    .gm-style .gm-style-iw-tc::after { background: white !important; }
+    .gm-style .gm-style-iw-chr {
+      position: absolute !important;
+      top: 6px !important; right: 6px !important;
+      z-index: 10;
+    }
+    .gm-style .gm-style-iw-chr button { width: 22px !important; height: 22px !important; }
+    .gm-style .gm-style-iw-chr button span {
+      width: 12px !important; height: 12px !important;
+      margin: 5px !important;
+    }
+
+    /* Hide default Google Maps controls we're replacing */
+    .gm-bundled-control,
+    .gm-svpc { display: none !important; }
   </style>
 </head>
 
 <body class="bg-background text-on-surface font-body-md overflow-hidden">
 
-<!-- ── Navigation ─────────────────────────────────────────────────────────── -->
+<!-- ── Navigation ──────────────────────────────────────────────────────────── -->
 <nav class="flex justify-between items-center w-full px-6 md:px-14 h-16 bg-primary sticky top-0 z-[500]">
   <a href="index.html" class="font-headline-md text-[22px] font-extrabold text-on-primary hover:opacity-90 transition-opacity">
     Indy Matcha
@@ -135,33 +131,29 @@
   <aside class="sidebar w-full md:w-[390px] bg-surface flex-shrink-0 border-r-2 border-surface-variant">
     <div class="p-5">
 
-      <!-- Header -->
       <div class="flex items-center justify-between mb-4">
         <h1 class="font-headline-md text-[20px] text-primary">Spots in Indy</h1>
         <span id="spot-count" class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-bold text-xs opacity-0 transition-opacity duration-300"></span>
       </div>
 
-      <!-- Search -->
       <div class="relative mb-4">
         <input id="search-input" type="text" placeholder="Search by name, vibe, or drink…"
           class="w-full h-12 bg-white rounded-full px-11 border-2 border-outline-variant focus:border-secondary focus:ring-0 font-body-md text-sm transition-colors">
         <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-secondary" style="font-size:20px;">search</span>
       </div>
 
-      <!-- Grade filters -->
       <div class="flex gap-2 mb-5">
         <button class="filter-btn active px-4 py-2 rounded-full font-label-bold text-xs border-2 transition-all" data-grade="all">All</button>
         <button class="filter-btn px-4 py-2 rounded-full font-label-bold text-xs border-2 border-outline-variant bg-white text-primary transition-all hover:border-primary" data-grade="Ceremonial">
-          <span class="material-symbols-outlined text-xs mr-0.5" style="font-size:13px;vertical-align:-2px;">local_cafe</span>Ceremonial
+          <span class="material-symbols-outlined mr-0.5" style="font-size:13px;vertical-align:-2px;">local_cafe</span>Ceremonial
         </button>
         <button class="filter-btn px-4 py-2 rounded-full font-label-bold text-xs border-2 border-outline-variant bg-white text-primary transition-all hover:border-primary" data-grade="Culinary">
-          <span class="material-symbols-outlined text-xs mr-0.5" style="font-size:13px;vertical-align:-2px;">eco</span>Culinary
+          <span class="material-symbols-outlined mr-0.5" style="font-size:13px;vertical-align:-2px;">eco</span>Culinary
         </button>
       </div>
 
-      <!-- Cards list -->
       <div id="spots-list">
-        <div id="loading-state" class="text-center py-14 text-on-surface-variant">
+        <div class="text-center py-14 text-on-surface-variant">
           <div class="w-9 h-9 border-4 border-secondary-container border-t-secondary rounded-full spinner mx-auto mb-4"></div>
           <p class="font-body-md text-sm">Loading spots…</p>
         </div>
@@ -174,7 +166,7 @@
   <section class="map-section flex-grow relative">
     <div id="map-canvas"></div>
 
-    <!-- Empty state overlay -->
+    <!-- Empty state -->
     <div id="empty-state" class="hidden absolute inset-0 flex items-center justify-center bg-surface/70 z-10 pointer-events-none">
       <div class="text-center bg-white rounded-lg p-10 border-2 border-primary shadow-[4px_4px_0_#1a3c34] max-w-sm pointer-events-auto">
         <span class="material-symbols-outlined text-5xl text-secondary mb-4 block" style="font-variation-settings:'FILL' 1;">energy_savings_leaf</span>
@@ -199,70 +191,111 @@
 
     <!-- My location -->
     <button id="my-location" title="My location"
-      class="absolute bottom-6 left-6 z-[400] w-14 h-14 bg-primary text-on-primary rounded-full shadow-xl shadow-primary/30 flex items-center justify-center hover:scale-110 active:scale-95 transition-all">
+      class="absolute bottom-6 left-6 z-[400] w-14 h-14 bg-primary text-on-primary rounded-full shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all">
       <span class="material-symbols-outlined">my_location</span>
     </button>
   </section>
 
 </main>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 // ── CONFIGURATION ─────────────────────────────────────────────────────────────
-// 1. Go to https://airtable.com/create/tokens
-// 2. Create a token with scope: data.records:read  on the "matcha" base
-// 3. Paste it below
-const AIRTABLE_TOKEN = 'patoO4IGP4ESJoWnD.a05da83d9b8e7a4f9808aa5cf85cf4e26b6971aa287b0bdaf76ffab3c76ec21e';
-const BASE_ID        = 'apph243NPR5JjRPav';
-const TABLE_ID       = 'tblRNrmF9zlhpC9fh';
+const AIRTABLE_TOKEN   = 'patoO4IGP4ESJoWnD.a05da83d9b8e7a4f9808aa5cf85cf4e26b6971aa287b0bdaf76ffab3c76ec21e';
+const BASE_ID          = 'apph243NPR5JjRPav';
+const TABLE_ID         = 'tblRNrmF9zlhpC9fh';
+const GOOGLE_MAPS_KEY  = 'AIzaSyBCAIHyg8TFCLwEW1BMtpT1QFyaymelXlU';
 // ─────────────────────────────────────────────────────────────────────────────
 
-let map;
-const markerMap = {};  // record.id → Leaflet marker
+// Minimal matcha-toned map style
+const MATCHA_STYLE = [
+  { elementType: 'geometry',             stylers: [{ color: '#f2f7f3' }] },
+  { elementType: 'labels.text.stroke',   stylers: [{ color: '#f2f7f3' }] },
+  { elementType: 'labels.text.fill',     stylers: [{ color: '#5a6e64' }] },
+  { featureType: 'administrative.locality', elementType: 'labels.text.fill', stylers: [{ color: '#01261f' }] },
+  { featureType: 'poi',                  elementType: 'labels',             stylers: [{ visibility: 'off' }] },
+  { featureType: 'poi.park',             elementType: 'geometry',           stylers: [{ color: '#d8eedf' }] },
+  { featureType: 'poi.park',             elementType: 'labels.text.fill',   stylers: [{ color: '#2c694e' }] },
+  { featureType: 'road',                 elementType: 'geometry',           stylers: [{ color: '#ffffff' }] },
+  { featureType: 'road',                 elementType: 'geometry.stroke',    stylers: [{ color: '#e4ece6' }] },
+  { featureType: 'road',                 elementType: 'labels.text.fill',   stylers: [{ color: '#6b8577' }] },
+  { featureType: 'road.highway',         elementType: 'geometry',           stylers: [{ color: '#ddeee5' }] },
+  { featureType: 'road.highway',         elementType: 'geometry.stroke',    stylers: [{ color: '#b8d4c4' }] },
+  { featureType: 'road.highway',         elementType: 'labels.text.fill',   stylers: [{ color: '#2c694e' }] },
+  { featureType: 'transit',              elementType: 'geometry',           stylers: [{ color: '#d8eedf' }] },
+  { featureType: 'water',                elementType: 'geometry',           stylers: [{ color: '#bfe0cf' }] },
+  { featureType: 'water',                elementType: 'labels.text.fill',   stylers: [{ color: '#2c694e' }] },
+];
 
-// ── Map init ──────────────────────────────────────────────────────────────────
-function initMap() {
-  map = L.map('map-canvas', { zoomControl: false })
-    .setView([39.7684, -86.1581], 13);
+let map, currentInfoWindow = null;
+const markerMap = {};
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    maxZoom: 19
-  }).addTo(map);
+// ── initApp is called by the Google Maps SDK on load ──────────────────────────
+window.initApp = async function () {
+  map = new google.maps.Map(document.getElementById('map-canvas'), {
+    center:           { lat: 39.7684, lng: -86.1581 },
+    zoom:             13,
+    styles:           MATCHA_STYLE,
+    disableDefaultUI: true,
+    gestureHandling:  'greedy',
+    clickableIcons:   false,
+  });
 
-  document.getElementById('zoom-in').addEventListener('click',  () => map.zoomIn());
-  document.getElementById('zoom-out').addEventListener('click', () => map.zoomOut());
-  document.getElementById('my-location').addEventListener('click', () =>
-    map.locate({ setView: true, maxZoom: 16 })
-  );
-}
+  // Wire up custom controls
+  document.getElementById('zoom-in').addEventListener('click',  () => map.setZoom(map.getZoom() + 1));
+  document.getElementById('zoom-out').addEventListener('click', () => map.setZoom(map.getZoom() - 1));
+  document.getElementById('my-location').addEventListener('click', () => {
+    navigator.geolocation.getCurrentPosition(
+      pos => { map.panTo({ lat: pos.coords.latitude, lng: pos.coords.longitude }); map.setZoom(15); },
+      ()  => alert('Location access denied or unavailable.')
+    );
+  });
 
-// ── Fetch published spots from Airtable ───────────────────────────────────────
+  await renderSpots();
+};
+
+// ── Airtable fetch ────────────────────────────────────────────────────────────
 async function fetchSpots() {
   const formula = encodeURIComponent("{publish}='publish'");
   const res = await fetch(
     `https://api.airtable.com/v0/${BASE_ID}/${TABLE_ID}?filterByFormula=${formula}&pageSize=100`,
     { headers: { Authorization: `Bearer ${AIRTABLE_TOKEN}` } }
   );
-  if (!res.ok) {
-    const body = await res.text();
-    throw new Error(`Airtable ${res.status}: ${body}`);
-  }
+  if (!res.ok) throw new Error(`Airtable ${res.status}: ${await res.text()}`);
   return (await res.json()).records || [];
 }
 
-// ── Custom marker icon ────────────────────────────────────────────────────────
-function buildIcon(grade) {
-  const cls = grade === 'Ceremonial' ? 'ceremonial' : grade === 'Culinary' ? 'culinary' : 'default';
-  return L.divIcon({
-    html: `<div class="matcha-marker ${cls}">
-             <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">local_cafe</span>
-           </div>`,
-    className: '',
-    iconSize:   [44, 44],
-    iconAnchor: [22, 22],
-    popupAnchor:[0, -28]
-  });
+// ── Marker pin SVG ────────────────────────────────────────────────────────────
+function pinSvg(grade) {
+  const bg   = grade === 'Ceremonial' ? '#01261f' : grade === 'Culinary' ? '#2c694e' : '#43655c';
+  const ring = grade === 'Ceremonial' ? '#aacec3' : '#b1f0ce';
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 52" width="40" height="52">
+    <ellipse cx="20" cy="49" rx="7" ry="2.5" fill="rgba(0,0,0,0.18)"/>
+    <path d="M20 2C10.6 2 3 9.6 3 19c0 12.4 17 31 17 31S37 31.4 37 19C37 9.6 29.4 2 20 2z"
+      fill="${bg}" stroke="${ring}" stroke-width="2.2"/>
+    <circle cx="20" cy="19" r="8" fill="white" opacity="0.15"/>
+    <circle cx="20" cy="19" r="4.5" fill="white" opacity="0.92"/>
+  </svg>`;
+}
+
+function markerIcon(grade) {
+  return {
+    url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(pinSvg(grade)),
+    scaledSize: new google.maps.Size(40, 52),
+    anchor:     new google.maps.Point(20, 50),
+  };
+}
+
+// ── InfoWindow content ────────────────────────────────────────────────────────
+function infoContent(f) {
+  const grade = f.Grade?.name ?? f.Grade ?? '';
+  return `<div style="padding:14px 36px 14px 16px;min-width:200px;font-family:'Be Vietnam Pro',sans-serif;">
+    <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:15px;font-weight:800;color:#01261f;margin-bottom:4px;">${esc(f.Name || '')}</div>
+    ${f.Address ? `<div style="font-size:12px;color:#414846;margin-bottom:8px;display:flex;align-items:center;gap:2px;">
+      <span style="font-family:'Material Symbols Outlined';font-size:14px;vertical-align:-2px;">location_on</span>${esc(f.Address)}
+    </div>` : ''}
+    ${grade ? `<span style="font-size:10px;font-weight:700;letter-spacing:.05em;color:#2c694e;background:#aeeecb;padding:3px 9px;border-radius:999px;">${esc(grade)}</span>` : ''}
+    ${f.Additional ? `<p style="font-size:12px;color:#414846;margin-top:8px;line-height:1.5;max-width:220px;">${esc(f.Additional).slice(0,120)}${f.Additional.length > 120 ? '…' : ''}</p>` : ''}
+  </div>`;
 }
 
 // ── Sidebar card ──────────────────────────────────────────────────────────────
@@ -276,29 +309,26 @@ function buildCard(record) {
   const menu  = (f.Menu        || []).map(m => m.name ?? m);
   const tags  = [...env, ...menu].slice(0, 3);
 
-  const gradePill = grade === 'Ceremonial'
-    ? 'bg-primary text-on-primary'
+  const gradePill = grade === 'Ceremonial' ? 'bg-primary text-on-primary'
+    : grade === 'Culinary' ? 'bg-secondary text-on-secondary' : '';
+  const accentGrad = grade === 'Ceremonial'
+    ? 'background:linear-gradient(90deg,#01261f,#1a3c34)'
     : grade === 'Culinary'
-      ? 'bg-secondary text-on-secondary'
-      : '';
-  const accentGradient = grade === 'Ceremonial'
-    ? 'background: linear-gradient(90deg,#01261f,#1a3c34);'
-    : grade === 'Culinary'
-      ? 'background: linear-gradient(90deg,#2c694e,#43655c);'
-      : 'background: linear-gradient(90deg,#43655c,#b1f0ce);';
+      ? 'background:linear-gradient(90deg,#2c694e,#43655c)'
+      : 'background:linear-gradient(90deg,#43655c,#b1f0ce)';
 
-  const ratingBar = (val, max = 5) =>
-    Array.from({ length: max }, (_, i) =>
-      `<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${i < val ? '#2c694e' : '#c1c8c4'};margin-right:2px;"></span>`
+  const dots = (val, max = 5) =>
+    Array.from({length: max}, (_, i) =>
+      `<span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:${i < val ? '#2c694e' : '#c1c8c4'};margin-right:2px;"></span>`
     ).join('');
 
   const el = document.createElement('div');
-  el.className   = 'spot-card group relative bg-surface-container-low rounded-lg border-2 border-transparent hover:border-secondary transition-all cursor-pointer overflow-hidden';
+  el.className     = 'spot-card group relative bg-surface-container-low rounded-lg border-2 border-transparent hover:border-secondary transition-all cursor-pointer overflow-hidden';
   el.dataset.id    = record.id;
   el.dataset.grade = grade;
 
   el.innerHTML = `
-    <div class="card-accent-bar" style="${accentGradient}"></div>
+    <div class="card-accent-bar" style="${accentGrad}"></div>
     <div class="p-4">
       <div class="flex justify-between items-start mb-2 gap-2">
         <div class="flex-1 min-w-0">
@@ -309,18 +339,14 @@ function buildCard(record) {
         </div>
         ${grade && gradePill ? `<span class="${gradePill} px-2 py-0.5 rounded-full font-label-bold text-[10px] whitespace-nowrap flex-shrink-0 self-start mt-0.5">${esc(grade)}</span>` : ''}
       </div>
-
       ${tags.length ? `<div class="flex flex-wrap gap-1 mb-2">
         ${tags.map(t => `<span class="bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full font-label-bold text-[10px]">${esc(t)}</span>`).join('')}
       </div>` : ''}
-
       ${notes ? `<p class="text-on-surface-variant text-xs mb-2 line-clamp-2 leading-relaxed">${esc(notes)}</p>` : ''}
-
       ${(f.Grassy || f.Sweet) ? `<div class="flex gap-4 mb-3">
-        ${f.Grassy ? `<div class="flex items-center gap-1.5"><span class="text-xs text-on-surface-variant font-label-bold">Grassy</span>${ratingBar(f.Grassy)}</div>` : ''}
-        ${f.Sweet  ? `<div class="flex items-center gap-1.5"><span class="text-xs text-on-surface-variant font-label-bold">Sweet</span>${ratingBar(f.Sweet)}</div>`   : ''}
+        ${f.Grassy ? `<div class="flex items-center gap-1.5"><span class="text-xs text-on-surface-variant font-label-bold">Grassy</span>${dots(f.Grassy)}</div>` : ''}
+        ${f.Sweet  ? `<div class="flex items-center gap-1.5"><span class="text-xs text-on-surface-variant font-label-bold">Sweet</span>${dots(f.Sweet)}</div>`   : ''}
       </div>` : ''}
-
       <button class="view-btn w-full py-2.5 bg-surface-container-highest rounded-full font-label-bold text-xs text-primary group-hover:bg-primary group-hover:text-on-primary transition-all flex items-center justify-center gap-1">
         View on map <span class="material-symbols-outlined" style="font-size:15px;">arrow_forward</span>
       </button>
@@ -329,72 +355,79 @@ function buildCard(record) {
   return el;
 }
 
-// ── Load & render ─────────────────────────────────────────────────────────────
+// ── Render ────────────────────────────────────────────────────────────────────
 async function renderSpots() {
   const list = document.getElementById('spots-list');
-
   try {
     const records = await fetchSpots();
     const spots   = records.filter(r => r.fields.Latitude && r.fields.Longitude);
 
     list.innerHTML = '';
-
     const countEl = document.getElementById('spot-count');
     countEl.textContent = `${spots.length} spot${spots.length !== 1 ? 's' : ''}`;
     countEl.classList.remove('opacity-0');
 
     if (spots.length === 0) {
       document.getElementById('empty-state').classList.remove('hidden');
-      list.innerHTML = `<p class="text-center text-on-surface-variant text-sm py-10">
-        No published spots yet.<br>
-        <a href="submit.html" class="text-secondary underline font-label-bold mt-1 inline-block">Be the first to submit one →</a>
-      </p>`;
+      list.innerHTML = `<p class="text-center text-on-surface-variant text-sm py-10">No published spots yet.<br>
+        <a href="submit.html" class="text-secondary underline font-label-bold mt-1 inline-block">Be the first to submit one →</a></p>`;
       return;
     }
 
-    const bounds = [];
+    const bounds = new google.maps.LatLngBounds();
 
     spots.forEach(record => {
       const f     = record.fields;
-      const lat   = f.Latitude;
-      const lng   = f.Longitude;
+      const pos   = { lat: f.Latitude, lng: f.Longitude };
       const grade = f.Grade?.name ?? f.Grade ?? '';
 
-      // ── Marker
-      const marker = L.marker([lat, lng], { icon: buildIcon(grade) }).addTo(map);
-      marker.bindPopup(`
-        <div style="padding:14px 16px 12px;min-width:190px;">
-          <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:15px;font-weight:700;color:#01261f;margin-bottom:4px;">${esc(f.Name || '')}</div>
-          ${f.Address ? `<div style="font-size:12px;color:#414846;margin-bottom:6px;">${esc(f.Address)}</div>` : ''}
-          ${grade ? `<span style="font-size:10px;font-weight:700;letter-spacing:.05em;color:#2c694e;background:#aeeecb;padding:2px 8px;border-radius:999px;">${esc(grade)}</span>` : ''}
-        </div>
-      `);
+      // Marker
+      const marker = new google.maps.Marker({
+        position: pos, map,
+        icon:     markerIcon(grade),
+        title:    f.Name || ''
+      });
       markerMap[record.id] = marker;
-      bounds.push([lat, lng]);
+      bounds.extend(pos);
 
-      // ── Card
+      // InfoWindow
+      const iw = new google.maps.InfoWindow({ content: infoContent(f) });
+
+      // Card
       const card = buildCard(record);
       list.appendChild(card);
 
-      // card "View on map" → fly + popup
-      card.querySelector('.view-btn').addEventListener('click', e => {
-        e.stopPropagation();
-        flyToSpot(record.id, lat, lng, marker, card);
-      });
-      // whole card click → same
-      card.addEventListener('click', () => flyToSpot(record.id, lat, lng, marker, card));
+      // Card → fly + open popup
+      const openSpot = () => {
+        if (currentInfoWindow) currentInfoWindow.close();
+        map.panTo(pos);
+        if (map.getZoom() < 15) map.setZoom(15);
+        iw.open({ anchor: marker, map });
+        currentInfoWindow = iw;
+        activateCard(record.id);
+      };
 
-      // marker click → highlight card
-      marker.on('click', () => {
+      card.querySelector('.view-btn').addEventListener('click', e => { e.stopPropagation(); openSpot(); });
+      card.addEventListener('click', openSpot);
+
+      // Marker → highlight card + open popup
+      marker.addListener('click', () => {
+        if (currentInfoWindow) currentInfoWindow.close();
+        iw.open({ anchor: marker, map });
+        currentInfoWindow = iw;
         activateCard(record.id);
         card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       });
+
+      // Close infowindow → deactivate card
+      iw.addListener('closeclick', () => activateCard(null));
     });
 
-    if (bounds.length === 1) {
-      map.setView(bounds[0], 15);
+    if (spots.length === 1) {
+      map.setCenter(bounds.getCenter());
+      map.setZoom(15);
     } else {
-      map.fitBounds(bounds, { padding: [60, 60], maxZoom: 15 });
+      map.fitBounds(bounds, { top: 60, right: 60, bottom: 60, left: 60 });
     }
 
   } catch (err) {
@@ -403,28 +436,21 @@ async function renderSpots() {
         <span class="material-symbols-outlined text-3xl text-error mb-2 block">error_outline</span>
         <p class="font-label-bold text-sm text-error mb-1">Couldn't load spots</p>
         <p class="text-on-surface-variant text-xs">${esc(err.message)}</p>
-        <p class="text-on-surface-variant text-xs mt-2">Check that your AIRTABLE_TOKEN is set in index.html.</p>
       </div>`;
     console.error('[IndyMatcha]', err);
   }
 }
 
-function flyToSpot(id, lat, lng, marker, card) {
-  map.flyTo([lat, lng], 16, { animate: true, duration: 1.1 });
-  setTimeout(() => marker.openPopup(), 1200);
-  activateCard(id);
-}
-
 function activateCard(id) {
   document.querySelectorAll('.spot-card').forEach(c => c.classList.remove('active'));
-  document.querySelector(`.spot-card[data-id="${id}"]`)?.classList.add('active');
+  if (id) document.querySelector(`.spot-card[data-id="${id}"]`)?.classList.add('active');
 }
 
 // ── Search ────────────────────────────────────────────────────────────────────
 document.getElementById('search-input').addEventListener('input', function () {
   const q = this.value.toLowerCase().trim();
-  document.querySelectorAll('.spot-card').forEach(card => {
-    card.style.display = (!q || card.textContent.toLowerCase().includes(q)) ? '' : 'none';
+  document.querySelectorAll('.spot-card').forEach(c => {
+    c.style.display = (!q || c.textContent.toLowerCase().includes(q)) ? '' : 'none';
   });
 });
 
@@ -437,10 +463,9 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     });
     this.classList.add('active');
     this.classList.remove('bg-white', 'border-outline-variant');
-
     const grade = this.dataset.grade;
-    document.querySelectorAll('.spot-card').forEach(card => {
-      card.style.display = (grade === 'all' || card.dataset.grade === grade) ? '' : 'none';
+    document.querySelectorAll('.spot-card').forEach(c => {
+      c.style.display = (grade === 'all' || c.dataset.grade === grade) ? '' : 'none';
     });
   });
 });
@@ -451,10 +476,12 @@ function esc(s) {
     .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
     .replace(/"/g,'&quot;').replace(/'/g,'&#039;');
 }
-
-// ── Boot ──────────────────────────────────────────────────────────────────────
-initMap();
-renderSpots();
 </script>
+
+<!-- Load Google Maps — calls window.initApp when ready -->
+<script async
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCAIHyg8TFCLwEW1BMtpT1QFyaymelXlU&callback=initApp&loading=async">
+</script>
+
 </body>
 </html>
