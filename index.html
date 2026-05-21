@@ -76,6 +76,12 @@
       border-color: #01261f !important;
     }
 
+    .active-suggest {
+      background: #01261f !important;
+      color: white !important;
+      border-color: #01261f !important;
+    }
+
     .card-accent-bar { height: 5px; }
 
     @keyframes spin { to { transform: rotate(360deg); } }
@@ -213,9 +219,10 @@
 
 <script>
 // ── CONFIGURATION ─────────────────────────────────────────────────────────────
-const AIRTABLE_TOKEN  = 'patoO4IGP4ESJoWnD.a05da83d9b8e7a4f9808aa5cf85cf4e26b6971aa287b0bdaf76ffab3c76ec21e';
-const BASE_ID         = 'apph243NPR5JjRPav';
-const TABLE_ID        = 'tblRNrmF9zlhpC9fh';
+const AIRTABLE_TOKEN      = 'patoO4IGP4ESJoWnD.a05da83d9b8e7a4f9808aa5cf85cf4e26b6971aa287b0bdaf76ffab3c76ec21e';
+const BASE_ID             = 'apph243NPR5JjRPav';
+const TABLE_ID            = 'tblRNrmF9zlhpC9fh';
+const SUGGESTIONS_TABLE_ID = 'tblo2YLMwUUC9Hlbh';
 // ─────────────────────────────────────────────────────────────────────────────
 
 const MATCHA_STYLE = [
@@ -520,8 +527,191 @@ function buildCard(record, place) {
       <button class="view-btn w-full py-2.5 bg-surface-container-highest rounded-full font-label-bold text-xs text-primary group-hover:bg-primary group-hover:text-on-primary transition-all flex items-center justify-center gap-1">
         View on map <span class="material-symbols-outlined" style="font-size:15px;">arrow_forward</span>
       </button>
+
+      <button class="suggest-toggle mt-2 w-full py-1.5 bg-transparent border border-dashed border-outline-variant rounded-full font-label-bold text-[10px] text-on-surface-variant hover:border-secondary hover:text-secondary transition-all flex items-center justify-center gap-1">
+        <span class="material-symbols-outlined" style="font-size:12px;">edit_note</span>
+        suggest a change
+      </button>
+
+      <div class="suggest-panel hidden mt-3 pt-3 border-t border-outline-variant">
+        <p class="font-label-bold text-[10px] text-on-surface-variant uppercase tracking-widest mb-2">what would you like to suggest?</p>
+        <div class="flex flex-wrap gap-1.5 mb-2.5">
+          <button class="suggest-type-btn px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary hover:border-secondary transition-all" data-type="Add filter">+ add filter</button>
+          <button class="suggest-type-btn px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary hover:border-secondary transition-all" data-type="Remove filter">− remove filter</button>
+          <button class="suggest-type-btn px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary hover:border-secondary transition-all" data-type="New idea">💡 new idea</button>
+        </div>
+        <div class="filter-select-area hidden mb-2.5">
+          <div class="flex gap-1.5 mb-1.5">
+            <button class="suggest-cat-btn px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary hover:border-secondary transition-all" data-cat="The Matcha">the matcha</button>
+            <button class="suggest-cat-btn px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary hover:border-secondary transition-all" data-cat="The Space">the space</button>
+          </div>
+          <div class="filter-options flex flex-wrap gap-1.5 min-h-[20px]"></div>
+        </div>
+        <textarea class="suggest-comment w-full border border-outline-variant rounded-lg px-3 py-2 text-xs font-body-md resize-none focus:border-secondary focus:outline-none mb-2 bg-white" rows="2" placeholder="Any additional context… (optional)"></textarea>
+        <div class="flex gap-2">
+          <button class="suggest-cancel flex-1 py-2 rounded-full font-label-bold text-[10px] border border-outline-variant text-on-surface-variant hover:bg-surface-container transition-all">cancel</button>
+          <button class="suggest-submit flex-1 py-2 rounded-full font-label-bold text-[10px] bg-primary text-on-primary hover:opacity-90 transition-all">submit →</button>
+        </div>
+      </div>
     </div>`;
   return el;
+}
+
+// ── Submit a suggestion to Airtable ──────────────────────────────────────────
+async function submitSuggestion({ recordId, spotName, type, category, filterValue, comment }) {
+  const summary = type === 'New idea'
+    ? `New idea for ${spotName}`
+    : `${type}: "${filterValue}" (${category}) — ${spotName}`;
+
+  const fields = {
+    Suggestion:     summary,
+    Location:       [recordId],
+    Type:           type,
+    Status:         'Pending',
+    'Submitted At': new Date().toISOString(),
+  };
+  if (category)    fields.Category          = category;
+  if (filterValue) fields['Filter Value']   = filterValue;
+  if (comment)     fields.Comment           = comment;
+
+  const res = await fetch(
+    `https://api.airtable.com/v0/${BASE_ID}/${SUGGESTIONS_TABLE_ID}`,
+    {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${AIRTABLE_TOKEN}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ fields }),
+    }
+  );
+  if (!res.ok) throw new Error(`Airtable ${res.status}`);
+  return res.json();
+}
+
+// ── Wire up suggest-a-change form inside a card ───────────────────────────────
+function initSuggestForm(cardEl, recordId, spotName, matchaTags, spaceTags) {
+  const toggle     = cardEl.querySelector('.suggest-toggle');
+  const panel      = cardEl.querySelector('.suggest-panel');
+  const typeBtns   = cardEl.querySelectorAll('.suggest-type-btn');
+  const catBtns    = cardEl.querySelectorAll('.suggest-cat-btn');
+  const filterArea = cardEl.querySelector('.filter-select-area');
+  const filterOpts = cardEl.querySelector('.filter-options');
+  const textarea   = cardEl.querySelector('.suggest-comment');
+  const submitBtn  = cardEl.querySelector('.suggest-submit');
+  const cancelBtn  = cardEl.querySelector('.suggest-cancel');
+
+  let selType = null, selCat = null, selFilter = null;
+
+  // Prevent panel clicks from bubbling up to the card's map-open handler
+  panel.addEventListener('click', e => e.stopPropagation());
+  textarea.addEventListener('click', e => e.stopPropagation());
+
+  const flash = (el, msg, restore, ms = 1800) => {
+    el.textContent = msg;
+    setTimeout(() => { el.textContent = restore; }, ms);
+  };
+
+  const reset = () => {
+    selType = selCat = selFilter = null;
+    typeBtns.forEach(b => b.classList.remove('active-suggest'));
+    catBtns.forEach(b  => b.classList.remove('active-suggest'));
+    filterArea.classList.add('hidden');
+    filterOpts.innerHTML = '';
+    textarea.value = '';
+    textarea.placeholder = 'Any additional context… (optional)';
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'submit →';
+    submitBtn.style.background = '';
+  };
+
+  toggle.addEventListener('click', e => {
+    e.stopPropagation();
+    const wasOpen = !panel.classList.contains('hidden');
+    panel.classList.toggle('hidden');
+    if (wasOpen) reset();
+  });
+
+  cancelBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    panel.classList.add('hidden');
+    reset();
+  });
+
+  typeBtns.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      selType = btn.dataset.type;
+      selFilter = null;
+      typeBtns.forEach(b => b.classList.remove('active-suggest'));
+      btn.classList.add('active-suggest');
+
+      if (selType === 'New idea') {
+        filterArea.classList.add('hidden');
+        textarea.placeholder = 'Describe your idea or suggestion…';
+        textarea.focus();
+      } else {
+        filterArea.classList.remove('hidden');
+        selCat = null;
+        catBtns.forEach(b => b.classList.remove('active-suggest'));
+        filterOpts.innerHTML = '';
+        textarea.placeholder = 'Any additional context… (optional)';
+      }
+    });
+  });
+
+  catBtns.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      selCat = btn.dataset.cat;
+      selFilter = null;
+      catBtns.forEach(b => b.classList.remove('active-suggest'));
+      btn.classList.add('active-suggest');
+
+      filterOpts.innerHTML = '';
+      const catKey   = selCat === 'The Matcha' ? 'matcha' : 'space';
+      const all      = [...document.querySelectorAll(`.filter-chip[data-category="${catKey}"]`)].map(b => b.dataset.value);
+      const spotTags = selCat === 'The Matcha' ? matchaTags : spaceTags;
+      const options  = selType === 'Add filter'
+        ? all.filter(f => !spotTags.includes(f))
+        : spotTags;
+
+      if (!options.length) {
+        filterOpts.innerHTML = `<span class="text-on-surface-variant text-[10px] italic">nothing to ${selType === 'Add filter' ? 'add' : 'remove'} here</span>`;
+        return;
+      }
+      options.forEach(val => {
+        const b = document.createElement('button');
+        b.className   = 'suggest-filter-opt px-2 py-0.5 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary hover:border-secondary transition-all';
+        b.textContent = val;
+        b.addEventListener('click', e2 => {
+          e2.stopPropagation();
+          selFilter = val;
+          filterOpts.querySelectorAll('.suggest-filter-opt').forEach(x => x.classList.remove('active-suggest'));
+          b.classList.add('active-suggest');
+        });
+        filterOpts.appendChild(b);
+      });
+    });
+  });
+
+  submitBtn.addEventListener('click', async e => {
+    e.stopPropagation();
+    if (!selType) { flash(submitBtn, 'pick a type ↑', 'submit →'); return; }
+    if (selType !== 'New idea' && !selFilter) { flash(submitBtn, 'pick a filter ↑', 'submit →'); return; }
+    const comment = textarea.value.trim();
+    if (selType === 'New idea' && !comment) { textarea.focus(); return; }
+
+    submitBtn.disabled    = true;
+    submitBtn.textContent = 'sending…';
+
+    try {
+      await submitSuggestion({ recordId, spotName, type: selType, category: selCat, filterValue: selFilter, comment });
+      submitBtn.textContent  = '✓ sent — thank you!';
+      submitBtn.style.background = '#2c694e';
+      setTimeout(() => { panel.classList.add('hidden'); reset(); }, 1800);
+    } catch (err) {
+      submitBtn.disabled = false;
+      flash(submitBtn, 'error — try again', 'submit →');
+    }
+  });
 }
 
 // ── Main render ───────────────────────────────────────────────────────────────
@@ -576,6 +766,7 @@ async function renderSpots() {
       // Card
       const card = buildCard(record, place);
       list.appendChild(card);
+      initSuggestForm(card, record.id, f.Name || '', (f['The Matcha']||[]).map(t=>t.name??t), (f['The Space']||[]).map(t=>t.name??t));
 
       const openSpot = () => {
         if (currentInfoWindow) currentInfoWindow.close();
