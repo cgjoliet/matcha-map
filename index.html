@@ -866,7 +866,10 @@ function activateCard(id) {
 document.getElementById('search-input').addEventListener('input', function () {
   const q = this.value.toLowerCase().trim();
   document.querySelectorAll('.spot-card').forEach(c => {
-    c.style.display = (!q || c.textContent.toLowerCase().includes(q)) ? '' : 'none';
+    const visible = !q || c.textContent.toLowerCase().includes(q);
+    c.style.display = visible ? '' : 'none';
+    const marker = markerMap[c.dataset.id];
+    if (marker) marker.setVisible(visible);
   });
 });
 
@@ -885,7 +888,10 @@ function applyFilters() {
     const areaOk  = areaActive.length   === 0 || areaActive.some(v   => cardArea.includes(v));
     const matchOk = matchaActive.length === 0 || matchaActive.some(v => cardMatcha.includes(v));
     const spaceOk = spaceActive.length  === 0 || spaceActive.some(v  => cardSpace.includes(v));
-    card.style.display = (areaOk && matchOk && spaceOk) ? '' : 'none';
+    const visible = areaOk && matchOk && spaceOk;
+    card.style.display = visible ? '' : 'none';
+    const marker = markerMap[card.dataset.id];
+    if (marker) marker.setVisible(visible);
   });
 
   document.getElementById('clear-filters').classList.toggle('hidden', activeFilters.size === 0);
@@ -895,7 +901,11 @@ function applyFilters() {
 document.getElementById('clear-filters').addEventListener('click', () => {
   activeFilters.clear();
   document.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.spot-card').forEach(c => c.style.display = '');
+  document.querySelectorAll('.spot-card').forEach(c => {
+    c.style.display = '';
+    const marker = markerMap[c.dataset.id];
+    if (marker) marker.setVisible(true);
+  });
   document.getElementById('clear-filters').classList.add('hidden');
 });
 
