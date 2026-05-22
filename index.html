@@ -153,6 +153,19 @@
           <button id="clear-filters" class="hidden font-label-bold text-[10px] text-secondary underline">Clear all</button>
         </div>
 
+        <!-- The Area -->
+        <div class="mb-2.5">
+          <button class="filter-toggle w-full flex items-center justify-between mb-1.5" data-target="area-chips">
+            <span class="font-label-bold text-[10px] text-primary uppercase tracking-wider flex items-center gap-1">
+              <span class="material-symbols-outlined" style="font-size:11px;">location_city</span> The Area
+            </span>
+            <svg class="toggle-caret flex-shrink-0 text-primary" style="transition:transform 0.2s ease;" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.5 3.5L5 6.5L8.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div id="area-chips" class="flex flex-wrap gap-1.5"></div>
+        </div>
+
         <div class="flex gap-3">
           <!-- The Matcha -->
           <div class="flex-1 min-w-0">
@@ -271,6 +284,7 @@ window.initApp = async function () {
   // Load filter chips from Airtable schema + spot cards in parallel
   const [filterOpts] = await Promise.all([fetchFilterOptions(), renderSpots()]);
   if (filterOpts) {
+    renderFilterChips('area',   'area-chips',   filterOpts.area);
     renderFilterChips('matcha', 'matcha-chips', filterOpts.matcha);
     renderFilterChips('space',  'space-chips',  filterOpts.space);
   }
@@ -350,18 +364,21 @@ async function fetchPlaceDetails(name) {
 async function fetchFilterOptions() {
   try {
     const res = await fetch(
-      `https://api.airtable.com/v0/${BASE_ID}/${TABLE_ID}?fields[]=The+Matcha&fields[]=The+Space&pageSize=100`,
+      `https://api.airtable.com/v0/${BASE_ID}/${TABLE_ID}?fields[]=The+Matcha&fields[]=The+Space&fields[]=area&pageSize=100`,
       { headers: { Authorization: `Bearer ${AIRTABLE_TOKEN}` } }
     );
     if (!res.ok) return null;
     const { records } = await res.json();
+    const areaSet   = new Set();
     const matchaSet = new Set();
     const spaceSet  = new Set();
     records?.forEach(r => {
+      const a = r.fields['area'];
+      if (a) areaSet.add(a.name ?? a);
       (r.fields['The Matcha'] || []).forEach(v => matchaSet.add(v.name ?? v));
       (r.fields['The Space']  || []).forEach(v => spaceSet.add(v.name ?? v));
     });
-    return { matcha: [...matchaSet], space: [...spaceSet] };
+    return { area: [...areaSet], matcha: [...matchaSet], space: [...spaceSet] };
   } catch (err) {
     console.warn('[FilterOptions]', err.message);
     return null;
@@ -508,6 +525,7 @@ function buildCard(record, place) {
   const addr  = f.Address || '';
   const grade = f.Grade?.name ?? f.Grade ?? '';
   const notes = f.Additional || '';
+  const area   = f['area'] ? [f['area'].name ?? f['area']] : [];
   const matcha = (f['The Matcha'] || []).map(t => t.name ?? t);
   const space  = (f['The Space']  || []).map(t => t.name ?? t);
   const isOpen = place?.isOpenNow ?? null;
@@ -527,6 +545,7 @@ function buildCard(record, place) {
   el.className      = 'spot-card group relative bg-surface-container-low rounded-lg border-2 border-transparent hover:border-secondary transition-all cursor-pointer overflow-hidden';
   el.dataset.id     = record.id;
   el.dataset.grade  = grade;
+  el.dataset.area   = JSON.stringify(area);
   el.dataset.matcha = JSON.stringify(matcha);
   el.dataset.space  = JSON.stringify(space);
 
@@ -855,15 +874,18 @@ document.getElementById('search-input').addEventListener('input', function () {
 const activeFilters = new Set();
 
 function applyFilters() {
+  const areaActive   = [...activeFilters].filter(f => f.startsWith('area:')).map(f   => f.slice(5));
   const matchaActive = [...activeFilters].filter(f => f.startsWith('matcha:')).map(f => f.slice(7));
   const spaceActive  = [...activeFilters].filter(f => f.startsWith('space:')).map(f  => f.slice(6));
 
   document.querySelectorAll('.spot-card').forEach(card => {
+    const cardArea   = JSON.parse(card.dataset.area   || '[]');
     const cardMatcha = JSON.parse(card.dataset.matcha || '[]');
     const cardSpace  = JSON.parse(card.dataset.space  || '[]');
+    const areaOk  = areaActive.length   === 0 || areaActive.some(v   => cardArea.includes(v));
     const matchOk = matchaActive.length === 0 || matchaActive.some(v => cardMatcha.includes(v));
     const spaceOk = spaceActive.length  === 0 || spaceActive.some(v  => cardSpace.includes(v));
-    card.style.display = (matchOk && spaceOk) ? '' : 'none';
+    card.style.display = (areaOk && matchOk && spaceOk) ? '' : 'none';
   });
 
   document.getElementById('clear-filters').classList.toggle('hidden', activeFilters.size === 0);
