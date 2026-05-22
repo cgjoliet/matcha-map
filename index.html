@@ -528,7 +528,11 @@ function buildCard(record, place) {
   const area   = f['area'] ? [f['area'].name ?? f['area']] : [];
   const matcha = (f['The Matcha'] || []).map(t => t.name ?? t);
   const space  = (f['The Space']  || []).map(t => t.name ?? t);
-  const isOpen = place?.isOpenNow ?? null;
+  const isOpen     = place?.isOpenNow ?? null;
+  const weekdays   = place?.weekdayDescriptions || [];
+  const dayIndex   = (new Date().getDay() + 6) % 7; // Mon=0 … Sun=6
+  const todayLine  = weekdays[dayIndex] || '';
+  const todayHours = todayLine.replace(/^[^:]+:\s*/, ''); // strip "Monday: "
 
   const gradePill = grade === 'Ceremonial' ? 'bg-primary text-on-primary'
     : grade === 'Culinary' ? 'bg-secondary text-on-secondary' : '';
@@ -576,13 +580,22 @@ function buildCard(record, place) {
         ${space.map(t=>`<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-2 py-0.5 rounded-full font-label-bold text-[10px]">${esc(t)}</span>`).join('')}
       </div>` : ''}
       ${notes ? `<p class="text-on-surface-variant text-xs mb-2 line-clamp-2 leading-relaxed italic">"${esc(notes)}"</p>` : ''}
-      ${(f.Grassy||f.Sweet) ? `<div class="flex gap-4 mb-3">
+      ${(f.Grassy||f.Sweet) ? `<div class="flex gap-4 mb-2">
         ${f.Grassy?`<div class="flex items-center gap-1.5"><span class="text-xs text-on-surface-variant font-label-bold">Grassy</span>${dots(f.Grassy)}</div>`:''}
         ${f.Sweet ?`<div class="flex items-center gap-1.5"><span class="text-xs text-on-surface-variant font-label-bold">Sweet</span>${dots(f.Sweet)}</div>`:''}
       </div>` : ''}
-      <button class="view-btn w-full py-2.5 bg-surface-container-highest rounded-full font-label-bold text-xs text-primary group-hover:bg-primary group-hover:text-on-primary transition-all flex items-center justify-center gap-1">
-        View on map <span class="material-symbols-outlined" style="font-size:15px;">arrow_forward</span>
-      </button>
+      ${weekdays.length ? `<div class="border-t border-outline-variant pt-2 mt-1 mb-2">
+        <div class="hours-toggle flex items-center justify-between" onclick="event.stopPropagation();this.nextElementSibling.classList.toggle('open')">
+          <span class="flex items-center gap-1 text-xs text-on-surface-variant">
+            <span class="material-symbols-outlined" style="font-size:13px;">schedule</span>
+            ${esc(todayHours)}
+          </span>
+          <span class="text-secondary font-label-bold text-[10px]">all hours ▾</span>
+        </div>
+        <div class="hours-list text-xs text-on-surface-variant mt-1.5 leading-relaxed">
+          ${weekdays.map(d => `<div>${esc(d)}</div>`).join('')}
+        </div>
+      </div>` : ''}
 
       <button class="suggest-toggle mt-2 w-full py-1.5 bg-transparent border border-dashed border-outline-variant rounded-full font-label-bold text-[10px] text-on-surface-variant hover:border-secondary hover:text-secondary transition-all flex items-center justify-center gap-1">
         <span class="material-symbols-outlined" style="font-size:12px;">edit_note</span>
@@ -833,7 +846,6 @@ async function renderSpots() {
         activateCard(record.id);
       };
 
-      card.querySelector('.view-btn').addEventListener('click', e => { e.stopPropagation(); openSpot(); });
       card.addEventListener('click', openSpot);
       marker.addListener('click', () => {
         if (currentInfoWindow) currentInfoWindow.close();
