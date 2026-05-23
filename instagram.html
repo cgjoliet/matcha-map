@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order from Instagram | Indy Matcha</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Be+Vietnam+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-variant": "#d8e6dc", "surface-tint": "#43655c",
+            "on-primary-fixed": "#00201a", "on-secondary-fixed": "#002114",
+            "secondary": "#2c694e", "inverse-surface": "#27332d",
+            "tertiary-fixed-dim": "#b5ccba", "tertiary": "#112519",
+            "on-tertiary-container": "#8ea594", "surface-container-high": "#deece2",
+            "on-tertiary": "#ffffff", "on-background": "#121e18",
+            "primary-fixed": "#c5eadf", "surface-container-lowest": "#ffffff",
+            "background": "#effdf3", "secondary-container": "#aeeecb",
+            "secondary-fixed": "#b1f0ce", "primary-fixed-dim": "#aacec3",
+            "tertiary-container": "#273b2e", "tertiary-fixed": "#d1e8d6",
+            "outline": "#717976", "surface-container": "#e3f1e7",
+            "on-surface": "#121e18", "on-secondary-fixed-variant": "#0e5138",
+            "on-secondary-container": "#316e52", "on-tertiary-fixed-variant": "#374b3e",
+            "on-error": "#ffffff", "error": "#ba1a1a",
+            "surface-dim": "#cfddd4", "on-primary": "#ffffff",
+            "inverse-on-surface": "#e6f4ea", "on-primary-fixed-variant": "#2b4d44",
+            "surface": "#effdf3", "surface-container-highest": "#d8e6dc",
+            "on-primary-container": "#83a69c", "on-tertiary-fixed": "#0b1f14",
+            "primary": "#01261f", "primary-container": "#1a3c34",
+            "outline-variant": "#c1c8c4", "error-container": "#ffdad6",
+            "on-secondary": "#ffffff", "on-error-container": "#93000a",
+            "on-surface-variant": "#414846", "secondary-fixed-dim": "#95d4b3",
+            "surface-container-low": "#e9f7ed", "inverse-primary": "#aacec3",
+            "surface-bright": "#effdf3"
+          },
+          borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+          fontFamily: {
+            "headline-xl": ["Bricolage Grotesque"], "body-lg": ["Be Vietnam Pro"],
+            "label-bold": ["Be Vietnam Pro"], "headline-md": ["Bricolage Grotesque"],
+            "body-md": ["Be Vietnam Pro"]
+          },
+          fontSize: {
+            "headline-xl": ["64px", {"lineHeight":"1.1","letterSpacing":"-0.04em","fontWeight":"800"}],
+            "body-lg": ["18px", {"lineHeight":"1.6","fontWeight":"400"}],
+            "label-bold": ["14px", {"lineHeight":"1.2","letterSpacing":"0.05em","fontWeight":"700"}],
+            "headline-md": ["32px", {"lineHeight":"1.2","fontWeight":"700"}],
+            "body-md": ["16px", {"lineHeight":"1.6","fontWeight":"400"}]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #b1f0ce; border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: #95d4b3; }
+
+    .ig-gradient {
+      background: linear-gradient(135deg, #405de6 0%, #833ab4 30%, #c13584 55%, #e1306c 75%, #fd1d1d 90%, #fcaf45 100%);
+    }
+
+    .ig-card {
+      background: white;
+      border: 2px solid #d8e6dc;
+      border-radius: 1.25rem;
+      overflow: hidden;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 3px 3px 0 rgba(1,38,31,0.07);
+    }
+    .ig-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 5px 8px 0 rgba(1,38,31,0.10);
+      border-color: #aacec3;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spinner { animation: spin 0.9s linear infinite; }
+  </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md min-h-screen">
+
+<!-- ── Navigation ──────────────────────────────────────────────────────────── -->
+<nav class="flex justify-between items-center w-full px-6 md:px-14 h-16 bg-primary sticky top-0 z-[500]">
+  <a href="index.html" class="font-headline-md text-[22px] font-extrabold text-on-primary hover:opacity-90 transition-opacity">
+    Indy Matcha
+  </a>
+  <div class="hidden md:flex items-center gap-8">
+    <a href="index.html" class="font-label-bold text-label-bold text-on-primary/70 hover:text-on-primary transition-colors">Find Matcha</a>
+    <a href="instagram.html" class="font-label-bold text-label-bold text-on-primary border-b-2 border-on-primary pb-0.5">Order from Instagram</a>
+    <a href="submit.html" class="font-label-bold text-label-bold text-on-primary/70 hover:text-on-primary transition-colors">Submit a Spot</a>
+  </div>
+  <a href="submit.html" class="bg-secondary text-on-secondary px-5 py-2 rounded-full font-label-bold text-sm shadow-[3px_3px_0px_rgba(255,255,255,0.15)] hover:scale-105 active:scale-95 transition-all">
+    + Add Spot
+  </a>
+</nav>
+
+<!-- ── Page header ─────────────────────────────────────────────────────────── -->
+<div class="text-center pt-12 pb-8 px-6">
+  <h1 class="font-headline-xl text-[40px] md:text-[52px] text-primary leading-tight mb-3">Order from Instagram</h1>
+  <p class="text-on-surface-variant font-body-md text-base max-w-md mx-auto">
+    DM your favorite Indy matcha spot directly — find their Instagram below and place your order.
+  </p>
+</div>
+
+<!-- ── Grid ────────────────────────────────────────────────────────────────── -->
+<div class="px-6 md:px-12 lg:px-20 pb-16">
+
+  <!-- Loading state -->
+  <div id="loading" class="flex justify-center py-20">
+    <svg class="spinner w-7 h-7 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+    </svg>
+  </div>
+
+  <!-- Cards grid -->
+  <div id="ig-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 hidden"></div>
+
+  <!-- Error state -->
+  <div id="error-state" class="hidden text-center py-20 text-on-surface-variant text-sm">
+    Couldn't load Instagram accounts. Check back soon.
+  </div>
+
+</div>
+
+<script>
+  const AIRTABLE_TOKEN = 'patoO4IGP4ESJoWnD.a05da83d9b8e7a4f9808aa5cf85cf4e26b6971aa287b0bdaf76ffab3c76ec21e';
+  const BASE_ID        = 'apph243NPR5JjRPav';
+  const IG_TABLE       = 'Instagram';
+
+  function handleFromUrl(url) {
+    try {
+      const path = new URL(url).pathname.replace(/\//g, '');
+      return path ? '@' + path : '';
+    } catch { return ''; }
+  }
+
+  function buildCard(name, siteUrl) {
+    const handle = handleFromUrl(siteUrl);
+
+    const card = document.createElement('a');
+    card.href = siteUrl;
+    card.target = '_blank';
+    card.rel = 'noopener noreferrer';
+    card.className = 'ig-card block no-underline';
+
+    card.innerHTML = `
+      <!-- Instagram gradient accent bar -->
+      <div class="ig-gradient h-2"></div>
+
+      <!-- Card body -->
+      <div class="p-7 flex flex-col items-center text-center gap-4">
+
+        <!-- Instagram logo icon -->
+        <div class="w-14 h-14 rounded-[18px] ig-gradient flex items-center justify-center shadow-md">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.8" fill="white" stroke="none"/>
+          </svg>
+        </div>
+
+        <!-- Name + handle -->
+        <div>
+          <h2 class="font-headline-md text-[22px] text-primary leading-tight mb-1">${name}</h2>
+          <p class="text-on-surface-variant text-sm font-label-bold tracking-wide">${handle}</p>
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-1 inline-flex items-center gap-2 bg-primary text-on-primary px-5 py-2.5 rounded-full font-label-bold text-sm shadow-[2px_2px_0px_rgba(1,38,31,0.15)] group-hover:scale-105 transition-all">
+          View &amp; Order
+          <svg viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5 opacity-80">
+            <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+
+      </div>
+    `;
+
+    return card;
+  }
+
+  async function loadAccounts() {
+    try {
+      const res = await fetch(
+        `https://api.airtable.com/v0/${BASE_ID}/${encodeURIComponent(IG_TABLE)}?pageSize=100`,
+        { headers: { Authorization: `Bearer ${AIRTABLE_TOKEN}` } }
+      );
+      if (!res.ok) throw new Error('Fetch failed');
+      const { records } = await res.json();
+
+      const grid = document.getElementById('ig-grid');
+      records.forEach(r => {
+        const name = r.fields['Name'] || '';
+        const site = r.fields['site'] || '';
+        if (name && site) grid.appendChild(buildCard(name, site));
+      });
+
+      document.getElementById('loading').classList.add('hidden');
+      grid.classList.remove('hidden');
+    } catch (e) {
+      document.getElementById('loading').classList.add('hidden');
+      document.getElementById('error-state').classList.remove('hidden');
+    }
+  }
+
+  loadAccounts();
+</script>
+
+</body>
+</html>
