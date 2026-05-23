@@ -166,6 +166,38 @@
           <div id="area-chips" class="flex flex-wrap gap-1.5"></div>
         </div>
 
+        <!-- When? time filter -->
+        <div class="mb-3">
+          <button class="filter-toggle w-full flex items-center justify-between mb-1.5" data-target="time-filter-body">
+            <span class="font-label-bold text-[10px] text-primary uppercase tracking-wider flex items-center gap-1">
+              <span class="material-symbols-outlined" style="font-size:11px;">schedule</span> When?
+            </span>
+            <div class="flex items-center gap-2">
+              <span id="clear-time-filter" class="hidden font-label-bold text-[10px] text-secondary underline normal-case">clear</span>
+              <svg class="toggle-caret flex-shrink-0 text-primary" style="transition:transform 0.2s ease;" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                <path d="M1.5 3.5L5 6.5L8.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </button>
+          <div id="time-filter-body">
+            <div class="flex items-center gap-2 mb-1.5">
+              <select id="time-day-select" class="flex-1 h-7 text-[10px] font-label-bold border border-outline-variant rounded-full px-2.5 bg-white text-primary focus:border-secondary focus:outline-none cursor-pointer appearance-none">
+                <option value="">any day</option>
+                <option value="0">Monday</option>
+                <option value="1">Tuesday</option>
+                <option value="2">Wednesday</option>
+                <option value="3">Thursday</option>
+                <option value="4">Friday</option>
+                <option value="5">Saturday</option>
+                <option value="6">Sunday</option>
+              </select>
+              <span id="time-display" class="font-label-bold text-[10px] text-primary whitespace-nowrap w-16 text-right"></span>
+            </div>
+            <input type="range" id="time-slider" min="360" max="1320" step="15"
+              style="accent-color:#2c694e;width:100%;cursor:pointer;height:4px;" class="opacity-40">
+          </div>
+        </div>
+
         <div class="flex gap-3">
           <!-- The Matcha -->
           <div class="flex-1 min-w-0">
@@ -549,9 +581,10 @@ function buildCard(record, place) {
   el.className      = 'spot-card group relative bg-surface-container-low rounded-lg border-2 border-transparent hover:border-secondary transition-all cursor-pointer overflow-hidden';
   el.dataset.id     = record.id;
   el.dataset.grade  = grade;
-  el.dataset.area   = JSON.stringify(area);
-  el.dataset.matcha = JSON.stringify(matcha);
-  el.dataset.space  = JSON.stringify(space);
+  el.dataset.area     = JSON.stringify(area);
+  el.dataset.matcha   = JSON.stringify(matcha);
+  el.dataset.space    = JSON.stringify(space);
+  el.dataset.weekdays = JSON.stringify(weekdays);
 
   el.innerHTML = `
     <div class="card-accent-bar" style="${accentGrad}"></div>
@@ -900,7 +933,13 @@ function applyFilters() {
     const areaOk  = areaActive.length   === 0 || areaActive.some(v   => cardArea.includes(v));
     const matchOk = matchaActive.length === 0 || matchaActive.some(v => cardMatcha.includes(v));
     const spaceOk = spaceActive.length  === 0 || spaceActive.some(v  => cardSpace.includes(v));
-    const visible = areaOk && matchOk && spaceOk;
+    let timeOk = true;
+    if (timeFilterDay !== null) {
+      const wds      = JSON.parse(card.dataset.weekdays || '[]');
+      const openResult = isOpenAtTimeStr(wds[timeFilterDay] || '', timeFilterMins);
+      if (openResult === false) timeOk = false; // null = unknown hours → let through
+    }
+    const visible = areaOk && matchOk && spaceOk && timeOk;
     card.style.display = visible ? '' : 'none';
     const marker = markerMap[card.dataset.id];
     if (marker) marker.setVisible(visible);
@@ -913,6 +952,11 @@ function applyFilters() {
 document.getElementById('clear-filters').addEventListener('click', () => {
   activeFilters.clear();
   document.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
+  // Also reset time filter
+  timeFilterDay = null;
+  document.getElementById('time-day-select').value = '';
+  document.getElementById('time-slider').classList.add('opacity-40');
+  document.getElementById('clear-time-filter').classList.add('hidden');
   document.querySelectorAll('.spot-card').forEach(c => {
     c.style.display = '';
     const marker = markerMap[c.dataset.id];
@@ -920,6 +964,78 @@ document.getElementById('clear-filters').addEventListener('click', () => {
   });
   document.getElementById('clear-filters').classList.add('hidden');
 });
+
+// ── Time filter ───────────────────────────────────────────────────────────────
+let timeFilterDay  = null;   // null = inactive; 0-6 = Mon–Sun
+let timeFilterMins = 540;    // minutes from midnight; updated by slider
+
+function formatTime(mins) {
+  const h = Math.floor(mins / 60) % 24;
+  const m = mins % 60;
+  const ampm = h < 12 ? 'AM' : 'PM';
+  const h12  = h === 0 ? 12 : h > 12 ? h - 12 : h;
+  return `${h12}:${m.toString().padStart(2, '0')} ${ampm}`;
+}
+
+// Parse a weekdayDescriptions string like "Monday: 7:00 AM – 8:30 PM"
+// Returns true/false/null (null = unknown, treat as open)
+function isOpenAtTimeStr(dayStr, timeMins) {
+  if (!dayStr) return null;
+  const lower = dayStr.toLowerCase();
+  if (lower.includes('closed'))    return false;
+  if (lower.includes('open 24'))   return true;
+  // Match "H:MM AM/PM – H:MM AM/PM" with em-dash or regular dash
+  const m = dayStr.match(/(\d{1,2}):(\d{2})\s*(AM|PM)\s*[–\-]\s*(\d{1,2}):(\d{2})\s*(AM|PM)/i);
+  if (!m) return null;
+  let [, oh, om, oa, ch, cm, ca] = m;
+  oh = parseInt(oh); om = parseInt(om); ch = parseInt(ch); cm = parseInt(cm);
+  if (oa.toUpperCase() === 'PM' && oh !== 12) oh += 12;
+  if (oa.toUpperCase() === 'AM' && oh === 12) oh = 0;
+  if (ca.toUpperCase() === 'PM' && ch !== 12) ch += 12;
+  if (ca.toUpperCase() === 'AM' && ch === 12) ch = 0;
+  const openMins = oh * 60 + om;
+  let closeMins  = ch * 60 + cm;
+  if (closeMins <= openMins) closeMins += 1440; // overnight wrap
+  return timeMins >= openMins && timeMins < closeMins;
+}
+
+(function initTimeFilter() {
+  const slider     = document.getElementById('time-slider');
+  const daySelect  = document.getElementById('time-day-select');
+  const display    = document.getElementById('time-display');
+  const clearBtn   = document.getElementById('clear-time-filter');
+
+  // Seed slider to current time clamped to range
+  const nowMins = new Date().getHours() * 60 + new Date().getMinutes();
+  timeFilterMins = Math.min(Math.max(nowMins, 360), 1320);
+  slider.value   = timeFilterMins;
+  display.textContent = formatTime(timeFilterMins);
+
+  slider.addEventListener('input', () => {
+    timeFilterMins = parseInt(slider.value);
+    display.textContent = formatTime(timeFilterMins);
+    if (timeFilterDay !== null) applyFilters();
+  });
+
+  daySelect.addEventListener('change', () => {
+    timeFilterDay = daySelect.value === '' ? null : parseInt(daySelect.value);
+    const active  = timeFilterDay !== null;
+    slider.classList.toggle('opacity-40', !active);
+    clearBtn.classList.toggle('hidden', !active);
+    if (active) document.getElementById('clear-filters').classList.remove('hidden');
+    applyFilters();
+  });
+
+  clearBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    timeFilterDay     = null;
+    daySelect.value   = '';
+    slider.classList.add('opacity-40');
+    clearBtn.classList.add('hidden');
+    applyFilters();
+    if (activeFilters.size === 0) document.getElementById('clear-filters').classList.add('hidden');
+  });
+})();
 
 // ── Collapsible filter sections ───────────────────────────────────────────────
 document.querySelectorAll('.filter-toggle').forEach(btn => {
