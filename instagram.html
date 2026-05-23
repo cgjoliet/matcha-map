@@ -223,7 +223,7 @@
       records.forEach(r => {
         const name = r.fields['Name'] || '';
         const site = r.fields['site'] || '';
-        const tags = (r.fields['tags'] || []).map(t => t.name ?? t);
+        const tags = (r.fields['Tags'] || []).map(t => t.name ?? t);
         if (name && site) grid.appendChild(buildCard(name, site, tags));
       });
 
