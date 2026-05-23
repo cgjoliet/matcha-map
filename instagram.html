@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Order from Instagram | Indy Matcha</title>
+  <title>Instagram Spots | Indy Matcha</title>
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Be+Vietnam+Pro:wght@400;700&display=swap" rel="stylesheet">
@@ -96,7 +96,7 @@
   </a>
   <div class="hidden md:flex items-center gap-8">
     <a href="index.html" class="font-label-bold text-label-bold text-on-primary/70 hover:text-on-primary transition-colors">Find Matcha</a>
-    <a href="instagram.html" class="font-label-bold text-label-bold text-on-primary border-b-2 border-on-primary pb-0.5">Order from Instagram</a>
+    <a href="instagram.html" class="font-label-bold text-label-bold text-on-primary border-b-2 border-on-primary pb-0.5">Instagram Spots</a>
     <a href="submit.html" class="font-label-bold text-label-bold text-on-primary/70 hover:text-on-primary transition-colors">Submit a Spot</a>
   </div>
   <a href="submit.html" class="bg-secondary text-on-secondary px-5 py-2 rounded-full font-label-bold text-sm shadow-[3px_3px_0px_rgba(255,255,255,0.15)] hover:scale-105 active:scale-95 transition-all">
@@ -106,10 +106,7 @@
 
 <!-- ── Page header ─────────────────────────────────────────────────────────── -->
 <div class="text-center pt-12 pb-8 px-6">
-  <h1 class="font-headline-xl text-[40px] md:text-[52px] text-primary leading-tight mb-3">Order from Instagram</h1>
-  <p class="text-on-surface-variant font-body-md text-base max-w-md mx-auto">
-    DM your favorite Indy matcha spot directly — find their Instagram below and place your order.
-  </p>
+  <h1 class="font-headline-xl text-[40px] md:text-[52px] text-primary leading-tight">Instagram Spots</h1>
 </div>
 
 <!-- ── Grid ────────────────────────────────────────────────────────────────── -->
@@ -144,8 +141,29 @@
     } catch { return ''; }
   }
 
-  function buildCard(name, siteUrl) {
+  const TAG_CONFIG = {
+    'pop-ups': {
+      icon: 'storefront',
+      label: 'Pop Up',
+      classes: 'bg-secondary-container text-on-secondary-container'
+    },
+    'order from instagram': {
+      icon: 'shopping_bag',
+      label: 'Order from IG',
+      classes: 'bg-primary-fixed text-on-primary-fixed'
+    }
+  };
+
+  function buildCard(name, siteUrl, tags) {
     const handle = handleFromUrl(siteUrl);
+
+    const tagBadges = tags.map(tag => {
+      const cfg = TAG_CONFIG[tag.toLowerCase()] || { icon: 'label', label: tag, classes: 'bg-surface-variant text-on-surface' };
+      return `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-label-bold ${cfg.classes}">
+        <span class="material-symbols-outlined" style="font-size:13px;font-variation-settings:'FILL' 1;">${cfg.icon}</span>
+        ${cfg.label}
+      </span>`;
+    }).join('');
 
     const card = document.createElement('a');
     card.href = siteUrl;
@@ -175,9 +193,12 @@
           <p class="text-on-surface-variant text-sm font-label-bold tracking-wide">${handle}</p>
         </div>
 
+        <!-- Tag badges -->
+        ${tagBadges ? `<div class="flex flex-wrap justify-center gap-1.5">${tagBadges}</div>` : ''}
+
         <!-- CTA -->
-        <div class="mt-1 inline-flex items-center gap-2 bg-primary text-on-primary px-5 py-2.5 rounded-full font-label-bold text-sm shadow-[2px_2px_0px_rgba(1,38,31,0.15)] group-hover:scale-105 transition-all">
-          View &amp; Order
+        <div class="mt-1 inline-flex items-center gap-2 bg-primary text-on-primary px-5 py-2.5 rounded-full font-label-bold text-sm shadow-[2px_2px_0px_rgba(1,38,31,0.15)] transition-all">
+          View on Instagram
           <svg viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5 opacity-80">
             <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
           </svg>
@@ -202,7 +223,8 @@
       records.forEach(r => {
         const name = r.fields['Name'] || '';
         const site = r.fields['site'] || '';
-        if (name && site) grid.appendChild(buildCard(name, site));
+        const tags = (r.fields['tags'] || []).map(t => t.name ?? t);
+        if (name && site) grid.appendChild(buildCard(name, site, tags));
       });
 
       document.getElementById('loading').classList.add('hidden');
