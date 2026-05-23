@@ -335,6 +335,32 @@ function parseCoordsFromUrl(url) {
   return null;
 }
 
+// ── Server-side Places cache (places-cache.json) ──────────────────────────────
+// GitHub Actions refreshes this file nightly via the Places REST API.
+// Loading it pre-populates localStorage so individual users never hit the API.
+async function loadServerCache() {
+  try {
+    const res = await fetch('/places-cache.json');
+    if (!res.ok) return;
+    const { cached_at, spots } = await res.json();
+    // Ignore if the file is older than 25 hours (missed a nightly run)
+    if (Date.now() - new Date(cached_at).getTime() > 25 * 60 * 60 * 1000) return;
+    Object.entries(spots || {}).forEach(([name, data]) => {
+      // Only seed localStorage if there's no fresher local entry already there
+      if (readPlaceCache(name) === undefined) {
+        // Compute isOpenNow client-side so it reflects the user's current time
+        const dayIndex = (new Date().getDay() + 6) % 7;
+        const now      = new Date();
+        const timeMins = now.getHours() * 60 + now.getMinutes();
+        data.isOpenNow = isOpenAtTimeStr(
+          (data.weekdayDescriptions || [])[dayIndex] || '', timeMins
+        ) ?? null;
+        writePlaceCache(name, data);
+      }
+    });
+  } catch { /* silently fall back to individual API calls */ }
+}
+
 // ── Fetch live place details using Places API (New) ───────────────────────────
 // Results are cached in localStorage for 23 hours so each spot costs at most
 // one SearchTextRequest per day instead of one per page load.
@@ -840,7 +866,12 @@ async function renderSpots() {
       return;
     }
 
-    // Fetch all place details in parallel
+    // Pre-populate localStorage from the nightly server cache.
+    // After this, fetchPlaceDetails will find hits in localStorage for every
+    // known spot and make zero Places API calls.
+    await loadServerCache();
+
+    // Fetch all place details in parallel (hits localStorage for cached spots)
     const placeDetails = await Promise.all(
       spots.map(r => fetchPlaceDetails(r.fields.Name || ''))
     );
