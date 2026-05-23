@@ -565,7 +565,7 @@ function markerIcon(grade) {
 }
 
 // ── Rich InfoWindow HTML ──────────────────────────────────────────────────────
-function buildInfoContent(f, place) {
+function buildInfoContent(f, place, recordId) {
   const grade    = f.Grade?.name ?? f.Grade ?? '';
   const isOpen   = place?.isOpenNow              ?? null;
   const weekdays = place?.weekdayDescriptions    || [];
@@ -633,6 +633,7 @@ function buildInfoContent(f, place) {
       ${websiteHtml}
       ${hoursHtml}
       ${notesHtml}
+      ${recordId ? `<button onclick="openSuggestFromMap('${recordId}')" style="margin-top:10px;width:100%;padding:6px 0;border:1.5px dashed #c1c8c4;border-radius:999px;background:transparent;font-size:10px;font-weight:700;letter-spacing:.04em;color:#717976;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;" onmouseover="this.style.borderColor='#2c694e';this.style.color='#2c694e'" onmouseout="this.style.borderColor='#c1c8c4';this.style.color='#717976'">✏ suggest a change</button>` : ''}
     </div>`;
 }
 
@@ -787,6 +788,18 @@ async function submitSuggestion({ recordId, spotName, type, category, filterValu
   return res.json();
 }
 
+// ── Open suggest panel from a map InfoWindow button ──────────────────────────
+function openSuggestFromMap(recordId) {
+  // On mobile switch to list view so the card is visible
+  if (window.innerWidth < 768) setMobileView('list');
+  const card = document.querySelector(`.spot-card[data-id="${recordId}"]`);
+  if (!card) return;
+  card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  const panel  = card.querySelector('.suggest-panel');
+  const toggle = card.querySelector('.suggest-toggle');
+  if (panel?.classList.contains('hidden')) toggle?.click();
+}
+
 // ── Wire up suggest-a-change form inside a card ───────────────────────────────
 function initSuggestForm(cardEl, recordId, spotName, matchaTags, spaceTags) {
   const toggle     = cardEl.querySelector('.suggest-toggle');
@@ -799,7 +812,7 @@ function initSuggestForm(cardEl, recordId, spotName, matchaTags, spaceTags) {
   const submitBtn  = cardEl.querySelector('.suggest-submit');
   const cancelBtn  = cardEl.querySelector('.suggest-cancel');
 
-  let selType = null, selCat = null, selFilter = null;
+  let selType = null, selCat = null, selFilters = new Set();
 
   // Prevent panel clicks from bubbling up to the card's map-open handler
   panel.addEventListener('click', e => e.stopPropagation());
@@ -811,7 +824,7 @@ function initSuggestForm(cardEl, recordId, spotName, matchaTags, spaceTags) {
   };
 
   const reset = () => {
-    selType = selCat = selFilter = null;
+    selType = selCat = null; selFilters = new Set();
     typeBtns.forEach(b => b.classList.remove('active-suggest'));
     catBtns.forEach(b  => b.classList.remove('active-suggest'));
     filterArea.classList.add('hidden');
@@ -840,7 +853,7 @@ function initSuggestForm(cardEl, recordId, spotName, matchaTags, spaceTags) {
     btn.addEventListener('click', e => {
       e.stopPropagation();
       selType = btn.dataset.type;
-      selFilter = null;
+      selFilters = new Set();
       typeBtns.forEach(b => b.classList.remove('active-suggest'));
       btn.classList.add('active-suggest');
 
@@ -862,7 +875,7 @@ function initSuggestForm(cardEl, recordId, spotName, matchaTags, spaceTags) {
     btn.addEventListener('click', e => {
       e.stopPropagation();
       selCat = btn.dataset.cat;
-      selFilter = null;
+      selFilters = new Set();
       catBtns.forEach(b => b.classList.remove('active-suggest'));
       btn.classList.add('active-suggest');
 
@@ -884,9 +897,13 @@ function initSuggestForm(cardEl, recordId, spotName, matchaTags, spaceTags) {
         b.textContent = val;
         b.addEventListener('click', e2 => {
           e2.stopPropagation();
-          selFilter = val;
-          filterOpts.querySelectorAll('.suggest-filter-opt').forEach(x => x.classList.remove('active-suggest'));
-          b.classList.add('active-suggest');
+          if (selFilters.has(val)) {
+            selFilters.delete(val);
+            b.classList.remove('active-suggest');
+          } else {
+            selFilters.add(val);
+            b.classList.add('active-suggest');
+          }
         });
         filterOpts.appendChild(b);
       });
@@ -896,7 +913,7 @@ function initSuggestForm(cardEl, recordId, spotName, matchaTags, spaceTags) {
   submitBtn.addEventListener('click', async e => {
     e.stopPropagation();
     if (!selType) { flash(submitBtn, 'pick a type ↑', 'submit →'); return; }
-    if (selType !== 'New idea' && !selFilter) { flash(submitBtn, 'pick a filter ↑', 'submit →'); return; }
+    if (selType !== 'New idea' && selFilters.size === 0) { flash(submitBtn, 'pick a filter ↑', 'submit →'); return; }
     const comment = textarea.value.trim();
     if (selType === 'New idea' && !comment) { textarea.focus(); return; }
 
@@ -904,7 +921,7 @@ function initSuggestForm(cardEl, recordId, spotName, matchaTags, spaceTags) {
     submitBtn.textContent = 'sending…';
 
     try {
-      await submitSuggestion({ recordId, spotName, type: selType, category: selCat, filterValue: selFilter, comment });
+      await submitSuggestion({ recordId, spotName, type: selType, category: selCat, filterValue: [...selFilters].join(', '), comment });
       submitBtn.textContent  = '✓ sent — thank you!';
       submitBtn.style.background = '#2c694e';
       setTimeout(() => { panel.classList.add('hidden'); reset(); }, 1800);
@@ -967,7 +984,7 @@ async function renderSpots() {
       bounds.extend(pos);
 
       // InfoWindow
-      const iw = new google.maps.InfoWindow({ content: buildInfoContent(f, place) });
+      const iw = new google.maps.InfoWindow({ content: buildInfoContent(f, place, record.id) });
 
       // Card
       const card = buildCard(record, place);
