@@ -99,10 +99,25 @@
     <a href="instagram.html" class="font-label-bold text-label-bold text-on-primary border-b-2 border-on-primary pb-0.5">Instagram Spots</a>
     <a href="submit.html" class="font-label-bold text-label-bold text-on-primary/70 hover:text-on-primary transition-colors">Submit a Spot</a>
   </div>
-  <a href="submit.html" class="bg-secondary text-on-secondary px-5 py-2 rounded-full font-label-bold text-sm shadow-[3px_3px_0px_rgba(255,255,255,0.15)] hover:scale-105 active:scale-95 transition-all">
+  <a href="submit.html" class="hidden md:inline-flex bg-secondary text-on-secondary px-5 py-2 rounded-full font-label-bold text-sm shadow-[3px_3px_0px_rgba(255,255,255,0.15)] hover:scale-105 active:scale-95 transition-all">
     + Add Spot
   </a>
+  <button id="hamburger-btn" class="md:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 rounded-lg hover:bg-white/10 transition-colors" aria-label="Menu">
+    <span class="hamburger-bar block w-5 h-0.5 bg-on-primary transition-all duration-200"></span>
+    <span class="hamburger-bar block w-5 h-0.5 bg-on-primary transition-all duration-200"></span>
+    <span class="hamburger-bar block w-5 h-0.5 bg-on-primary transition-all duration-200"></span>
+  </button>
 </nav>
+
+<!-- Mobile nav dropdown -->
+<div id="mobile-menu" class="md:hidden" style="position:absolute;top:64px;left:0;right:0;background:#01261f;z-index:600;border-bottom:2px solid rgba(255,255,255,0.1);transform:translateY(-8px);opacity:0;pointer-events:none;transition:transform 0.18s ease,opacity 0.18s ease;">
+  <div class="flex flex-col px-6 py-4 gap-1">
+    <a href="index.html"     class="font-label-bold text-sm text-on-primary/70 py-3 border-b border-white/10">Find Matcha</a>
+    <a href="instagram.html" class="font-label-bold text-sm text-on-primary    py-3 border-b border-white/10">Instagram Spots</a>
+    <a href="submit.html"    class="font-label-bold text-sm text-on-primary/70 py-3 border-b border-white/10">Submit a Spot</a>
+    <a href="submit.html"    class="mt-3 bg-secondary text-on-secondary px-5 py-3 rounded-full font-label-bold text-sm text-center">+ Add Spot</a>
+  </div>
+</div>
 
 <!-- ── Page header ─────────────────────────────────────────────────────────── -->
 <div class="text-center pt-12 pb-8 px-6">
@@ -236,6 +251,22 @@
   }
 
   loadAccounts();
+
+  // ── Hamburger menu ──────────────────────────────────────────────────────────
+  document.getElementById('hamburger-btn')?.addEventListener('click', function () {
+    const menu = document.getElementById('mobile-menu');
+    const bars = this.querySelectorAll('.hamburger-bar');
+    const isOpen = menu.style.opacity === '1';
+    if (!isOpen) {
+      menu.style.transform = 'translateY(0)'; menu.style.opacity = '1'; menu.style.pointerEvents = 'auto';
+      bars[0].style.transform = 'translateY(8px) rotate(45deg)';
+      bars[1].style.opacity   = '0';
+      bars[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+    } else {
+      menu.style.transform = 'translateY(-8px)'; menu.style.opacity = '0'; menu.style.pointerEvents = 'none';
+      bars[0].style.transform = ''; bars[1].style.opacity = ''; bars[2].style.transform = '';
+    }
+  });
 </script>
 
 </body>

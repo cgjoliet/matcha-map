@@ -99,18 +99,33 @@
       <a href="instagram.html" class="font-label-bold text-label-bold text-on-primary/70 hover:text-on-primary transition-colors">Instagram Spots</a>
       <a href="submit.html"  class="font-label-bold text-label-bold text-on-primary border-b-2 border-on-primary pb-1">Submit a Spot</a>
     </div>
-    <button class="md:hidden text-on-primary">
-      <span class="material-symbols-outlined text-4xl">menu</span>
-    </button>
+  <a href="submit.html" class="hidden md:inline-flex bg-secondary text-on-secondary px-5 py-2 rounded-full font-label-bold text-sm shadow-[3px_3px_0px_rgba(255,255,255,0.15)] hover:scale-105 active:scale-95 transition-all">
+    + Add Spot
+  </a>
+  <button id="hamburger-btn" class="md:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 rounded-lg hover:bg-white/10 transition-colors" aria-label="Menu">
+    <span class="hamburger-bar block w-5 h-0.5 bg-on-primary transition-all duration-200"></span>
+    <span class="hamburger-bar block w-5 h-0.5 bg-on-primary transition-all duration-200"></span>
+    <span class="hamburger-bar block w-5 h-0.5 bg-on-primary transition-all duration-200"></span>
+  </button>
   </div>
 </nav>
+
+<!-- Mobile nav dropdown -->
+<div id="mobile-menu" class="md:hidden" style="position:fixed;top:64px;left:0;right:0;background:#01261f;z-index:600;border-bottom:2px solid rgba(255,255,255,0.1);transform:translateY(-8px);opacity:0;pointer-events:none;transition:transform 0.18s ease,opacity 0.18s ease;">
+  <div class="flex flex-col px-6 py-4 gap-1">
+    <a href="index.html"     class="font-label-bold text-sm text-on-primary/70 py-3 border-b border-white/10">Find Matcha</a>
+    <a href="instagram.html" class="font-label-bold text-sm text-on-primary/70 py-3 border-b border-white/10">Instagram Spots</a>
+    <a href="submit.html"    class="font-label-bold text-sm text-on-primary    py-3 border-b border-white/10">Submit a Spot</a>
+    <a href="submit.html"    class="mt-3 bg-secondary text-on-secondary px-5 py-3 rounded-full font-label-bold text-sm text-center">+ Add Spot</a>
+  </div>
+</div>
 
 <!-- ── Main content ────────────────────────────────────────────────────────── -->
 <main class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
   <div class="grid lg:grid-cols-12 gap-12 items-start">
 
     <!-- Left: Copy & decoration -->
-    <div class="lg:col-span-5 space-y-8 sticky top-32">
+    <div class="lg:col-span-5 space-y-6 lg:sticky lg:top-32">
       <div class="space-y-4">
         <span class="bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full font-label-bold text-sm inline-block">
           COMMUNITY SUBMISSION
@@ -119,27 +134,27 @@
           Matcha lovers, unite!
         </h1>
         <p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
-          Found a hidden gem? Share your favorite spot with the Indy community and help us map the city's best ceremonial and culinary matcha.
+          Found a hidden gem? Share your favorite spot with the Indy community and help us grow the map.
+        </p>
+        <p class="text-on-surface-variant text-sm font-body-md leading-relaxed">
+          <span class="material-symbols-outlined text-secondary align-middle mr-1" style="font-size:16px;">info</span>
+          Submissions are reviewed before appearing on the map. Usually approved within 48 hours.
         </p>
       </div>
 
-      <div class="relative w-full aspect-square max-w-sm mx-auto lg:mx-0">
+      <!-- Image only shown on desktop -->
+      <div class="relative w-full aspect-square max-w-sm mx-auto lg:mx-0 hidden lg:block">
         <div class="absolute inset-0 bg-primary-container matcha-blob-mask opacity-10 animate-pulse" style="transform:scale(1.2) rotate(15deg);"></div>
         <img
           class="w-full h-full object-cover matcha-blob-mask shadow-2xl"
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzmaGmV3vfPgMxEozx3AAmR0cxm12pVFawdgJrlHxX4QOgzACAB5EH-e8he3lusjTsBDHdBUhqHLkzlfOyF1fTLfv_lgfXKJs8sxtG4w-faHAxpvK_RqmSfLIlOv1dgC9KIyeKJEHzn8u691Uh-CalLAkSpcWIVjbJC8V_Obs9sevSojXOtcWiRzu8cgMCFe4u-JncqPgmRG-A09j4GOQ_hrfcfkuWhuMNWa63MhXahc2PCGudO7bT9v0RYO8O8BYyLvz04RUNzps"
           alt="Matcha being whisked in a ceramic bowl"
         >
-        <div class="absolute -bottom-6 -right-6 bg-tertiary-fixed p-6 rounded-lg neo-pop-shadow border-2 border-primary rotate-6 hidden md:block">
+        <div class="absolute -bottom-6 -right-6 bg-tertiary-fixed p-6 rounded-lg neo-pop-shadow border-2 border-primary rotate-6">
           <span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings:'FILL' 1;">favorite</span>
           <p class="font-label-bold text-on-tertiary-fixed mt-2">Community Map</p>
         </div>
       </div>
-
-      <p class="text-on-surface-variant text-sm font-body-md max-w-xs leading-relaxed">
-        <span class="material-symbols-outlined text-secondary align-middle mr-1" style="font-size:16px;">info</span>
-        Submissions are reviewed before appearing on the map. Usually approved within 48 hours.
-      </p>
     </div>
 
     <!-- Right: Form -->
@@ -621,6 +636,22 @@ function spawnConfetti() {
 loadFilterOptions();
 setInterval(spawnBubble, 3500);
 for (let i = 0; i < 4; i++) setTimeout(spawnBubble, i * 800);
+
+// ── Hamburger menu ────────────────────────────────────────────────────────────
+document.getElementById('hamburger-btn')?.addEventListener('click', function () {
+  const menu = document.getElementById('mobile-menu');
+  const bars = this.querySelectorAll('.hamburger-bar');
+  const isOpen = menu.style.opacity === '1';
+  if (!isOpen) {
+    menu.style.transform = 'translateY(0)'; menu.style.opacity = '1'; menu.style.pointerEvents = 'auto';
+    bars[0].style.transform = 'translateY(8px) rotate(45deg)';
+    bars[1].style.opacity   = '0';
+    bars[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+  } else {
+    menu.style.transform = 'translateY(-8px)'; menu.style.opacity = '0'; menu.style.pointerEvents = 'none';
+    bars[0].style.transform = ''; bars[1].style.opacity = ''; bars[2].style.transform = '';
+  }
+});
 </script>
 </body>
 </html>

@@ -189,14 +189,16 @@
 
   <!-- Sidebar -->
   <aside class="sidebar w-full md:w-[390px] bg-surface flex-shrink-0 border-r-2 border-surface-variant">
-    <div class="p-5">
 
-      <!-- Mobile Map/List toggle -->
-      <div class="md:hidden bg-surface-container rounded-full p-1 flex mb-4">
+    <!-- Mobile Map/List toggle — sticky so it stays visible while scrolling -->
+    <div class="md:hidden sticky top-0 z-10 bg-surface px-4 py-2 border-b border-surface-variant">
+      <div class="bg-surface-container rounded-full p-1 flex">
         <button id="mobile-list-btn" class="view-pill active" onclick="setMobileView('list')">List</button>
         <button id="mobile-map-btn"  class="view-pill"        onclick="setMobileView('map')">Map</button>
       </div>
+    </div>
 
+    <div class="p-5">
       <div class="flex items-center justify-between mb-4">
         <h1 class="font-headline-md text-[20px] text-primary">Spots in Indy</h1>
         <span id="spot-count" class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-bold text-xs opacity-0 transition-opacity duration-300"></span>
@@ -567,6 +569,8 @@ function buildInfoContent(f, place) {
   const grade    = f.Grade?.name ?? f.Grade ?? '';
   const isOpen   = place?.isOpenNow              ?? null;
   const weekdays = place?.weekdayDescriptions    || [];
+  const matcha   = (f['The Matcha'] || []).map(t => t.name ?? t);
+  const space    = (f['The Space']  || []).map(t => t.name ?? t);
 
   // Today's hours (weekdayDescriptions is Mon-Sun 0-6, JS getDay() is Sun=0)
   const dayIndex  = (new Date().getDay() + 6) % 7;
@@ -622,7 +626,8 @@ function buildInfoContent(f, place) {
     <div style="padding:14px 36px 14px 16px;min-width:220px;max-width:260px;font-family:'Be Vietnam Pro',sans-serif;">
       <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:800;color:#01261f;margin-bottom:3px;line-height:1.2;">${esc(f.Name || '')}</div>
       ${f.Address ? `<div style="font-size:11px;color:#717976;margin-bottom:8px;">${esc(f.Address)}</div>` : ''}
-      <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px;">${gradeBadge}${openBadge}</div>
+      <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:6px;">${gradeBadge}${openBadge}</div>
+      ${[...matcha, ...space].length ? `<div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px;">${matcha.map(t=>`<span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:999px;background:#e3f1e7;color:#2c694e;">${esc(t)}</span>`).join('')}${space.map(t=>`<span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:999px;background:#d8e6dc;color:#01261f;">${esc(t)}</span>`).join('')}</div>` : ''}
       ${ratingHtml}
       ${phoneHtml}
       ${websiteHtml}
