@@ -180,18 +180,17 @@
             </div>
           </button>
           <div id="time-filter-body">
-            <div class="flex items-center gap-2 mb-1.5">
-              <select id="time-day-select" class="flex-1 h-7 text-[9px] font-label-bold border border-outline-variant rounded-full px-2.5 bg-white text-primary focus:border-secondary focus:outline-none cursor-pointer appearance-none">
-                <option value="">any day</option>
-                <option value="0">monday</option>
-                <option value="1">tuesday</option>
-                <option value="2">wednesday</option>
-                <option value="3">thursday</option>
-                <option value="4">friday</option>
-                <option value="5">saturday</option>
-                <option value="6">sunday</option>
-              </select>
-              <span id="time-display" class="font-label-bold text-[10px] text-primary whitespace-nowrap w-16 text-right"></span>
+            <div class="flex flex-wrap gap-1.5 mb-2">
+              <button class="time-day-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary hover:border-secondary transition-all" data-day="0">mon</button>
+              <button class="time-day-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary hover:border-secondary transition-all" data-day="1">tue</button>
+              <button class="time-day-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary hover:border-secondary transition-all" data-day="2">wed</button>
+              <button class="time-day-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary hover:border-secondary transition-all" data-day="3">thu</button>
+              <button class="time-day-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary hover:border-secondary transition-all" data-day="4">fri</button>
+              <button class="time-day-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary hover:border-secondary transition-all" data-day="5">sat</button>
+              <button class="time-day-chip px-2.5 py-1 rounded-full font-label-bold text-[10px] border border-outline-variant bg-white text-primary hover:border-secondary transition-all" data-day="6">sun</button>
+            </div>
+            <div class="flex items-center justify-end mb-1">
+              <span id="time-display" class="font-label-bold text-[10px] text-primary whitespace-nowrap"></span>
             </div>
             <input type="range" id="time-slider" min="360" max="1320" step="15"
               style="accent-color:#2c694e;width:100%;cursor:pointer;height:4px;" class="opacity-40">
@@ -954,7 +953,7 @@ document.getElementById('clear-filters').addEventListener('click', () => {
   document.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
   // Also reset time filter
   timeFilterDay = null;
-  document.getElementById('time-day-select').value = '';
+  document.querySelectorAll('.time-day-chip').forEach(c => c.classList.remove('active-suggest'));
   document.getElementById('time-slider').classList.add('opacity-40');
   document.getElementById('clear-time-filter').classList.add('hidden');
   document.querySelectorAll('.spot-card').forEach(c => {
@@ -1000,36 +999,48 @@ function isOpenAtTimeStr(dayStr, timeMins) {
 }
 
 (function initTimeFilter() {
-  const slider     = document.getElementById('time-slider');
-  const daySelect  = document.getElementById('time-day-select');
-  const display    = document.getElementById('time-display');
-  const clearBtn   = document.getElementById('clear-time-filter');
+  const slider   = document.getElementById('time-slider');
+  const display  = document.getElementById('time-display');
+  const clearBtn = document.getElementById('clear-time-filter');
+  const dayChips = document.querySelectorAll('.time-day-chip');
 
   // Seed slider to current time clamped to range
   const nowMins = new Date().getHours() * 60 + new Date().getMinutes();
   timeFilterMins = Math.min(Math.max(nowMins, 360), 1320);
-  slider.value   = timeFilterMins;
+  slider.value        = timeFilterMins;
   display.textContent = formatTime(timeFilterMins);
 
   slider.addEventListener('input', () => {
-    timeFilterMins = parseInt(slider.value);
+    timeFilterMins      = parseInt(slider.value);
     display.textContent = formatTime(timeFilterMins);
     if (timeFilterDay !== null) applyFilters();
   });
 
-  daySelect.addEventListener('change', () => {
-    timeFilterDay = daySelect.value === '' ? null : parseInt(daySelect.value);
-    const active  = timeFilterDay !== null;
-    slider.classList.toggle('opacity-40', !active);
-    clearBtn.classList.toggle('hidden', !active);
-    if (active) document.getElementById('clear-filters').classList.remove('hidden');
-    applyFilters();
+  dayChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const day    = parseInt(chip.dataset.day);
+      const active = !chip.classList.contains('active-suggest'); // toggle
+      dayChips.forEach(c => c.classList.remove('active-suggest'));
+      if (active) {
+        chip.classList.add('active-suggest');
+        timeFilterDay = day;
+        slider.classList.remove('opacity-40');
+        clearBtn.classList.remove('hidden');
+        document.getElementById('clear-filters').classList.remove('hidden');
+      } else {
+        timeFilterDay = null;
+        slider.classList.add('opacity-40');
+        clearBtn.classList.add('hidden');
+        if (activeFilters.size === 0) document.getElementById('clear-filters').classList.add('hidden');
+      }
+      applyFilters();
+    });
   });
 
   clearBtn.addEventListener('click', (e) => {
     e.stopPropagation();
-    timeFilterDay     = null;
-    daySelect.value   = '';
+    timeFilterDay = null;
+    dayChips.forEach(c => c.classList.remove('active-suggest'));
     slider.classList.add('opacity-40');
     clearBtn.classList.add('hidden');
     applyFilters();
