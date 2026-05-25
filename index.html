@@ -1013,9 +1013,25 @@ async function renderSpots() {
       const spaceTags  = (f['The Space'] ||[]).map(t=>t.name??t);
       const iwEl = buildInfoElement(f, place, record.id);
       const iw   = new google.maps.InfoWindow({ content: iwEl });
-      // Wire up suggest form; onLayout forces InfoWindow to recalculate height
-      initSuggestForm(iwEl, record.id, f.Name || '', matchaTags, spaceTags,
-        () => iw.setContent(iwEl));
+      // Wire up suggest form; onLayout forces InfoWindow to recalculate height,
+      // then pans the map so the expanded popup stays fully on screen
+      initSuggestForm(iwEl, record.id, f.Name || '', matchaTags, spaceTags, () => {
+        iw.setContent(iwEl);
+        // Wait two frames for Maps to re-render the InfoWindow, then pan to fit
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          const iwBox  = document.querySelector('.gm-style-iw-c');
+          if (!iwBox) return;
+          const mapBox = map.getDiv().getBoundingClientRect();
+          const iRect  = iwBox.getBoundingClientRect();
+          const PAD    = 12; // px breathing room from map edge
+          let dx = 0, dy = 0;
+          if (iRect.top    < mapBox.top    + PAD) dy = iRect.top    - mapBox.top    - PAD;
+          if (iRect.bottom > mapBox.bottom - PAD) dy = iRect.bottom - mapBox.bottom + PAD;
+          if (iRect.left   < mapBox.left   + PAD) dx = iRect.left   - mapBox.left   - PAD;
+          if (iRect.right  > mapBox.right  - PAD) dx = iRect.right  - mapBox.right  + PAD;
+          if (dx || dy) map.panBy(dx, dy);
+        }));
+      });
 
       // Card
       const card = buildCard(record, place);
