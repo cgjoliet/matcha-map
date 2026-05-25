@@ -635,8 +635,39 @@ function buildInfoContent(f, place, recordId) {
       ${websiteHtml}
       ${hoursHtml}
       ${notesHtml}
-      ${recordId ? `<button onclick="openSuggestFromMap('${recordId}')" style="margin-top:10px;width:100%;padding:6px 0;border:1.5px dashed #c1c8c4;border-radius:999px;background:transparent;font-size:10px;font-weight:700;letter-spacing:.04em;color:#717976;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;" onmouseover="this.style.borderColor='#2c694e';this.style.color='#2c694e'" onmouseout="this.style.borderColor='#c1c8c4';this.style.color='#717976'">✏ suggest a change</button>` : ''}
+      ${recordId ? `
+      <button class="suggest-toggle" style="margin-top:10px;width:100%;padding:6px 0;border:1.5px dashed #c1c8c4;border-radius:999px;background:transparent;font-size:10px;font-weight:700;letter-spacing:.04em;color:#717976;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;display:flex;align-items:center;justify-content:center;gap:4px;" onmouseover="this.style.borderColor='#2c694e';this.style.color='#2c694e'" onmouseout="if(!this.closest('[data-suggest-open]'))this.style.borderColor='#c1c8c4',this.style.color='#717976'">
+        <span class="material-symbols-outlined" style="font-size:12px;vertical-align:middle;font-variation-settings:'FILL' 1;">edit_note</span>
+        suggest a change
+      </button>
+      <div class="suggest-panel" style="display:none;margin-top:12px;padding-top:12px;border-top:1px solid #c1c8c4;">
+        <p style="font-size:10px;font-weight:700;letter-spacing:.05em;color:#717976;text-transform:uppercase;margin-bottom:8px;font-family:'Be Vietnam Pro',sans-serif;">what would you like to suggest?</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;">
+          <button class="suggest-type-btn" data-type="Add filter" style="padding:3px 10px;border-radius:999px;font-size:10px;font-weight:700;border:1.5px solid #c1c8c4;background:white;color:#01261f;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;">+ add filter</button>
+          <button class="suggest-type-btn" data-type="Remove filter" style="padding:3px 10px;border-radius:999px;font-size:10px;font-weight:700;border:1.5px solid #c1c8c4;background:white;color:#01261f;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;">− remove filter</button>
+          <button class="suggest-type-btn" data-type="New idea" style="padding:3px 10px;border-radius:999px;font-size:10px;font-weight:700;border:1.5px solid #c1c8c4;background:white;color:#01261f;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;">💡 new idea</button>
+        </div>
+        <div class="filter-select-area" style="display:none;margin-bottom:10px;">
+          <div style="display:flex;gap:6px;margin-bottom:6px;">
+            <button class="suggest-cat-btn" data-cat="The Matcha" style="padding:3px 10px;border-radius:999px;font-size:10px;font-weight:700;border:1.5px solid #c1c8c4;background:white;color:#01261f;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;">the matcha</button>
+            <button class="suggest-cat-btn" data-cat="The Space" style="padding:3px 10px;border-radius:999px;font-size:10px;font-weight:700;border:1.5px solid #c1c8c4;background:white;color:#01261f;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;">the space</button>
+          </div>
+          <div class="filter-options" style="display:flex;flex-wrap:wrap;gap:6px;min-height:18px;"></div>
+        </div>
+        <textarea class="suggest-comment" rows="2" placeholder="Any additional context… (optional)" style="width:100%;border:1.5px solid #c1c8c4;border-radius:8px;padding:6px 10px;font-size:11px;font-family:'Be Vietnam Pro',sans-serif;resize:none;outline:none;box-sizing:border-box;margin-bottom:8px;background:white;"></textarea>
+        <div style="display:flex;gap:8px;">
+          <button class="suggest-cancel" style="flex:1;padding:6px 0;border-radius:999px;font-size:10px;font-weight:700;border:1.5px solid #c1c8c4;background:white;color:#717976;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;">cancel</button>
+          <button class="suggest-submit" style="flex:1;padding:6px 0;border-radius:999px;font-size:10px;font-weight:700;border:none;background:#01261f;color:white;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;">submit →</button>
+        </div>
+      </div>` : ''}
     </div>`;
+}
+
+// Wrap InfoWindow HTML string in a real DOM element so event listeners persist across open/close
+function buildInfoElement(f, place, recordId) {
+  const wrapper = document.createElement('div');
+  wrapper.innerHTML = buildInfoContent(f, place, recordId);
+  return wrapper;
 }
 
 // 5-star SVG rating
@@ -790,20 +821,9 @@ async function submitSuggestion({ recordId, spotName, type, category, filterValu
   return res.json();
 }
 
-// ── Open suggest panel from a map InfoWindow button ──────────────────────────
-function openSuggestFromMap(recordId) {
-  // On mobile switch to list view so the card is visible
-  if (window.innerWidth < 768) setMobileView('list');
-  const card = document.querySelector(`.spot-card[data-id="${recordId}"]`);
-  if (!card) return;
-  card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  const panel  = card.querySelector('.suggest-panel');
-  const toggle = card.querySelector('.suggest-toggle');
-  if (panel?.classList.contains('hidden')) toggle?.click();
-}
-
-// ── Wire up suggest-a-change form inside a card ───────────────────────────────
-function initSuggestForm(cardEl, recordId, spotName, matchaTags, spaceTags) {
+// ── Wire up suggest-a-change form inside a card OR InfoWindow element ─────────
+// onLayout (optional): called after any show/hide so InfoWindows can resize
+function initSuggestForm(cardEl, recordId, spotName, matchaTags, spaceTags, onLayout) {
   const toggle     = cardEl.querySelector('.suggest-toggle');
   const panel      = cardEl.querySelector('.suggest-panel');
   const typeBtns   = cardEl.querySelectorAll('.suggest-type-btn');
@@ -814,7 +834,14 @@ function initSuggestForm(cardEl, recordId, spotName, matchaTags, spaceTags) {
   const submitBtn  = cardEl.querySelector('.suggest-submit');
   const cancelBtn  = cardEl.querySelector('.suggest-cancel');
 
+  if (!toggle || !panel) return; // guard: element not present
+
   let selType = null, selCat = null, selFilters = new Set();
+
+  // Works for both Tailwind `hidden` class (sidebar) and inline style (InfoWindow)
+  const isHidden = el => el.classList.contains('hidden') || el.style.display === 'none';
+  const showEl   = el => { el.classList.remove('hidden'); el.style.display = ''; if (onLayout) requestAnimationFrame(onLayout); };
+  const hideEl   = el => { el.classList.remove('hidden'); el.style.display = 'none'; if (onLayout) requestAnimationFrame(onLayout); };
 
   // Prevent panel clicks from bubbling up to the card's map-open handler
   panel.addEventListener('click', e => e.stopPropagation());
@@ -829,7 +856,7 @@ function initSuggestForm(cardEl, recordId, spotName, matchaTags, spaceTags) {
     selType = selCat = null; selFilters = new Set();
     typeBtns.forEach(b => b.classList.remove('active-suggest'));
     catBtns.forEach(b  => b.classList.remove('active-suggest'));
-    filterArea.classList.add('hidden');
+    hideEl(filterArea);
     filterOpts.innerHTML = '';
     textarea.value = '';
     textarea.placeholder = 'Any additional context… (optional)';
@@ -840,14 +867,13 @@ function initSuggestForm(cardEl, recordId, spotName, matchaTags, spaceTags) {
 
   toggle.addEventListener('click', e => {
     e.stopPropagation();
-    const wasOpen = !panel.classList.contains('hidden');
-    panel.classList.toggle('hidden');
-    if (wasOpen) reset();
+    const wasOpen = !isHidden(panel);
+    if (wasOpen) { hideEl(panel); reset(); } else { showEl(panel); }
   });
 
   cancelBtn.addEventListener('click', e => {
     e.stopPropagation();
-    panel.classList.add('hidden');
+    hideEl(panel);
     reset();
   });
 
@@ -860,11 +886,11 @@ function initSuggestForm(cardEl, recordId, spotName, matchaTags, spaceTags) {
       btn.classList.add('active-suggest');
 
       if (selType === 'New idea') {
-        filterArea.classList.add('hidden');
+        hideEl(filterArea);
         textarea.placeholder = 'Describe your idea or suggestion…';
         textarea.focus();
       } else {
-        filterArea.classList.remove('hidden');
+        showEl(filterArea);
         selCat = null;
         catBtns.forEach(b => b.classList.remove('active-suggest'));
         filterOpts.innerHTML = '';
@@ -890,7 +916,8 @@ function initSuggestForm(cardEl, recordId, spotName, matchaTags, spaceTags) {
         : spotTags;
 
       if (!options.length) {
-        filterOpts.innerHTML = `<span class="text-on-surface-variant text-[10px] italic">nothing to ${selType === 'Add filter' ? 'add' : 'remove'} here</span>`;
+        filterOpts.innerHTML = `<span style="font-size:10px;color:#717976;font-style:italic;font-family:'Be Vietnam Pro',sans-serif;">nothing to ${selType === 'Add filter' ? 'add' : 'remove'} here</span>`;
+        if (onLayout) requestAnimationFrame(onLayout);
         return;
       }
       options.forEach(val => {
@@ -899,16 +926,12 @@ function initSuggestForm(cardEl, recordId, spotName, matchaTags, spaceTags) {
         b.textContent = val;
         b.addEventListener('click', e2 => {
           e2.stopPropagation();
-          if (selFilters.has(val)) {
-            selFilters.delete(val);
-            b.classList.remove('active-suggest');
-          } else {
-            selFilters.add(val);
-            b.classList.add('active-suggest');
-          }
+          if (selFilters.has(val)) { selFilters.delete(val); b.classList.remove('active-suggest'); }
+          else                     { selFilters.add(val);    b.classList.add('active-suggest'); }
         });
         filterOpts.appendChild(b);
       });
+      if (onLayout) requestAnimationFrame(onLayout);
     });
   });
 
@@ -924,9 +947,9 @@ function initSuggestForm(cardEl, recordId, spotName, matchaTags, spaceTags) {
 
     try {
       await submitSuggestion({ recordId, spotName, type: selType, category: selCat, filterValue: [...selFilters].join(', '), comment });
-      submitBtn.textContent  = '✓ sent — thank you!';
+      submitBtn.textContent      = '✓ sent — thank you!';
       submitBtn.style.background = '#2c694e';
-      setTimeout(() => { panel.classList.add('hidden'); reset(); }, 1800);
+      setTimeout(() => { hideEl(panel); reset(); }, 1800);
     } catch (err) {
       submitBtn.disabled = false;
       flash(submitBtn, 'error — try again', 'submit →');
@@ -985,13 +1008,19 @@ async function renderSpots() {
       markerMap[record.id] = marker;
       bounds.extend(pos);
 
-      // InfoWindow
-      const iw = new google.maps.InfoWindow({ content: buildInfoContent(f, place, record.id) });
+      // InfoWindow — built as a DOM element so listeners persist across open/close
+      const matchaTags = (f['The Matcha']||[]).map(t=>t.name??t);
+      const spaceTags  = (f['The Space'] ||[]).map(t=>t.name??t);
+      const iwEl = buildInfoElement(f, place, record.id);
+      const iw   = new google.maps.InfoWindow({ content: iwEl });
+      // Wire up suggest form; onLayout forces InfoWindow to recalculate height
+      initSuggestForm(iwEl, record.id, f.Name || '', matchaTags, spaceTags,
+        () => iw.setContent(iwEl));
 
       // Card
       const card = buildCard(record, place);
       list.appendChild(card);
-      initSuggestForm(card, record.id, f.Name || '', (f['The Matcha']||[]).map(t=>t.name??t), (f['The Space']||[]).map(t=>t.name??t));
+      initSuggestForm(card, record.id, f.Name || '', matchaTags, spaceTags);
 
       const openSpot = () => {
         // On mobile switch to map view first, then pan
