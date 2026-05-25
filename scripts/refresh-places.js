@@ -16,8 +16,9 @@ if (!GOOGLE_API_KEY)  throw new Error('GOOGLE_PLACES_API_KEY env var is required
 
 // ── 1. Fetch published spot names from Airtable ───────────────────────────────
 async function fetchSpotNames() {
+  const formula = encodeURIComponent("{publish}='publish'");   // matches index.html
   const url = `https://api.airtable.com/v0/${BASE_ID}/${TABLE_ID}`
-    + `?fields[]=Name&filterByFormula={publish}="Published"&pageSize=100`;
+    + `?fields%5B%5D=Name&filterByFormula=${formula}&pageSize=100`;
   const res = await fetch(url, {
     headers: { Authorization: `Bearer ${AIRTABLE_TOKEN}` }
   });
