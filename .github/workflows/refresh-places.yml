@@ -36,4 +36,5 @@ jobs:
           git add places-cache.json
           # Only commit if the file actually changed
           git diff --staged --quiet || git commit -m "chore: refresh places cache [skip vercel]"
+          git pull --rebase origin main
           git push
