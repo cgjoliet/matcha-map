@@ -33,7 +33,18 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase origin main
-          git add places-cache.json
-          git diff --staged --quiet || git commit -m "chore: refresh places cache [skip vercel]"
-          git push
+          # Save the freshly generated file
+          cp places-cache.json /tmp/places-cache.json
+          # Retry loop — handles rare race where another push lands between fetch and push
+          for i in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/places-cache.json places-cache.json
+            git add places-cache.json
+            git diff --staged --quiet && echo "No changes to commit" && exit 0
+            git commit -m "chore: refresh places cache [skip vercel]"
+            git push && exit 0
+            echo "Push rejected (attempt $i), retrying…"
+            sleep 3
+          done
+          echo "All push attempts failed" && exit 1
