@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | Indy Matcha</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Be+Vietnam+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-variant": "#d8e6dc", "surface-tint": "#43655c",
+            "on-primary-fixed": "#00201a", "on-secondary-fixed": "#002114",
+            "secondary": "#2c694e", "inverse-surface": "#27332d",
+            "tertiary-fixed-dim": "#b5ccba", "tertiary": "#112519",
+            "on-tertiary-container": "#8ea594", "surface-container-high": "#deece2",
+            "on-tertiary": "#ffffff", "on-background": "#121e18",
+            "primary-fixed": "#c5eadf", "surface-container-lowest": "#ffffff",
+            "background": "#effdf3", "secondary-container": "#aeeecb",
+            "secondary-fixed": "#b1f0ce", "primary-fixed-dim": "#aacec3",
+            "tertiary-container": "#273b2e", "tertiary-fixed": "#d1e8d6",
+            "outline": "#717976", "surface-container": "#e3f1e7",
+            "on-surface": "#121e18", "on-secondary-fixed-variant": "#0e5138",
+            "on-secondary-container": "#316e52", "on-tertiary-fixed-variant": "#374b3e",
+            "on-error": "#ffffff", "error": "#ba1a1a",
+            "surface-dim": "#cfddd4", "on-primary": "#ffffff",
+            "inverse-on-surface": "#e6f4ea", "on-primary-fixed-variant": "#2b4d44",
+            "surface": "#effdf3", "surface-container-highest": "#d8e6dc",
+            "on-primary-container": "#83a69c", "on-tertiary-fixed": "#0b1f14",
+            "primary": "#01261f", "primary-container": "#1a3c34",
+            "outline-variant": "#c1c8c4", "error-container": "#ffdad6",
+            "on-secondary": "#ffffff", "on-error-container": "#93000a",
+            "on-surface-variant": "#414846", "secondary-fixed-dim": "#95d4b3",
+            "surface-container-low": "#e9f7ed", "inverse-primary": "#aacec3",
+            "surface-bright": "#effdf3"
+          },
+          borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+          fontFamily: {
+            "headline-xl": ["Bricolage Grotesque"], "body-lg": ["Be Vietnam Pro"],
+            "label-bold": ["Be Vietnam Pro"], "headline-md": ["Bricolage Grotesque"],
+            "body-md": ["Be Vietnam Pro"]
+          },
+          fontSize: {
+            "headline-xl": ["64px", {"lineHeight":"1.1","letterSpacing":"-0.04em","fontWeight":"800"}],
+            "body-lg": ["18px", {"lineHeight":"1.6","fontWeight":"400"}],
+            "label-bold": ["14px", {"lineHeight":"1.2","letterSpacing":"0.05em","fontWeight":"700"}],
+            "headline-md": ["32px", {"lineHeight":"1.2","fontWeight":"700"}],
+            "body-md": ["16px", {"lineHeight":"1.6","fontWeight":"400"}]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #b1f0ce; border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: #95d4b3; }
+
+    /* ── Calendar cell ─────────────────────────────────────────── */
+    .cal-cell {
+      min-height: 52px;
+      padding: 6px 4px 5px;
+      border-radius: 10px;
+      transition: background 0.12s, outline 0.12s;
+      position: relative;
+    }
+    @media (min-width: 480px) {
+      .cal-cell { min-height: 72px; padding: 8px 6px 6px; border-radius: 12px; }
+    }
+    .cal-cell.has-events { cursor: pointer; }
+    .cal-cell.has-events:hover { background: #e3f1e7; }
+    .cal-cell.is-selected { background: #dff5e9 !important; outline: 2px solid #aacec3; outline-offset: -2px; }
+    .cal-cell.other-month { pointer-events: none; }
+    .cal-cell.other-month .day-num { opacity: 0.2; }
+
+    /* Today ring */
+    .today-ring {
+      width: 26px; height: 26px;
+      display: flex; align-items: center; justify-content: center;
+      background: #01261f; color: white;
+      border-radius: 50%;
+      font-size: 13px; font-weight: 700;
+      line-height: 1;
+    }
+
+    /* Event dots (mobile) */
+    .event-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: #2c694e;
+      flex-shrink: 0;
+    }
+
+    /* Event pills (desktop) */
+    .event-pill {
+      font-size: 10px; font-weight: 700; line-height: 1.3;
+      padding: 2px 5px; border-radius: 999px;
+      background: #aeeecb; color: #00201a;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      max-width: 100%; display: block;
+    }
+
+    /* ── Animations ────────────────────────────────────────────── */
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spinner { animation: spin 0.9s linear infinite; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.22s ease forwards; }
+  </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md min-h-screen">
+
+<!-- ── Navigation ──────────────────────────────────────────────────────────── -->
+<nav class="flex justify-between items-center w-full px-6 md:px-14 h-16 bg-primary sticky top-0 z-[500]">
+  <a href="index.html" class="font-headline-md text-[22px] font-extrabold text-on-primary hover:opacity-90 transition-opacity">
+    Indy Matcha
+  </a>
+  <div class="hidden md:flex items-center gap-8">
+    <a href="index.html"     class="font-label-bold text-label-bold text-on-primary/70 hover:text-on-primary transition-colors">Find Matcha</a>
+    <a href="events.html"    class="font-label-bold text-label-bold text-on-primary border-b-2 border-on-primary pb-0.5">Events</a>
+    <a href="instagram.html" class="font-label-bold text-label-bold text-on-primary/70 hover:text-on-primary transition-colors">Instagram Spots</a>
+    <a href="submit.html"    class="font-label-bold text-label-bold text-on-primary/70 hover:text-on-primary transition-colors">Submit a Spot</a>
+  </div>
+  <a href="submit.html" class="hidden md:inline-flex bg-secondary text-on-secondary px-5 py-2 rounded-full font-label-bold text-sm shadow-[3px_3px_0px_rgba(255,255,255,0.15)] hover:scale-105 active:scale-95 transition-all">
+    + Add Spot
+  </a>
+  <button id="hamburger-btn" class="md:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 rounded-lg hover:bg-white/10 transition-colors" aria-label="Menu">
+    <span class="hamburger-bar block w-5 h-0.5 bg-on-primary transition-all duration-200"></span>
+    <span class="hamburger-bar block w-5 h-0.5 bg-on-primary transition-all duration-200"></span>
+    <span class="hamburger-bar block w-5 h-0.5 bg-on-primary transition-all duration-200"></span>
+  </button>
+</nav>
+
+<!-- Mobile nav dropdown -->
+<div id="mobile-menu" style="position:fixed;top:64px;left:0;right:0;background:#01261f;z-index:600;border-bottom:2px solid rgba(255,255,255,0.1);transform:translateY(-8px);opacity:0;pointer-events:none;transition:transform 0.18s ease,opacity 0.18s ease;">
+  <div class="flex flex-col px-6 py-4 gap-1">
+    <a href="index.html"     class="font-label-bold text-sm text-on-primary/70 py-3 border-b border-white/10">Find Matcha</a>
+    <a href="events.html"    class="font-label-bold text-sm text-on-primary    py-3 border-b border-white/10">Events</a>
+    <a href="instagram.html" class="font-label-bold text-sm text-on-primary/70 py-3 border-b border-white/10">Instagram Spots</a>
+    <a href="submit.html"    class="font-label-bold text-sm text-on-primary/70 py-3 border-b border-white/10">Submit a Spot</a>
+    <a href="submit.html"    class="mt-3 bg-secondary text-on-secondary px-5 py-3 rounded-full font-label-bold text-sm text-center">+ Add Spot</a>
+  </div>
+</div>
+
+<!-- ── Page header ──────────────────────────────────────────────────────────── -->
+<div class="text-center pt-12 pb-8 px-6">
+  <h1 class="font-headline-xl text-[40px] md:text-[52px] text-primary leading-tight">Events</h1>
+</div>
+
+<!-- ── Calendar ─────────────────────────────────────────────────────────────── -->
+<div class="max-w-xl mx-auto px-4 sm:px-6 pb-24">
+
+  <!-- Loading state -->
+  <div id="loading" class="flex justify-center py-20">
+    <svg class="spinner w-7 h-7 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+    </svg>
+  </div>
+
+  <!-- Calendar (hidden until loaded) -->
+  <div id="calendar-wrap" class="hidden">
+
+    <!-- Month navigation -->
+    <div class="flex items-center justify-between mb-5">
+      <button id="prev-btn"
+        class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
+        aria-label="Previous month">
+        <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+          <path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd"/>
+        </svg>
+      </button>
+      <h2 id="month-label" class="font-headline-md text-[22px] text-primary select-none"></h2>
+      <button id="next-btn"
+        class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
+        aria-label="Next month">
+        <svg viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+          <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Day-of-week headers -->
+    <div class="grid grid-cols-7 text-center mb-1.5">
+      <div class="text-[11px] font-label-bold text-on-surface-variant uppercase tracking-wider py-1">Sun</div>
+      <div class="text-[11px] font-label-bold text-on-surface-variant uppercase tracking-wider py-1">Mon</div>
+      <div class="text-[11px] font-label-bold text-on-surface-variant uppercase tracking-wider py-1">Tue</div>
+      <div class="text-[11px] font-label-bold text-on-surface-variant uppercase tracking-wider py-1">Wed</div>
+      <div class="text-[11px] font-label-bold text-on-surface-variant uppercase tracking-wider py-1">Thu</div>
+      <div class="text-[11px] font-label-bold text-on-surface-variant uppercase tracking-wider py-1">Fri</div>
+      <div class="text-[11px] font-label-bold text-on-surface-variant uppercase tracking-wider py-1">Sat</div>
+    </div>
+
+    <!-- Calendar grid -->
+    <div id="cal-grid" class="grid grid-cols-7 gap-0.5 sm:gap-1"></div>
+
+    <!-- Thin divider -->
+    <div class="border-t border-surface-variant mt-7"></div>
+
+    <!-- Day detail panel -->
+    <div id="day-panel" class="mt-5 hidden">
+      <p id="day-title" class="text-[11px] font-label-bold text-on-surface-variant uppercase tracking-widest mb-4"></p>
+      <div id="day-events" class="flex flex-col gap-3"></div>
+    </div>
+
+    <!-- Empty month notice -->
+    <div id="empty-month" class="hidden mt-7 text-center text-sm text-on-surface-variant py-2">
+      No published events this month.
+    </div>
+
+  </div>
+
+  <!-- Error state -->
+  <div id="error-state" class="hidden text-center py-20 text-on-surface-variant text-sm">
+    Couldn't load events. Check back soon.
+  </div>
+
+</div>
+
+<script>
+  const AIRTABLE_TOKEN = 'patoO4IGP4ESJoWnD.a05da83d9b8e7a4f9808aa5cf85cf4e26b6971aa287b0bdaf76ffab3c76ec21e';
+  const BASE_ID        = 'apph243NPR5JjRPav';
+  const EVENTS_TABLE   = 'events';
+  const TZ             = 'America/Indiana/Indianapolis';
+
+  let allEvents      = [];
+  let eventsByDate   = {};
+  let viewYear       = new Date().getFullYear();
+  let viewMonth      = new Date().getMonth(); // 0-indexed
+  let selectedDate   = null; // 'YYYY-MM-DD'
+
+  // ── Utilities ─────────────────────────────────────────────────────────────
+
+  function esc(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  // 'YYYY-MM-DD' string in Indianapolis local time
+  function localDateKey(isoStr) {
+    return new Date(isoStr).toLocaleDateString('en-CA', { timeZone: TZ });
+  }
+
+  function fmtTime(isoStr) {
+    return new Date(isoStr).toLocaleTimeString('en-US', {
+      hour: 'numeric', minute: '2-digit', timeZone: TZ
+    });
+  }
+
+  function groupByDate(events) {
+    const map = {};
+    for (const e of events) {
+      const key = localDateKey(e.start);
+      (map[key] = map[key] || []).push(e);
+    }
+    return map;
+  }
+
+  // ── Calendar render ────────────────────────────────────────────────────────
+
+  function renderCalendar() {
+    const grid  = document.getElementById('cal-grid');
+    const label = document.getElementById('month-label');
+    const empty = document.getElementById('empty-month');
+
+    label.textContent = new Date(viewYear, viewMonth, 1)
+      .toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+    grid.innerHTML = '';
+
+    const firstDay    = new Date(viewYear, viewMonth, 1).getDay(); // 0=Sun
+    const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+    const todayKey    = new Date().toLocaleDateString('en-CA', { timeZone: TZ });
+
+    // Check if month has any published events
+    let monthHasEvents = false;
+    for (let d = 1; d <= daysInMonth; d++) {
+      const key = `${viewYear}-${String(viewMonth+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+      if (eventsByDate[key]?.length) { monthHasEvents = true; break; }
+    }
+    empty.classList.toggle('hidden', monthHasEvents);
+
+    // Leading blank cells
+    for (let i = 0; i < firstDay; i++) {
+      const blank = document.createElement('div');
+      blank.className = 'cal-cell other-month';
+      grid.appendChild(blank);
+    }
+
+    // Day cells
+    for (let d = 1; d <= daysInMonth; d++) {
+      const dateKey   = `${viewYear}-${String(viewMonth+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+      const dayEvents = (eventsByDate[dateKey] || [])
+        .slice().sort((a, b) => new Date(a.start) - new Date(b.start));
+      const isToday    = dateKey === todayKey;
+      const isSelected = dateKey === selectedDate;
+
+      const cell = document.createElement('div');
+      cell.className = [
+        'cal-cell',
+        dayEvents.length ? 'has-events'  : '',
+        isToday          ? 'is-today'    : '',
+        isSelected       ? 'is-selected' : '',
+      ].filter(Boolean).join(' ');
+
+      // Day number
+      const numWrap = document.createElement('div');
+      numWrap.className = 'flex items-center justify-center mb-1';
+      if (isToday) {
+        numWrap.innerHTML = `<span class="today-ring">${d}</span>`;
+      } else {
+        numWrap.innerHTML = `<span class="day-num text-[13px] font-label-bold text-on-surface">${d}</span>`;
+      }
+      cell.appendChild(numWrap);
+
+      if (dayEvents.length > 0) {
+        // Mobile: colored dots
+        const dotRow = document.createElement('div');
+        dotRow.className = 'sm:hidden flex justify-center gap-1 mt-0.5';
+        dayEvents.slice(0, 3).forEach(() => {
+          const dot = document.createElement('div');
+          dot.className = 'event-dot';
+          dotRow.appendChild(dot);
+        });
+        cell.appendChild(dotRow);
+
+        // Desktop: name pills
+        const pillCol = document.createElement('div');
+        pillCol.className = 'hidden sm:flex flex-col gap-0.5';
+        dayEvents.slice(0, 2).forEach(e => {
+          const pill = document.createElement('span');
+          pill.className = 'event-pill';
+          pill.textContent = e.name;
+          pillCol.appendChild(pill);
+        });
+        if (dayEvents.length > 2) {
+          const more = document.createElement('span');
+          more.className = 'text-[10px] font-label-bold text-secondary pl-1';
+          more.textContent = `+${dayEvents.length - 2} more`;
+          pillCol.appendChild(more);
+        }
+        cell.appendChild(pillCol);
+
+        cell.addEventListener('click', () => selectDay(dateKey, dayEvents));
+      }
+
+      grid.appendChild(cell);
+    }
+  }
+
+  // ── Day selection ──────────────────────────────────────────────────────────
+
+  function selectDay(dateKey, dayEvents) {
+    selectedDate = dateKey;
+    renderCalendar();
+
+    const panel  = document.getElementById('day-panel');
+    const title  = document.getElementById('day-title');
+    const evtCtr = document.getElementById('day-events');
+
+    // Format heading: "Friday, May 30"
+    const [y, m, d] = dateKey.split('-').map(Number);
+    title.textContent = new Date(y, m - 1, d).toLocaleDateString('en-US', {
+      weekday: 'long', month: 'long', day: 'numeric'
+    });
+
+    evtCtr.innerHTML = '';
+    dayEvents.forEach(e => {
+      let timeStr = fmtTime(e.start);
+      if (e.end) timeStr += ` – ${fmtTime(e.end)}`;
+
+      const card = document.createElement('div');
+      card.className = 'bg-white border border-surface-variant rounded-[1.25rem] p-5 flex flex-col gap-3 shadow-[3px_3px_0_rgba(1,38,31,0.06)]';
+      card.innerHTML = `
+        <div class="flex flex-col gap-1">
+          <h3 class="font-headline-md text-[20px] text-primary leading-tight">${esc(e.name)}</h3>
+          <p class="text-sm text-on-surface-variant font-label-bold flex items-center gap-1.5">
+            <span class="material-symbols-outlined" style="font-size:15px;font-variation-settings:'FILL' 1;vertical-align:middle;">schedule</span>
+            ${timeStr}
+          </p>
+        </div>
+        ${e.repostLink ? `
+        <a href="${esc(e.repostLink)}" target="_blank" rel="noopener noreferrer"
+           class="self-start inline-flex items-center gap-2 bg-primary text-on-primary px-4 py-2 rounded-full font-label-bold text-sm shadow-[2px_2px_0px_rgba(1,38,31,0.15)] hover:scale-105 active:scale-95 transition-all">
+          View on Instagram
+          <svg viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5 opacity-80">
+            <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>
+          </svg>
+        </a>` : ''}
+      `;
+      evtCtr.appendChild(card);
+    });
+
+    // Animate in
+    panel.classList.remove('hidden', 'fade-up');
+    void panel.offsetWidth; // force reflow
+    panel.classList.add('fade-up');
+
+    setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 40);
+  }
+
+  // ── Month navigation ───────────────────────────────────────────────────────
+
+  document.getElementById('prev-btn').addEventListener('click', () => {
+    viewMonth--;
+    if (viewMonth < 0) { viewMonth = 11; viewYear--; }
+    selectedDate = null;
+    document.getElementById('day-panel').classList.add('hidden');
+    renderCalendar();
+  });
+
+  document.getElementById('next-btn').addEventListener('click', () => {
+    viewMonth++;
+    if (viewMonth > 11) { viewMonth = 0; viewYear++; }
+    selectedDate = null;
+    document.getElementById('day-panel').classList.add('hidden');
+    renderCalendar();
+  });
+
+  // ── Data loading ───────────────────────────────────────────────────────────
+
+  async function loadEvents() {
+    const formula = encodeURIComponent("{publish}='publish'");
+    const url = `https://api.airtable.com/v0/${BASE_ID}/${encodeURIComponent(EVENTS_TABLE)}` +
+                `?filterByFormula=${formula}&pageSize=100`;
+
+    const res = await fetch(url, { headers: { Authorization: `Bearer ${AIRTABLE_TOKEN}` } });
+    if (!res.ok) throw new Error(`Airtable ${res.status}`);
+    const { records } = await res.json();
+
+    allEvents = records
+      .filter(r => r.fields['Start'])
+      .map(r => ({
+        id:         r.id,
+        name:       r.fields['Name']        || 'Untitled event',
+        start:      r.fields['Start'],
+        end:        r.fields['End']         || null,
+        repostLink: r.fields['Repost link'] || null,
+      }));
+
+    eventsByDate = groupByDate(allEvents);
+
+    // Default view: current month; jump forward if no events here but there are upcoming ones
+    const now     = new Date();
+    const nowYear = now.getFullYear();
+    const nowMon  = now.getMonth();
+    viewYear  = nowYear;
+    viewMonth = nowMon;
+
+    const currentMonthKey = `${nowYear}-${String(nowMon+1).padStart(2,'0')}`;
+    const hasNow = Object.keys(eventsByDate).some(k => k.startsWith(currentMonthKey));
+    if (!hasNow && allEvents.length) {
+      // Jump to the earliest future event's month
+      const future = allEvents
+        .filter(e => new Date(e.start) >= now)
+        .sort((a,b) => new Date(a.start) - new Date(b.start));
+      if (future.length) {
+        const d = new Date(future[0].start);
+        viewYear  = d.getFullYear();
+        viewMonth = d.getMonth();
+      }
+    }
+
+    renderCalendar();
+    document.getElementById('loading').classList.add('hidden');
+    document.getElementById('calendar-wrap').classList.remove('hidden');
+  }
+
+  // ── Hamburger menu ──────────────────────────────────────────────────────────
+
+  document.getElementById('hamburger-btn')?.addEventListener('click', function () {
+    const menu = document.getElementById('mobile-menu');
+    const bars = this.querySelectorAll('.hamburger-bar');
+    const isOpen = menu.style.opacity === '1';
+    if (!isOpen) {
+      menu.style.transform = 'translateY(0)'; menu.style.opacity = '1'; menu.style.pointerEvents = 'auto';
+      bars[0].style.transform = 'translateY(8px) rotate(45deg)';
+      bars[1].style.opacity   = '0';
+      bars[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+    } else {
+      menu.style.transform = 'translateY(-8px)'; menu.style.opacity = '0'; menu.style.pointerEvents = 'none';
+      bars[0].style.transform = ''; bars[1].style.opacity = ''; bars[2].style.transform = '';
+    }
+  });
+
+  // ── Init ──────────────────────────────────────────────────────────────────
+
+  loadEvents().catch(() => {
+    document.getElementById('loading').classList.add('hidden');
+    document.getElementById('error-state').classList.remove('hidden');
+  });
+</script>
+
+</body>
+</html>
