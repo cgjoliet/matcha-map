@@ -42,7 +42,7 @@ jobs:
             cp /tmp/places-cache.json places-cache.json
             git add places-cache.json
             git diff --staged --quiet && echo "No changes to commit" && exit 0
-            git commit -m "chore: refresh places cache [skip vercel]"
+            git commit -m "chore: refresh places cache"
             git push && exit 0
             echo "Push rejected (attempt $i), retrying…"
             sleep 3
