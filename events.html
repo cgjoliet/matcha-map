@@ -64,15 +64,29 @@
     ::-webkit-scrollbar-thumb { background: #b1f0ce; border-radius: 10px; }
     ::-webkit-scrollbar-thumb:hover { background: #95d4b3; }
 
+    /* ── Calendar sizing via JS-set CSS variable ───────────────── */
+    :root { --cell-size: 80px; }
+
+    #calendar-wrap {
+      width: calc(7 * var(--cell-size) + 24px); /* 6 gaps × 4px */
+      margin: 0 auto;
+    }
+    #cal-grid {
+      grid-template-columns: repeat(7, var(--cell-size));
+      gap: 4px;
+    }
+    #dow-header { gap: 4px; }
+
     /* ── Calendar cell ─────────────────────────────────────────── */
     .cal-cell {
-      aspect-ratio: 1 / 1;
-      min-height: 44px;
+      width:  var(--cell-size);
+      height: var(--cell-size);
       padding: 5px 4px 4px;
       border-radius: 10px;
       transition: background 0.12s, outline 0.12s;
       position: relative;
       overflow: hidden;
+      box-sizing: border-box;
     }
     .cal-cell.has-events { cursor: pointer; }
     .cal-cell.has-events:hover { background: #e3f1e7; }
@@ -90,7 +104,7 @@
       line-height: 1;
     }
 
-    /* Event dots (mobile) */
+    /* Event dots (small cells) */
     .event-dot {
       width: 5px; height: 5px;
       border-radius: 50%;
@@ -98,17 +112,13 @@
       flex-shrink: 0;
     }
 
-    /* Event pills (all sizes) */
+    /* Event pills */
     .event-pill {
       font-size: 10px; font-weight: 700; line-height: 1.3;
       padding: 2px 5px; border-radius: 999px;
       background: #aeeecb; color: #00201a;
       white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
       max-width: 100%; display: block;
-    }
-    @media (min-width: 768px) {
-      .cal-cell { padding: 8px 7px 6px; border-radius: 12px; }
-      .event-pill { font-size: 11px; padding: 3px 7px; }
     }
 
     /* ── Animations ────────────────────────────────────────────── */
@@ -158,12 +168,12 @@
 </div>
 
 <!-- ── Page header ──────────────────────────────────────────────────────────── -->
-<div class="text-center pt-12 pb-8 px-6">
-  <h1 class="font-headline-xl text-[40px] md:text-[52px] text-primary leading-tight">Events</h1>
+<div id="page-header" class="text-center pt-5 pb-3 px-6">
+  <h1 class="font-headline-xl text-[36px] md:text-[44px] text-primary leading-tight">Events</h1>
 </div>
 
 <!-- ── Calendar ─────────────────────────────────────────────────────────────── -->
-<div class="w-3/4 mx-auto pb-24">
+<div class="pb-8">
 
   <!-- Loading state -->
   <div id="loading" class="flex justify-center py-20">
@@ -176,7 +186,7 @@
   <div id="calendar-wrap" class="hidden">
 
     <!-- Month navigation -->
-    <div class="flex items-center justify-between mb-5">
+    <div id="month-nav" class="flex items-center justify-between mb-3">
       <button id="prev-btn"
         class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
         aria-label="Previous month">
@@ -195,7 +205,7 @@
     </div>
 
     <!-- Day-of-week headers -->
-    <div class="grid grid-cols-7 text-center mb-1.5">
+    <div id="dow-header" class="grid grid-cols-7 text-center mb-1">
       <div class="text-[11px] font-label-bold text-on-surface-variant uppercase tracking-wider py-1">Sun</div>
       <div class="text-[11px] font-label-bold text-on-surface-variant uppercase tracking-wider py-1">Mon</div>
       <div class="text-[11px] font-label-bold text-on-surface-variant uppercase tracking-wider py-1">Tue</div>
@@ -206,7 +216,7 @@
     </div>
 
     <!-- Calendar grid -->
-    <div id="cal-grid" class="grid grid-cols-7 gap-0.5 sm:gap-1"></div>
+    <div id="cal-grid" class="grid"></div>
 
     <!-- Thin divider -->
     <div class="border-t border-surface-variant mt-7"></div>
@@ -242,6 +252,33 @@
   let viewYear       = new Date().getFullYear();
   let viewMonth      = new Date().getMonth(); // 0-indexed
   let selectedDate   = null; // 'YYYY-MM-DD'
+
+  // ── Cell sizing: height-first so whole month fits on screen ──────────────
+
+  function rowCount() {
+    const firstDay    = new Date(viewYear, viewMonth, 1).getDay();
+    const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+    return Math.ceil((firstDay + daysInMonth) / 7);
+  }
+
+  function sizeCells() {
+    const GAP     = 4;   // matches CSS gap: 4px
+    const H_PAD   = 32;  // horizontal breathing room (16px per side)
+    const navH    = 64;
+    const pageH   = document.getElementById('page-header')?.offsetHeight  || 72;
+    const mnH     = document.getElementById('month-nav')?.offsetHeight    || 44;
+    const dowH    = document.getElementById('dow-header')?.offsetHeight   || 26;
+    const margins = 12 + 4 + 8; // month-nav mb-3 + dow mb-1 + small buffer
+    const rows    = rowCount();
+
+    const byHeight = Math.floor(
+      (window.innerHeight - navH - pageH - mnH - dowH - margins - GAP * (rows - 1)) / rows
+    );
+    const byWidth = Math.floor((window.innerWidth - H_PAD) / 7);
+    const cellSize = Math.max(40, Math.min(150, byHeight, byWidth));
+
+    document.documentElement.style.setProperty('--cell-size', cellSize + 'px');
+  }
 
   // ── Utilities ─────────────────────────────────────────────────────────────
 
@@ -420,6 +457,7 @@
     selectedDate = null;
     document.getElementById('day-panel').classList.add('hidden');
     renderCalendar();
+    sizeCells();
   });
 
   document.getElementById('next-btn').addEventListener('click', () => {
@@ -428,7 +466,10 @@
     selectedDate = null;
     document.getElementById('day-panel').classList.add('hidden');
     renderCalendar();
+    sizeCells();
   });
+
+  window.addEventListener('resize', () => { sizeCells(); });
 
   // ── Data loading ───────────────────────────────────────────────────────────
 
@@ -477,6 +518,8 @@
     renderCalendar();
     document.getElementById('loading').classList.add('hidden');
     document.getElementById('calendar-wrap').classList.remove('hidden');
+    // Size after reveal so offsetHeight measurements are accurate
+    requestAnimationFrame(sizeCells);
   }
 
   // ── Hamburger menu ──────────────────────────────────────────────────────────
