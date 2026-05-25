@@ -2,15 +2,14 @@
 // Daily Places API refresh — run by GitHub Actions, outputs places-cache.json
 // Uses Google Places API (New) REST endpoint so no browser SDK needed.
 
-import { writeFileSync } from 'fs';
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
+const fs   = require('fs');
+const path = require('path');
 
-const AIRTABLE_TOKEN    = process.env.AIRTABLE_TOKEN;
-const GOOGLE_API_KEY    = process.env.GOOGLE_PLACES_API_KEY;
-const BASE_ID           = 'apph243NPR5JjRPav';
-const TABLE_ID          = 'tblRNrmF9zlhpC9fh';
-const OUTPUT_FILE       = join(dirname(fileURLToPath(import.meta.url)), '..', 'places-cache.json');
+const AIRTABLE_TOKEN = process.env.AIRTABLE_TOKEN;
+const GOOGLE_API_KEY = process.env.GOOGLE_PLACES_API_KEY;
+const BASE_ID        = 'apph243NPR5JjRPav';
+const TABLE_ID       = 'tblRNrmF9zlhpC9fh';
+const OUTPUT_FILE    = path.join(__dirname, '..', 'places-cache.json');
 
 if (!AIRTABLE_TOKEN)  throw new Error('AIRTABLE_TOKEN env var is required');
 if (!GOOGLE_API_KEY)  throw new Error('GOOGLE_PLACES_API_KEY env var is required');
@@ -32,8 +31,8 @@ async function fetchPlaceDetails(name) {
   const res = await fetch('https://places.googleapis.com/v1/places:searchText', {
     method: 'POST',
     headers: {
-      'Content-Type':    'application/json',
-      'X-Goog-Api-Key':  GOOGLE_API_KEY,
+      'Content-Type':     'application/json',
+      'X-Goog-Api-Key':   GOOGLE_API_KEY,
       'X-Goog-FieldMask': [
         'places.rating',
         'places.userRatingCount',
@@ -64,10 +63,9 @@ async function fetchPlaceDetails(name) {
     rating:              p.rating              ?? null,
     userRatingCount:     p.userRatingCount      ?? null,
     weekdayDescriptions: p.regularOpeningHours?.weekdayDescriptions || [],
-    // isOpenNow is intentionally omitted — the client computes it from
-    // weekdayDescriptions at load time so it reflects the user's current hour.
+    // isOpenNow omitted — client computes it from weekdayDescriptions at load time
     nationalPhoneNumber: p.nationalPhoneNumber  ?? null,
-    websiteURI:          p.websiteUri           ?? null,  // normalise casing
+    websiteURI:          p.websiteUri           ?? null,
   };
 }
 
@@ -90,7 +88,7 @@ async function main() {
   }
 
   const cache = { cached_at: new Date().toISOString(), spots };
-  writeFileSync(OUTPUT_FILE, JSON.stringify(cache, null, 2));
+  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(cache, null, 2));
   console.log(`\nWrote ${Object.keys(spots).length} entries to places-cache.json ✓`);
 }
 
