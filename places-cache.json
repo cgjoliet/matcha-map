@@ -1,4 +1,822 @@
 {
-  "cached_at": "2026-05-25T22:32:12.738Z",
-  "spots": {}
+  "cached_at": "2026-05-26T17:48:42.139Z",
+  "spots": {
+    "MOTW Coffee and Pastries - W 38th": {
+      "rating": 4.8,
+      "userRatingCount": 691,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 8:30 PM",
+        "Tuesday: 7:00 AM – 8:30 PM",
+        "Wednesday: 7:00 AM – 8:30 PM",
+        "Thursday: 7:00 AM – 8:30 PM",
+        "Friday: 7:00 AM – 8:30 PM",
+        "Saturday: 9:00 AM – 9:30 PM",
+        "Sunday: 9:00 AM – 9:30 PM"
+      ],
+      "nationalPhoneNumber": "(317) 602-8259",
+      "websiteURI": "http://motw.coffee/"
+    },
+    "Foundry Provisions": {
+      "rating": 4.5,
+      "userRatingCount": 427,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 5:00 PM",
+        "Tuesday: 7:00 AM – 5:00 PM",
+        "Wednesday: 7:00 AM – 5:00 PM",
+        "Thursday: 7:00 AM – 5:00 PM",
+        "Friday: 7:00 AM – 5:00 PM",
+        "Saturday: 8:00 AM – 3:00 PM",
+        "Sunday: 8:00 AM – 3:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 543-7357",
+      "websiteURI": "http://foundryprovisions.com/"
+    },
+    "Claypot Coffee House": {
+      "rating": 4.9,
+      "userRatingCount": 345,
+      "weekdayDescriptions": [
+        "Monday: 8:00 AM – 9:00 PM",
+        "Tuesday: 8:00 AM – 9:00 PM",
+        "Wednesday: 8:00 AM – 9:00 PM",
+        "Thursday: 8:00 AM – 9:00 PM",
+        "Friday: 8:00 AM – 9:00 PM",
+        "Saturday: 8:00 AM – 9:00 PM",
+        "Sunday: Closed"
+      ],
+      "nationalPhoneNumber": "(317) 300-1346",
+      "websiteURI": "https://online.skytab.com/1960128eaf501649f03c18a93b48ba98"
+    },
+    "Cafe Patachou - Downtown": {
+      "rating": 4.6,
+      "userRatingCount": 3165,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 3:00 PM",
+        "Tuesday: 7:00 AM – 3:00 PM",
+        "Wednesday: 7:00 AM – 3:00 PM",
+        "Thursday: 7:00 AM – 3:00 PM",
+        "Friday: 7:00 AM – 3:00 PM",
+        "Saturday: 8:00 AM – 3:00 PM",
+        "Sunday: 8:00 AM – 3:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 632-0765",
+      "websiteURI": "https://www.cafepatachou.com/"
+    },
+    "The Spice & Tea Exchange": {
+      "rating": 4.9,
+      "userRatingCount": 38,
+      "weekdayDescriptions": [
+        "Monday: 10:00 AM – 6:00 PM",
+        "Tuesday: 10:00 AM – 6:00 PM",
+        "Wednesday: 10:00 AM – 6:00 PM",
+        "Thursday: 10:00 AM – 6:00 PM",
+        "Friday: 10:00 AM – 6:00 PM",
+        "Saturday: 10:00 AM – 7:00 PM",
+        "Sunday: 11:00 AM – 5:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 526-6836",
+      "websiteURI": "https://www.spiceandtea.com/noblesville-in"
+    },
+    "Mocha House": {
+      "rating": 4.7,
+      "userRatingCount": 121,
+      "weekdayDescriptions": [
+        "Monday: 6:00 AM – 11:00 PM",
+        "Tuesday: 6:00 AM – 11:00 PM",
+        "Wednesday: 6:00 AM – 11:00 PM",
+        "Thursday: 6:00 AM – 11:00 PM",
+        "Friday: 6:00 AM – 1:00 AM",
+        "Saturday: 6:00 AM – 1:00 AM",
+        "Sunday: 6:00 AM – 11:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 436-3800",
+      "websiteURI": "https://baytalmocha.com/?utm_source=gbp"
+    },
+    "Cafe Patachou - The Stutz": {
+      "rating": 4.6,
+      "userRatingCount": 197,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 3:00 PM",
+        "Tuesday: 7:00 AM – 3:00 PM",
+        "Wednesday: 7:00 AM – 3:00 PM",
+        "Thursday: 7:00 AM – 3:00 PM",
+        "Friday: 7:00 AM – 3:00 PM",
+        "Saturday: 8:00 AM – 3:00 PM",
+        "Sunday: 8:00 AM – 3:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 222-3538",
+      "websiteURI": "https://www.cafepatachou.com/"
+    },
+    "MOTW Coffee and Pastries - Carmel": {
+      "rating": 4.6,
+      "userRatingCount": 402,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 8:30 PM",
+        "Tuesday: 7:00 AM – 8:30 PM",
+        "Wednesday: 7:00 AM – 8:30 PM",
+        "Thursday: 7:00 AM – 8:30 PM",
+        "Friday: 7:00 AM – 10:00 PM",
+        "Saturday: 9:00 AM – 10:00 PM",
+        "Sunday: 9:00 AM – 10:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 343-2187",
+      "websiteURI": "http://motw.coffee/"
+    },
+    "Mansion Society": {
+      "rating": 4.6,
+      "userRatingCount": 261,
+      "weekdayDescriptions": [
+        "Monday: Closed",
+        "Tuesday: Closed",
+        "Wednesday: 8:00 AM – 5:00 PM",
+        "Thursday: 8:00 AM – 4:00 PM",
+        "Friday: 8:00 AM – 4:00 PM",
+        "Saturday: 8:00 AM – 4:00 PM",
+        "Sunday: 9:00 AM – 4:00 PM"
+      ],
+      "nationalPhoneNumber": null,
+      "websiteURI": null
+    },
+    "Prufrock Coffee Company - Carmel": {
+      "rating": 4.5,
+      "userRatingCount": 138,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 7:00 PM",
+        "Tuesday: 7:00 AM – 7:00 PM",
+        "Wednesday: 7:00 AM – 7:00 PM",
+        "Thursday: 7:00 AM – 7:00 PM",
+        "Friday: 7:00 AM – 7:00 PM",
+        "Saturday: 7:00 AM – 7:00 PM",
+        "Sunday: 7:00 AM – 7:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 602-3004",
+      "websiteURI": "https://www.facebook.com/p/Prufrock-Coffee-Company-100063278586049/"
+    },
+    "Black House Café": {
+      "rating": 4.6,
+      "userRatingCount": 342,
+      "weekdayDescriptions": [
+        "Monday: 8:00 AM – 5:00 PM",
+        "Tuesday: 8:00 AM – 5:00 PM",
+        "Wednesday: 8:00 AM – 5:00 PM",
+        "Thursday: 8:00 AM – 5:00 PM",
+        "Friday: 8:00 AM – 5:00 PM",
+        "Saturday: 8:00 AM – 5:00 PM",
+        "Sunday: 8:00 AM – 5:00 PM"
+      ],
+      "nationalPhoneNumber": null,
+      "websiteURI": "http://www.blackhousecafeindy.com/"
+    },
+    "Bovaconti Coffee - Indy": {
+      "rating": 4.8,
+      "userRatingCount": 757,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 7:00 PM",
+        "Tuesday: 7:00 AM – 7:00 PM",
+        "Wednesday: 7:00 AM – 7:00 PM",
+        "Thursday: 7:00 AM – 7:00 PM",
+        "Friday: 7:00 AM – 7:00 PM",
+        "Saturday: 7:00 AM – 7:00 PM",
+        "Sunday: 7:00 AM – 7:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 222-1855",
+      "websiteURI": "http://www.bovaconticoffee.com/"
+    },
+    "Cafe Patachou - Keystone": {
+      "rating": 4.6,
+      "userRatingCount": 928,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 3:00 PM",
+        "Tuesday: 7:00 AM – 3:00 PM",
+        "Wednesday: 7:00 AM – 3:00 PM",
+        "Thursday: 7:00 AM – 3:00 PM",
+        "Friday: 7:00 AM – 3:00 PM",
+        "Saturday: 8:00 AM – 3:00 PM",
+        "Sunday: 8:00 AM – 3:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 815-0765",
+      "websiteURI": "https://www.cafepatachou.com/"
+    },
+    "Provider Café": {
+      "rating": 4.6,
+      "userRatingCount": 675,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 4:00 PM",
+        "Tuesday: 7:00 AM – 4:00 PM",
+        "Wednesday: 7:00 AM – 4:00 PM",
+        "Thursday: 7:00 AM – 4:00 PM",
+        "Friday: 7:00 AM – 4:00 PM",
+        "Saturday: 8:00 AM – 4:00 PM",
+        "Sunday: 8:00 AM – 4:00 PM"
+      ],
+      "nationalPhoneNumber": null,
+      "websiteURI": "http://www.providerindy.com/"
+    },
+    "Leviathan Bakehouse": {
+      "rating": 4.7,
+      "userRatingCount": 668,
+      "weekdayDescriptions": [
+        "Monday: Closed",
+        "Tuesday: 8:00 AM – 3:00 PM",
+        "Wednesday: 8:00 AM – 3:00 PM",
+        "Thursday: 8:00 AM – 3:00 PM",
+        "Friday: 8:00 AM – 3:00 PM",
+        "Saturday: 8:00 AM – 3:00 PM",
+        "Sunday: 8:00 AM – 3:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 493-1879",
+      "websiteURI": "http://www.leviathanbakehouse.com/"
+    },
+    "Prufrock Coffee Company - Indy": {
+      "rating": 4.5,
+      "userRatingCount": 414,
+      "weekdayDescriptions": [
+        "Monday: 6:30 AM – 6:00 PM",
+        "Tuesday: 6:30 AM – 6:00 PM",
+        "Wednesday: 6:30 AM – 6:00 PM",
+        "Thursday: 6:30 AM – 6:00 PM",
+        "Friday: 6:30 AM – 6:00 PM",
+        "Saturday: 8:00 AM – 6:00 PM",
+        "Sunday: 8:00 AM – 6:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 602-3004",
+      "websiteURI": "https://instagram.com/prufrockcoffeecompany?igshid=MzMyNGUyNmU2YQ=="
+    },
+    "Tinker Coffee on Market": {
+      "rating": 4.6,
+      "userRatingCount": 94,
+      "weekdayDescriptions": [
+        "Monday: 6:00 AM – 4:00 PM",
+        "Tuesday: 6:00 AM – 4:00 PM",
+        "Wednesday: 6:00 AM – 4:00 PM",
+        "Thursday: 6:00 AM – 4:00 PM",
+        "Friday: 6:00 AM – 4:00 PM",
+        "Saturday: 8:00 AM – 3:00 PM",
+        "Sunday: 8:00 AM – 3:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 974-9086",
+      "websiteURI": "http://tinkercoffee.com/"
+    },
+    "Top Out Cafe": {
+      "rating": 4.6,
+      "userRatingCount": 131,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 10:00 PM",
+        "Tuesday: 7:00 AM – 10:00 PM",
+        "Wednesday: 7:00 AM – 10:00 PM",
+        "Thursday: 7:00 AM – 10:00 PM",
+        "Friday: 7:00 AM – 10:00 PM",
+        "Saturday: 7:00 AM – 10:00 PM",
+        "Sunday: 7:00 AM – 9:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 953-6669",
+      "websiteURI": "http://topoutcafe.com/"
+    },
+    "Blue Collar Coffee Co.": {
+      "rating": 4.2,
+      "userRatingCount": 167,
+      "weekdayDescriptions": [
+        "Monday: 6:00 AM – 4:00 PM",
+        "Tuesday: 6:00 AM – 4:00 PM",
+        "Wednesday: 6:00 AM – 4:00 PM",
+        "Thursday: 6:00 AM – 4:00 PM",
+        "Friday: 6:00 AM – 4:00 PM",
+        "Saturday: 6:00 AM – 4:00 PM",
+        "Sunday: 6:00 AM – 4:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 556-1250",
+      "websiteURI": "https://www.bluecollarcoffee.net/"
+    },
+    "Niyyah Coffee - Fishers": {
+      "rating": 4.9,
+      "userRatingCount": 431,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 7:00 PM",
+        "Tuesday: 7:00 AM – 7:00 PM",
+        "Wednesday: 7:00 AM – 7:00 PM",
+        "Thursday: 7:00 AM – 7:00 PM",
+        "Friday: 7:00 AM – 8:00 PM",
+        "Saturday: 8:00 AM – 8:00 PM",
+        "Sunday: 8:00 AM – 7:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 379-6038",
+      "websiteURI": "http://niyyahcoffee.com/"
+    },
+    "Cafe Patachou - Clay Terrace": {
+      "rating": 4.5,
+      "userRatingCount": 528,
+      "weekdayDescriptions": [
+        "Monday: 8:00 AM – 3:00 PM",
+        "Tuesday: 8:00 AM – 3:00 PM",
+        "Wednesday: 8:00 AM – 3:00 PM",
+        "Thursday: 8:00 AM – 3:00 PM",
+        "Friday: 8:00 AM – 3:00 PM",
+        "Saturday: 8:00 AM – 3:00 PM",
+        "Sunday: 8:00 AM – 3:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 566-0765",
+      "websiteURI": "https://www.cafepatachou.com/"
+    },
+    "1656 Club": {
+      "rating": 4.6,
+      "userRatingCount": 64,
+      "weekdayDescriptions": [
+        "Monday: Closed",
+        "Tuesday: 8:00 AM – 3:00 PM",
+        "Wednesday: 8:00 AM – 3:00 PM",
+        "Thursday: 8:00 AM – 3:00 PM",
+        "Friday: 8:00 AM – 3:00 PM",
+        "Saturday: 9:00 AM – 3:00 PM",
+        "Sunday: 9:00 AM – 3:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 419-2589",
+      "websiteURI": "http://1656club.com/"
+    },
+    "Good Vibes Cafe Indy": {
+      "rating": 4.7,
+      "userRatingCount": 232,
+      "weekdayDescriptions": [
+        "Monday: 8:30 AM – 8:00 PM",
+        "Tuesday: 8:30 AM – 8:00 PM",
+        "Wednesday: 8:30 AM – 8:00 PM",
+        "Thursday: 8:30 AM – 8:00 PM",
+        "Friday: 8:30 AM – 8:30 PM",
+        "Saturday: 8:30 AM – 8:30 PM",
+        "Sunday: 8:30 AM – 8:30 PM"
+      ],
+      "nationalPhoneNumber": "(463) 202-2117",
+      "websiteURI": "https://cash.app/order/$goodvibescafeindy"
+    },
+    "Tinker Coffee at The AMP": {
+      "rating": 4.7,
+      "userRatingCount": 54,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 3:00 PM",
+        "Tuesday: 7:00 AM – 3:00 PM",
+        "Wednesday: 7:00 AM – 3:00 PM",
+        "Thursday: 7:00 AM – 3:00 PM",
+        "Friday: 7:00 AM – 3:00 PM",
+        "Saturday: Closed",
+        "Sunday: Closed"
+      ],
+      "nationalPhoneNumber": null,
+      "websiteURI": "https://www.tinkercoffee.com/cafe"
+    },
+    "Borage": {
+      "rating": 4.5,
+      "userRatingCount": 462,
+      "weekdayDescriptions": [
+        "Monday: Closed",
+        "Tuesday: 7:00 AM – 2:00 PM",
+        "Wednesday: 7:00 AM – 2:00 PM",
+        "Thursday: 7:00 AM – 2:00 PM, 5:00 – 9:00 PM",
+        "Friday: 7:00 AM – 2:00 PM, 5:00 – 9:00 PM",
+        "Saturday: 8:00 AM – 3:00 PM, 5:00 – 9:00 PM",
+        "Sunday: 8:00 AM – 3:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 734-3958",
+      "websiteURI": "https://www.borageeats.com/"
+    },
+    "The Coffee Haus": {
+      "rating": 4.8,
+      "userRatingCount": 62,
+      "weekdayDescriptions": [
+        "Monday: Closed",
+        "Tuesday: 8:00 AM – 3:00 PM",
+        "Wednesday: 8:00 AM – 3:00 PM",
+        "Thursday: 8:00 AM – 3:00 PM",
+        "Friday: 8:00 AM – 3:00 PM",
+        "Saturday: 8:00 AM – 3:00 PM",
+        "Sunday: 8:00 AM – 3:00 PM"
+      ],
+      "nationalPhoneNumber": null,
+      "websiteURI": "https://www.guggmanhausbrewing.com/coffeehaus"
+    },
+    "Yafa's Golden Coffee": {
+      "rating": 4.8,
+      "userRatingCount": 1287,
+      "weekdayDescriptions": [
+        "Monday: 6:00 AM – 12:00 AM",
+        "Tuesday: 6:00 AM – 12:00 AM",
+        "Wednesday: 6:00 AM – 12:00 AM",
+        "Thursday: 6:00 AM – 12:00 AM",
+        "Friday: 6:00 AM – 1:00 AM",
+        "Saturday: 8:00 AM – 1:00 AM",
+        "Sunday: 8:00 AM – 12:00 AM"
+      ],
+      "nationalPhoneNumber": "(317) 400-5959",
+      "websiteURI": "https://yafagoldencoffeeusa.com/"
+    },
+    "Blue Mind Coffee": {
+      "rating": 4.9,
+      "userRatingCount": 235,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 3:00 PM",
+        "Tuesday: 7:00 AM – 3:00 PM",
+        "Wednesday: 7:00 AM – 3:00 PM",
+        "Thursday: 7:00 AM – 3:00 PM",
+        "Friday: 7:00 AM – 3:00 PM",
+        "Saturday: 8:00 AM – 3:00 PM",
+        "Sunday: Closed"
+      ],
+      "nationalPhoneNumber": "(317) 426-4030",
+      "websiteURI": "https://www.bluemindroasting.com/"
+    },
+    "Niyyah Coffee - Indy": {
+      "rating": 4.8,
+      "userRatingCount": 56,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 5:00 PM",
+        "Tuesday: 7:00 AM – 5:00 PM",
+        "Wednesday: 7:00 AM – 5:00 PM",
+        "Thursday: 7:00 AM – 5:00 PM",
+        "Friday: 7:00 AM – 5:00 PM",
+        "Saturday: 8:00 AM – 5:00 PM",
+        "Sunday: 8:00 AM – 5:00 PM"
+      ],
+      "nationalPhoneNumber": null,
+      "websiteURI": "https://niyyahcoffee.com/"
+    },
+    "Bovaconti Coffee - Carmel": {
+      "rating": 4.7,
+      "userRatingCount": 171,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 7:00 PM",
+        "Tuesday: 7:00 AM – 7:00 PM",
+        "Wednesday: 7:00 AM – 7:00 PM",
+        "Thursday: 7:00 AM – 7:00 PM",
+        "Friday: 7:00 AM – 7:00 PM",
+        "Saturday: 7:00 AM – 7:00 PM",
+        "Sunday: 7:00 AM – 7:00 PM"
+      ],
+      "nationalPhoneNumber": null,
+      "websiteURI": "https://www.bovaconticoffee.com/"
+    },
+    "NUTOPIA": {
+      "rating": 5,
+      "userRatingCount": 98,
+      "weekdayDescriptions": [
+        "Monday: 10:00 AM – 11:00 PM",
+        "Tuesday: 10:00 AM – 11:00 PM",
+        "Wednesday: 10:00 AM – 11:00 PM",
+        "Thursday: 10:00 AM – 11:00 PM",
+        "Friday: 10:00 AM – 1:00 AM",
+        "Saturday: 10:00 AM – 1:00 AM",
+        "Sunday: 10:00 AM – 11:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 288-4468",
+      "websiteURI": null
+    },
+    "Parlor Public House": {
+      "rating": 4.5,
+      "userRatingCount": 599,
+      "weekdayDescriptions": [
+        "Monday: 8:00 AM – 5:00 PM",
+        "Tuesday: 8:00 AM – 5:00 PM",
+        "Wednesday: 8:00 AM – 10:00 PM",
+        "Thursday: 8:00 AM – 12:00 AM",
+        "Friday: 8:00 AM – 12:00 AM",
+        "Saturday: 8:00 AM – 12:00 AM",
+        "Sunday: 8:00 AM – 5:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 610-0106",
+      "websiteURI": "https://www.parlorpublichouse.com/"
+    },
+    "Cafe Patachou - East Carmel": {
+      "rating": 4.6,
+      "userRatingCount": 797,
+      "weekdayDescriptions": [
+        "Monday: 8:00 AM – 3:00 PM",
+        "Tuesday: 8:00 AM – 3:00 PM",
+        "Wednesday: 8:00 AM – 3:00 PM",
+        "Thursday: 8:00 AM – 3:00 PM",
+        "Friday: 8:00 AM – 3:00 PM",
+        "Saturday: 8:00 AM – 3:00 PM",
+        "Sunday: 8:00 AM – 3:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 569-0965",
+      "websiteURI": "https://www.cafepatachou.com/"
+    },
+    "Rivet Coffee - Zionsville": {
+      "rating": 4.5,
+      "userRatingCount": 93,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 3:00 PM",
+        "Tuesday: 7:00 AM – 3:00 PM",
+        "Wednesday: 7:00 AM – 3:00 PM",
+        "Thursday: 7:00 AM – 3:00 PM",
+        "Friday: 7:00 AM – 3:00 PM",
+        "Saturday: 7:00 AM – 3:00 PM",
+        "Sunday: Closed"
+      ],
+      "nationalPhoneNumber": "(463) 229-3777",
+      "websiteURI": "https://www.rivetcoffee.com/"
+    },
+    "Cafe Noricha": {
+      "rating": 4.8,
+      "userRatingCount": 142,
+      "weekdayDescriptions": [
+        "Monday: Closed",
+        "Tuesday: 10:30 AM – 8:00 PM",
+        "Wednesday: 10:30 AM – 8:00 PM",
+        "Thursday: 10:30 AM – 8:00 PM",
+        "Friday: 10:30 AM – 9:00 PM",
+        "Saturday: 10:30 AM – 9:00 PM",
+        "Sunday: 10:30 AM – 8:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 762-6262",
+      "websiteURI": "https://cafenoricha.com/"
+    },
+    "Gaia Coffee": {
+      "rating": 4.7,
+      "userRatingCount": 196,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 4:00 PM",
+        "Tuesday: 7:00 AM – 3:30 PM",
+        "Wednesday: 7:00 AM – 4:00 PM",
+        "Thursday: 7:00 AM – 4:00 PM",
+        "Friday: 7:00 AM – 4:00 PM",
+        "Saturday: 8:00 AM – 3:00 PM",
+        "Sunday: 8:00 AM – 3:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 756-9995",
+      "websiteURI": null
+    },
+    "Ascend Coffee": {
+      "rating": 4.8,
+      "userRatingCount": 325,
+      "weekdayDescriptions": [
+        "Monday: 6:30 AM – 4:00 PM",
+        "Tuesday: 6:30 AM – 4:00 PM",
+        "Wednesday: 6:30 AM – 4:00 PM",
+        "Thursday: 6:30 AM – 4:00 PM",
+        "Friday: 6:30 AM – 4:00 PM",
+        "Saturday: 7:30 AM – 4:00 PM",
+        "Sunday: 7:30 AM – 4:00 PM"
+      ],
+      "nationalPhoneNumber": null,
+      "websiteURI": "http://ascendindy.com/"
+    },
+    "The Human Bean - Indy": {
+      "rating": 4.5,
+      "userRatingCount": 387,
+      "weekdayDescriptions": [
+        "Monday: 5:00 AM – 9:00 PM",
+        "Tuesday: 5:00 AM – 9:00 PM",
+        "Wednesday: 5:00 AM – 9:00 PM",
+        "Thursday: 5:00 AM – 9:00 PM",
+        "Friday: 5:00 AM – 9:00 PM",
+        "Saturday: 5:00 AM – 9:00 PM",
+        "Sunday: 5:00 AM – 9:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 384-1362",
+      "websiteURI": "https://thehumanbean.com/location/the-human-bean-5405-n-keystone-ave-indianapolis-in/"
+    },
+    "Mariam Coffee - Indy": {
+      "rating": 4.6,
+      "userRatingCount": 138,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 7:00 PM",
+        "Tuesday: 7:00 AM – 7:00 PM",
+        "Wednesday: 7:00 AM – 7:00 PM",
+        "Thursday: 7:00 AM – 7:00 PM",
+        "Friday: 7:00 AM – 9:00 PM",
+        "Saturday: 7:00 AM – 9:00 PM",
+        "Sunday: 7:00 AM – 7:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 516-7058",
+      "websiteURI": "https://indymariamcoffee.com/"
+    },
+    "Indie Coffee Roasters - Noblesville": {
+      "rating": 4.8,
+      "userRatingCount": 67,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 3:00 PM",
+        "Tuesday: 7:00 AM – 3:00 PM",
+        "Wednesday: 7:00 AM – 3:00 PM",
+        "Thursday: 7:00 AM – 3:00 PM",
+        "Friday: 7:00 AM – 3:00 PM",
+        "Saturday: 7:00 AM – 3:00 PM",
+        "Sunday: 9:00 AM – 3:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 900-4197",
+      "websiteURI": "https://www.indiecoffeeroasters.com/"
+    },
+    "Eli Coffee Co": {
+      "rating": 5,
+      "userRatingCount": 7,
+      "weekdayDescriptions": [],
+      "nationalPhoneNumber": null,
+      "websiteURI": "http://elicoffeeco.com/"
+    },
+    "Cafe Patachou - Broad Ripple": {
+      "rating": 4.6,
+      "userRatingCount": 1114,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 3:00 PM",
+        "Tuesday: 7:00 AM – 3:00 PM",
+        "Wednesday: 7:00 AM – 3:00 PM",
+        "Thursday: 7:00 AM – 3:00 PM",
+        "Friday: 7:00 AM – 3:00 PM",
+        "Saturday: 8:00 AM – 3:00 PM",
+        "Sunday: 8:00 AM – 3:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 925-2823",
+      "websiteURI": "https://www.cafepatachou.com/"
+    },
+    "Sidedoor Bagel": {
+      "rating": 4.6,
+      "userRatingCount": 513,
+      "weekdayDescriptions": [
+        "Monday: 7:30 AM – 1:30 PM",
+        "Tuesday: 7:30 AM – 1:30 PM",
+        "Wednesday: 7:30 AM – 1:30 PM",
+        "Thursday: 7:30 AM – 1:30 PM",
+        "Friday: 7:30 AM – 1:30 PM",
+        "Saturday: 8:30 AM – 1:30 PM",
+        "Sunday: 8:30 AM – 1:30 PM"
+      ],
+      "nationalPhoneNumber": null,
+      "websiteURI": "http://sidedoorbagel.com/"
+    },
+    "Indie Coffee Roasters - Carmel Smoky Row": {
+      "rating": 4.7,
+      "userRatingCount": 411,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 5:00 PM",
+        "Tuesday: 7:00 AM – 5:00 PM",
+        "Wednesday: 7:00 AM – 5:00 PM",
+        "Thursday: 7:00 AM – 5:00 PM",
+        "Friday: 7:00 AM – 5:00 PM",
+        "Saturday: 7:00 AM – 5:00 PM",
+        "Sunday: 9:00 AM – 3:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 993-3443",
+      "websiteURI": "http://www.indiecoffeeroasters.com/"
+    },
+    "Tinker Coffee – The Firehouse": {
+      "rating": 4.8,
+      "userRatingCount": 89,
+      "weekdayDescriptions": [
+        "Monday: 6:00 AM – 6:00 PM",
+        "Tuesday: 6:00 AM – 6:00 PM",
+        "Wednesday: 6:00 AM – 6:00 PM",
+        "Thursday: 6:00 AM – 6:00 PM",
+        "Friday: 6:00 AM – 6:00 PM",
+        "Saturday: 7:00 AM – 6:00 PM",
+        "Sunday: 7:00 AM – 6:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 377-4967",
+      "websiteURI": "https://www.tinkercoffee.com/pages/locations"
+    },
+    "NEVERHOME COFFEE": {
+      "rating": 5,
+      "userRatingCount": 51,
+      "weekdayDescriptions": [
+        "Monday: Closed",
+        "Tuesday: Closed",
+        "Wednesday: Closed",
+        "Thursday: 9:00 AM – 2:00 PM",
+        "Friday: 9:00 AM – 2:00 PM",
+        "Saturday: 9:00 AM – 2:00 PM",
+        "Sunday: 10:00 AM – 2:00 PM"
+      ],
+      "nationalPhoneNumber": null,
+      "websiteURI": "https://www.instagram.com/neverhomecoffee/"
+    },
+    "Mariam Coffee - Fishers": {
+      "rating": 4.7,
+      "userRatingCount": 269,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 7:00 PM",
+        "Tuesday: 7:00 AM – 7:00 PM",
+        "Wednesday: 7:00 AM – 7:00 PM",
+        "Thursday: 7:00 AM – 7:00 PM",
+        "Friday: 7:00 AM – 9:00 PM",
+        "Saturday: 7:00 AM – 9:00 PM",
+        "Sunday: 7:00 AM – 9:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 654-0960",
+      "websiteURI": "https://indymariamcoffee.com/"
+    },
+    "Georgia Street Grind": {
+      "rating": 4.8,
+      "userRatingCount": 390,
+      "weekdayDescriptions": [
+        "Monday: Closed",
+        "Tuesday: 7:00 AM – 4:00 PM",
+        "Wednesday: 7:00 AM – 4:00 PM",
+        "Thursday: 7:00 AM – 4:00 PM",
+        "Friday: 7:00 AM – 4:00 PM",
+        "Saturday: 8:00 AM – 12:00 PM",
+        "Sunday: Closed"
+      ],
+      "nationalPhoneNumber": "(317) 371-9949",
+      "websiteURI": "https://georgiastreetgrind.io/"
+    },
+    "Red Door Cafe": {
+      "rating": 5,
+      "userRatingCount": 106,
+      "weekdayDescriptions": [
+        "Monday: 8:00 AM – 4:00 PM",
+        "Tuesday: 8:00 AM – 4:00 PM",
+        "Wednesday: 8:00 AM – 4:00 PM",
+        "Thursday: 8:00 AM – 4:00 PM",
+        "Friday: 8:00 AM – 4:00 PM",
+        "Saturday: 9:00 AM – 2:00 PM",
+        "Sunday: 9:00 AM – 2:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 721-4555",
+      "websiteURI": "https://thecyrusplaceeventcenter.com/"
+    },
+    "The Selene by Ova": {
+      "rating": 4.3,
+      "userRatingCount": 31,
+      "weekdayDescriptions": [
+        "Monday: Closed",
+        "Tuesday: 9:00 AM – 1:00 PM",
+        "Wednesday: 9:00 AM – 1:00 PM",
+        "Thursday: 9:00 AM – 1:00 PM",
+        "Friday: 9:00 AM – 1:00 PM",
+        "Saturday: 9:00 AM – 1:00 PM",
+        "Sunday: Closed"
+      ],
+      "nationalPhoneNumber": "(317) 654-7741",
+      "websiteURI": "https://www.selenebyova.com/"
+    },
+    "Cafe Patachou - Zionsville": {
+      "rating": 4.5,
+      "userRatingCount": 142,
+      "weekdayDescriptions": [
+        "Monday: 8:00 AM – 3:00 PM",
+        "Tuesday: 8:00 AM – 3:00 PM",
+        "Wednesday: 8:00 AM – 3:00 PM",
+        "Thursday: 8:00 AM – 3:00 PM",
+        "Friday: 8:00 AM – 3:00 PM",
+        "Saturday: 8:00 AM – 3:00 PM",
+        "Sunday: 8:00 AM – 3:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 344-6700",
+      "websiteURI": "https://www.cafepatachou.com/"
+    },
+    "Command Coffee - Indy": {
+      "rating": 4.5,
+      "userRatingCount": 114,
+      "weekdayDescriptions": [
+        "Monday: 6:00 AM – 4:00 PM",
+        "Tuesday: 6:00 AM – 4:00 PM",
+        "Wednesday: 6:00 AM – 4:00 PM",
+        "Thursday: 6:00 AM – 4:00 PM",
+        "Friday: 6:00 AM – 5:00 PM",
+        "Saturday: 6:00 AM – 6:00 PM",
+        "Sunday: 6:00 AM – 5:00 PM"
+      ],
+      "nationalPhoneNumber": null,
+      "websiteURI": "https://commandcoffee.com/"
+    },
+    "Milk & Honey Coffeehouse": {
+      "rating": 4.6,
+      "userRatingCount": 152,
+      "weekdayDescriptions": [
+        "Monday: 6:00 AM – 3:00 PM",
+        "Tuesday: 6:00 AM – 3:00 PM",
+        "Wednesday: 6:00 AM – 3:00 PM",
+        "Thursday: 6:00 AM – 3:00 PM",
+        "Friday: 6:00 AM – 3:00 PM",
+        "Saturday: 7:00 AM – 3:00 PM",
+        "Sunday: Closed"
+      ],
+      "nationalPhoneNumber": null,
+      "websiteURI": "http://milkhoneycoffeehouse.com/"
+    },
+    "Chronic Coffee": {
+      "rating": 4.9,
+      "userRatingCount": 781,
+      "weekdayDescriptions": [
+        "Monday: 8:00 AM – 2:00 PM",
+        "Tuesday: 8:00 AM – 4:00 PM",
+        "Wednesday: 8:00 AM – 4:00 PM",
+        "Thursday: 8:00 AM – 4:00 PM",
+        "Friday: 8:00 AM – 4:00 PM",
+        "Saturday: 8:00 AM – 4:00 PM",
+        "Sunday: 8:00 AM – 4:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 377-4812",
+      "websiteURI": "http://www.chroniccoffeeindy.com/"
+    },
+    "Quills Coffee": {
+      "rating": 4.6,
+      "userRatingCount": 722,
+      "weekdayDescriptions": [
+        "Monday: 6:00 AM – 6:00 PM",
+        "Tuesday: 6:00 AM – 6:00 PM",
+        "Wednesday: 6:00 AM – 6:00 PM",
+        "Thursday: 6:00 AM – 6:00 PM",
+        "Friday: 6:00 AM – 6:00 PM",
+        "Saturday: 7:00 AM – 7:00 PM",
+        "Sunday: 7:00 AM – 7:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 426-1431",
+      "websiteURI": "http://quillscoffee.com/"
+    }
+  }
 }
