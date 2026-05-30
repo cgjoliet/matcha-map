@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-05-29T17:58:25.774Z",
+  "cached_at": "2026-05-30T11:05:56.548Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.8,
@@ -18,7 +18,7 @@
     },
     "Foundry Provisions": {
       "rating": 4.5,
-      "userRatingCount": 428,
+      "userRatingCount": 429,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -44,7 +44,7 @@
         "Sunday: Closed"
       ],
       "nationalPhoneNumber": "(317) 300-1346",
-      "websiteURI": "https://online.skytab.com/1960128eaf501649f03c18a93b48ba98"
+      "websiteURI": "https://online.skytab.com/1960128eaf501649f03c18a93b48ba98/order-settings"
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
@@ -168,7 +168,7 @@
     },
     "Bovaconti Coffee - Indy": {
       "rating": 4.8,
-      "userRatingCount": 757,
+      "userRatingCount": 758,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -183,7 +183,7 @@
     },
     "Cafe Patachou - Keystone": {
       "rating": 4.6,
-      "userRatingCount": 928,
+      "userRatingCount": 929,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -513,7 +513,7 @@
     },
     "Cafe Noricha": {
       "rating": 4.8,
-      "userRatingCount": 142,
+      "userRatingCount": 143,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 10:30 AM – 8:00 PM",
@@ -768,7 +768,7 @@
     },
     "Command Coffee - Indy": {
       "rating": 4.5,
-      "userRatingCount": 114,
+      "userRatingCount": 115,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 4:00 PM",
         "Tuesday: 6:00 AM – 4:00 PM",
