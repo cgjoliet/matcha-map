@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-06-04T16:40:11.856Z",
+  "cached_at": "2026-06-06T11:12:08.473Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.8,
@@ -33,7 +33,7 @@
     },
     "Claypot Coffee House": {
       "rating": 4.9,
-      "userRatingCount": 353,
+      "userRatingCount": 354,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 9:00 PM",
         "Tuesday: 8:00 AM – 9:00 PM",
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3171,
+      "userRatingCount": 3172,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -63,7 +63,7 @@
     },
     "The Spice & Tea Exchange": {
       "rating": 4.9,
-      "userRatingCount": 40,
+      "userRatingCount": 41,
       "weekdayDescriptions": [
         "Monday: 10:00 AM – 6:00 PM",
         "Tuesday: 10:00 AM – 6:00 PM",
@@ -78,7 +78,7 @@
     },
     "Mocha House": {
       "rating": 4.6,
-      "userRatingCount": 128,
+      "userRatingCount": 129,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 11:00 PM",
         "Tuesday: 6:00 AM – 11:00 PM",
@@ -93,7 +93,7 @@
     },
     "Cafe Patachou - The Stutz": {
       "rating": 4.6,
-      "userRatingCount": 198,
+      "userRatingCount": 199,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -168,7 +168,7 @@
     },
     "Bovaconti Coffee - Indy": {
       "rating": 4.8,
-      "userRatingCount": 763,
+      "userRatingCount": 765,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -183,7 +183,7 @@
     },
     "Cafe Patachou - Keystone": {
       "rating": 4.6,
-      "userRatingCount": 929,
+      "userRatingCount": 931,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -198,7 +198,7 @@
     },
     "Provider Café": {
       "rating": 4.6,
-      "userRatingCount": 676,
+      "userRatingCount": 677,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 4:00 PM",
         "Tuesday: 7:00 AM – 4:00 PM",
@@ -228,7 +228,7 @@
     },
     "Prufrock Coffee Company - Indy": {
       "rating": 4.5,
-      "userRatingCount": 417,
+      "userRatingCount": 419,
       "weekdayDescriptions": [
         "Monday: 6:30 AM – 6:00 PM",
         "Tuesday: 6:30 AM – 6:00 PM",
@@ -288,7 +288,7 @@
     },
     "Niyyah Coffee - Fishers": {
       "rating": 4.9,
-      "userRatingCount": 432,
+      "userRatingCount": 433,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -303,7 +303,7 @@
     },
     "Cafe Patachou - Clay Terrace": {
       "rating": 4.5,
-      "userRatingCount": 530,
+      "userRatingCount": 531,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -318,7 +318,7 @@
     },
     "1656 Club": {
       "rating": 4.7,
-      "userRatingCount": 66,
+      "userRatingCount": 67,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -335,10 +335,10 @@
       "rating": 4.7,
       "userRatingCount": 235,
       "weekdayDescriptions": [
-        "Monday: 8:30 AM – 8:00 PM",
-        "Tuesday: 8:30 AM – 8:00 PM",
-        "Wednesday: 8:30 AM – 8:00 PM",
-        "Thursday: 8:30 AM – 8:00 PM",
+        "Monday: 8:30 AM – 8:30 PM",
+        "Tuesday: 8:30 AM – 8:30 PM",
+        "Wednesday: 8:30 AM – 8:30 PM",
+        "Thursday: 8:30 AM – 8:30 PM",
         "Friday: 8:30 AM – 8:30 PM",
         "Saturday: 8:30 AM – 8:30 PM",
         "Sunday: 8:30 AM – 8:30 PM"
@@ -363,7 +363,7 @@
     },
     "Borage": {
       "rating": 4.5,
-      "userRatingCount": 468,
+      "userRatingCount": 470,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 2:00 PM",
@@ -378,7 +378,7 @@
     },
     "The Coffee Haus": {
       "rating": 4.8,
-      "userRatingCount": 62,
+      "userRatingCount": 64,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1293,
+      "userRatingCount": 1295,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 12:00 AM",
         "Tuesday: 6:00 AM – 12:00 AM",
@@ -408,7 +408,7 @@
     },
     "Blue Mind Coffee": {
       "rating": 4.9,
-      "userRatingCount": 236,
+      "userRatingCount": 237,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -422,8 +422,8 @@
       "websiteURI": "https://www.bluemindroasting.com/"
     },
     "Niyyah Coffee - Indy": {
-      "rating": 4.8,
-      "userRatingCount": 56,
+      "rating": 4.7,
+      "userRatingCount": 57,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -468,7 +468,7 @@
     },
     "Parlor Public House": {
       "rating": 4.5,
-      "userRatingCount": 598,
+      "userRatingCount": 599,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: 8:00 AM – 5:00 PM",
@@ -513,7 +513,7 @@
     },
     "Cafe Noricha": {
       "rating": 4.8,
-      "userRatingCount": 145,
+      "userRatingCount": 146,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 10:30 AM – 8:00 PM",
@@ -573,7 +573,7 @@
     },
     "Mariam Coffee - Indy": {
       "rating": 4.6,
-      "userRatingCount": 142,
+      "userRatingCount": 144,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -604,7 +604,15 @@
     "Eli Coffee Co": {
       "rating": 5,
       "userRatingCount": 7,
-      "weekdayDescriptions": [],
+      "weekdayDescriptions": [
+        "Monday: Closed",
+        "Tuesday: 7:00 AM – 12:00 PM",
+        "Wednesday: 7:00 AM – 12:00 PM",
+        "Thursday: 7:00 AM – 12:00 PM",
+        "Friday: 7:00 AM – 12:00 PM",
+        "Saturday: 8:00 – 11:30 AM",
+        "Sunday: Closed"
+      ],
       "nationalPhoneNumber": null,
       "websiteURI": "http://elicoffeeco.com/"
     },
@@ -655,7 +663,7 @@
     },
     "Tinker Coffee – The Firehouse": {
       "rating": 4.8,
-      "userRatingCount": 89,
+      "userRatingCount": 90,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 6:00 PM",
         "Tuesday: 6:00 AM – 6:00 PM",
@@ -685,7 +693,7 @@
     },
     "Mariam Coffee - Fishers": {
       "rating": 4.7,
-      "userRatingCount": 271,
+      "userRatingCount": 272,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -745,7 +753,7 @@
     },
     "Cafe Patachou - Zionsville": {
       "rating": 4.5,
-      "userRatingCount": 144,
+      "userRatingCount": 143,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -880,7 +888,7 @@
     },
     "Cafe Patachou - Fishers": {
       "rating": 4.4,
-      "userRatingCount": 155,
+      "userRatingCount": 156,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -895,7 +903,7 @@
     },
     "MOTW Coffee and Pastries - Fishers": {
       "rating": 4.8,
-      "userRatingCount": 540,
+      "userRatingCount": 541,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -910,7 +918,7 @@
     },
     "Gold Leaf Indy": {
       "rating": 4.8,
-      "userRatingCount": 446,
+      "userRatingCount": 447,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 9:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -925,7 +933,7 @@
     },
     "Rivet Coffee - Westfield": {
       "rating": 4.7,
-      "userRatingCount": 484,
+      "userRatingCount": 485,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -940,7 +948,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 4878,
+      "userRatingCount": 4881,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
@@ -955,7 +963,7 @@
     },
     "Recess": {
       "rating": 4.7,
-      "userRatingCount": 67,
+      "userRatingCount": 69,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
