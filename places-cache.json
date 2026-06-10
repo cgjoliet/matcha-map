@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-06-09T16:19:51.627Z",
+  "cached_at": "2026-06-10T17:44:21.471Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.8,
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3177,
+      "userRatingCount": 3178,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -78,7 +78,7 @@
     },
     "Mocha House": {
       "rating": 4.6,
-      "userRatingCount": 130,
+      "userRatingCount": 131,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 11:00 PM",
         "Tuesday: 6:00 AM – 11:00 PM",
@@ -93,7 +93,7 @@
     },
     "Cafe Patachou - The Stutz": {
       "rating": 4.6,
-      "userRatingCount": 201,
+      "userRatingCount": 204,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -213,7 +213,7 @@
     },
     "Leviathan Bakehouse": {
       "rating": 4.7,
-      "userRatingCount": 675,
+      "userRatingCount": 676,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -333,7 +333,7 @@
     },
     "Good Vibes Cafe Indy": {
       "rating": 4.7,
-      "userRatingCount": 237,
+      "userRatingCount": 238,
       "weekdayDescriptions": [
         "Monday: 8:30 AM – 8:30 PM",
         "Tuesday: 8:30 AM – 8:30 PM",
@@ -363,7 +363,7 @@
     },
     "Borage": {
       "rating": 4.5,
-      "userRatingCount": 471,
+      "userRatingCount": 472,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 2:00 PM",
@@ -453,7 +453,7 @@
     },
     "NUTOPIA": {
       "rating": 4.9,
-      "userRatingCount": 103,
+      "userRatingCount": 104,
       "weekdayDescriptions": [
         "Monday: 10:00 AM – 11:00 PM",
         "Tuesday: 10:00 AM – 11:00 PM",
@@ -468,7 +468,7 @@
     },
     "Parlor Public House": {
       "rating": 4.5,
-      "userRatingCount": 600,
+      "userRatingCount": 601,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: 8:00 AM – 5:00 PM",
@@ -646,6 +646,21 @@
       "nationalPhoneNumber": null,
       "websiteURI": "http://sidedoorbagel.com/"
     },
+    "Indie Coffee Roasters - Carmel Smoky Row": {
+      "rating": 4.7,
+      "userRatingCount": 412,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 5:00 PM",
+        "Tuesday: 7:00 AM – 5:00 PM",
+        "Wednesday: 7:00 AM – 5:00 PM",
+        "Thursday: 7:00 AM – 5:00 PM",
+        "Friday: 7:00 AM – 5:00 PM",
+        "Saturday: 7:00 AM – 5:00 PM",
+        "Sunday: 9:00 AM – 3:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 993-3443",
+      "websiteURI": "http://www.indiecoffeeroasters.com/"
+    },
     "Tinker Coffee – The Firehouse": {
       "rating": 4.8,
       "userRatingCount": 91,
@@ -738,7 +753,7 @@
     },
     "Cafe Patachou - Zionsville": {
       "rating": 4.5,
-      "userRatingCount": 146,
+      "userRatingCount": 147,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -753,7 +768,7 @@
     },
     "Command Coffee - Indy": {
       "rating": 4.5,
-      "userRatingCount": 117,
+      "userRatingCount": 116,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 4:00 PM",
         "Tuesday: 6:00 AM – 4:00 PM",
@@ -918,7 +933,7 @@
     },
     "Rivet Coffee - Westfield": {
       "rating": 4.7,
-      "userRatingCount": 485,
+      "userRatingCount": 487,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -933,7 +948,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 4887,
+      "userRatingCount": 4890,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
@@ -948,7 +963,7 @@
     },
     "Recess": {
       "rating": 4.7,
-      "userRatingCount": 71,
+      "userRatingCount": 72,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
