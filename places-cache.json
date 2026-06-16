@@ -1,9 +1,9 @@
 {
-  "cached_at": "2026-06-15T19:59:18.616Z",
+  "cached_at": "2026-06-16T19:51:07.568Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.8,
-      "userRatingCount": 694,
+      "userRatingCount": 695,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:30 PM",
         "Tuesday: 7:00 AM – 8:30 PM",
@@ -33,7 +33,7 @@
     },
     "Claypot Coffee House": {
       "rating": 4.9,
-      "userRatingCount": 364,
+      "userRatingCount": 366,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 9:00 PM",
         "Tuesday: 8:00 AM – 9:00 PM",
@@ -363,7 +363,7 @@
     },
     "Borage": {
       "rating": 4.5,
-      "userRatingCount": 474,
+      "userRatingCount": 475,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 2:00 PM",
@@ -378,7 +378,7 @@
     },
     "The Coffee Haus": {
       "rating": 4.8,
-      "userRatingCount": 64,
+      "userRatingCount": 65,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1299,
+      "userRatingCount": 1300,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 12:00 AM",
         "Tuesday: 6:00 AM – 12:00 AM",
@@ -558,7 +558,7 @@
     },
     "The Human Bean - Indy": {
       "rating": 4.5,
-      "userRatingCount": 388,
+      "userRatingCount": 389,
       "weekdayDescriptions": [
         "Monday: 5:00 AM – 9:00 PM",
         "Tuesday: 5:00 AM – 9:00 PM",
@@ -604,21 +604,13 @@
     "Eli Coffee Co": {
       "rating": 5,
       "userRatingCount": 7,
-      "weekdayDescriptions": [
-        "Monday: Closed",
-        "Tuesday: 7:00 AM – 12:00 PM",
-        "Wednesday: 7:00 AM – 12:00 PM",
-        "Thursday: 7:00 AM – 12:00 PM",
-        "Friday: 7:00 AM – 12:00 PM",
-        "Saturday: 8:00 AM – 12:00 PM",
-        "Sunday: Closed"
-      ],
+      "weekdayDescriptions": [],
       "nationalPhoneNumber": null,
       "websiteURI": "http://elicoffeeco.com/"
     },
     "Cafe Patachou - Broad Ripple": {
       "rating": 4.6,
-      "userRatingCount": 1119,
+      "userRatingCount": 1120,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -693,7 +685,7 @@
     },
     "Mariam Coffee - Fishers": {
       "rating": 4.7,
-      "userRatingCount": 273,
+      "userRatingCount": 274,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -783,7 +775,7 @@
     },
     "Milk & Honey Coffeehouse": {
       "rating": 4.6,
-      "userRatingCount": 156,
+      "userRatingCount": 157,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 3:00 PM",
         "Tuesday: 6:00 AM – 3:00 PM",
@@ -888,7 +880,7 @@
     },
     "Cafe Patachou - Fishers": {
       "rating": 4.4,
-      "userRatingCount": 161,
+      "userRatingCount": 162,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -948,7 +940,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 4894,
+      "userRatingCount": 4895,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
