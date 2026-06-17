@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-06-16T19:51:07.568Z",
+  "cached_at": "2026-06-17T17:33:14.555Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.8,
@@ -93,7 +93,7 @@
     },
     "Cafe Patachou - The Stutz": {
       "rating": 4.6,
-      "userRatingCount": 206,
+      "userRatingCount": 207,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -108,7 +108,7 @@
     },
     "MOTW Coffee and Pastries - Carmel": {
       "rating": 4.6,
-      "userRatingCount": 408,
+      "userRatingCount": 409,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:30 PM",
         "Tuesday: 7:00 AM – 8:30 PM",
@@ -303,7 +303,7 @@
     },
     "Cafe Patachou - Clay Terrace": {
       "rating": 4.5,
-      "userRatingCount": 532,
+      "userRatingCount": 533,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -363,7 +363,7 @@
     },
     "Borage": {
       "rating": 4.5,
-      "userRatingCount": 475,
+      "userRatingCount": 476,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 2:00 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1300,
+      "userRatingCount": 1301,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 12:00 AM",
         "Tuesday: 6:00 AM – 12:00 AM",
@@ -437,8 +437,8 @@
       "websiteURI": "https://niyyahcoffee.com/"
     },
     "Bovaconti Coffee - Carmel": {
-      "rating": 4.8,
-      "userRatingCount": 176,
+      "rating": 4.7,
+      "userRatingCount": 177,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -925,7 +925,7 @@
     },
     "Rivet Coffee - Westfield": {
       "rating": 4.7,
-      "userRatingCount": 490,
+      "userRatingCount": 491,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -955,7 +955,7 @@
     },
     "Recess": {
       "rating": 4.7,
-      "userRatingCount": 75,
+      "userRatingCount": 76,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
