@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-06-20T08:43:04.589Z",
+  "cached_at": "2026-06-21T09:38:33.906Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.8,
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3187,
+      "userRatingCount": 3189,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -93,7 +93,7 @@
     },
     "Cafe Patachou - The Stutz": {
       "rating": 4.6,
-      "userRatingCount": 208,
+      "userRatingCount": 209,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -198,7 +198,7 @@
     },
     "Provider Café": {
       "rating": 4.6,
-      "userRatingCount": 679,
+      "userRatingCount": 680,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 4:00 PM",
         "Tuesday: 7:00 AM – 4:00 PM",
@@ -228,7 +228,7 @@
     },
     "Prufrock Coffee Company - Indy": {
       "rating": 4.5,
-      "userRatingCount": 421,
+      "userRatingCount": 422,
       "weekdayDescriptions": [
         "Monday: 6:30 AM – 6:00 PM",
         "Tuesday: 6:30 AM – 6:00 PM",
@@ -303,7 +303,7 @@
     },
     "Cafe Patachou - Clay Terrace": {
       "rating": 4.5,
-      "userRatingCount": 533,
+      "userRatingCount": 534,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -363,7 +363,7 @@
     },
     "Borage": {
       "rating": 4.5,
-      "userRatingCount": 477,
+      "userRatingCount": 478,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 2:00 PM",
@@ -378,7 +378,7 @@
     },
     "The Coffee Haus": {
       "rating": 4.8,
-      "userRatingCount": 65,
+      "userRatingCount": 66,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1303,
+      "userRatingCount": 1308,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 12:00 AM",
         "Tuesday: 6:00 AM – 12:00 AM",
@@ -543,7 +543,7 @@
     },
     "Ascend Coffee": {
       "rating": 4.8,
-      "userRatingCount": 326,
+      "userRatingCount": 327,
       "weekdayDescriptions": [
         "Monday: 6:30 AM – 4:00 PM",
         "Tuesday: 6:30 AM – 4:00 PM",
@@ -604,7 +604,15 @@
     "Eli Coffee Co": {
       "rating": 5,
       "userRatingCount": 7,
-      "weekdayDescriptions": [],
+      "weekdayDescriptions": [
+        "Monday: Closed",
+        "Tuesday: 7:00 AM – 12:00 PM",
+        "Wednesday: 7:00 AM – 12:00 PM",
+        "Thursday: 7:00 AM – 12:00 PM",
+        "Friday: 7:00 AM – 12:00 PM",
+        "Saturday: 8:00 AM – 12:00 PM",
+        "Sunday: Closed"
+      ],
       "nationalPhoneNumber": null,
       "websiteURI": "http://elicoffeeco.com/"
     },
@@ -790,7 +798,7 @@
     },
     "Chronic Coffee": {
       "rating": 4.9,
-      "userRatingCount": 784,
+      "userRatingCount": 789,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 4:00 PM",
         "Tuesday: 8:00 AM – 4:00 PM",
