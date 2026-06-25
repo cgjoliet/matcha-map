@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-06-24T08:54:54.970Z",
+  "cached_at": "2026-06-25T08:49:50.440Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.8,
@@ -33,7 +33,7 @@
     },
     "Claypot Coffee House": {
       "rating": 4.9,
-      "userRatingCount": 369,
+      "userRatingCount": 370,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 9:00 PM",
         "Tuesday: 8:00 AM – 9:00 PM",
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3191,
+      "userRatingCount": 3192,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -123,7 +123,7 @@
     },
     "Mansion Society": {
       "rating": 4.6,
-      "userRatingCount": 268,
+      "userRatingCount": 269,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
@@ -378,7 +378,7 @@
     },
     "The Coffee Haus": {
       "rating": 4.8,
-      "userRatingCount": 66,
+      "userRatingCount": 67,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1312,
+      "userRatingCount": 1313,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 12:00 AM",
         "Tuesday: 6:00 AM – 12:00 AM",
@@ -422,19 +422,11 @@
       "websiteURI": "https://www.bluemindroasting.com/"
     },
     "Niyyah Coffee - Indy": {
-      "rating": 4.9,
-      "userRatingCount": 435,
-      "weekdayDescriptions": [
-        "Monday: 7:00 AM – 7:00 PM",
-        "Tuesday: 7:00 AM – 7:00 PM",
-        "Wednesday: 7:00 AM – 7:00 PM",
-        "Thursday: 7:00 AM – 7:00 PM",
-        "Friday: 7:00 AM – 8:00 PM",
-        "Saturday: 8:00 AM – 8:00 PM",
-        "Sunday: 8:00 AM – 7:00 PM"
-      ],
-      "nationalPhoneNumber": "(317) 379-6038",
-      "websiteURI": "http://niyyahcoffee.com/"
+      "rating": null,
+      "userRatingCount": null,
+      "weekdayDescriptions": [],
+      "nationalPhoneNumber": "(512) 566-9552",
+      "websiteURI": "https://www.niyyahcoffee.com/"
     },
     "Bovaconti Coffee - Carmel": {
       "rating": 4.7,
@@ -648,7 +640,7 @@
     },
     "Indie Coffee Roasters - Carmel Smoky Row": {
       "rating": 4.7,
-      "userRatingCount": 416,
+      "userRatingCount": 417,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -708,7 +700,7 @@
     },
     "Georgia Street Grind": {
       "rating": 4.8,
-      "userRatingCount": 396,
+      "userRatingCount": 397,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 4:00 PM",
         "Tuesday: 7:00 AM – 4:00 PM",
@@ -783,7 +775,7 @@
     },
     "Milk & Honey Coffeehouse": {
       "rating": 4.6,
-      "userRatingCount": 163,
+      "userRatingCount": 164,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 3:00 PM",
         "Tuesday: 6:00 AM – 3:00 PM",
@@ -798,7 +790,7 @@
     },
     "Chronic Coffee": {
       "rating": 4.9,
-      "userRatingCount": 792,
+      "userRatingCount": 793,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 4:00 PM",
         "Tuesday: 8:00 AM – 4:00 PM",
@@ -858,7 +850,7 @@
     },
     "Indie Coffee Roasters - Downtown Carmel": {
       "rating": 4.7,
-      "userRatingCount": 416,
+      "userRatingCount": 417,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -880,7 +872,7 @@
     },
     "Cafe Patachou - Fishers": {
       "rating": 4.4,
-      "userRatingCount": 162,
+      "userRatingCount": 163,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -895,7 +887,7 @@
     },
     "MOTW Coffee and Pastries - Fishers": {
       "rating": 4.8,
-      "userRatingCount": 542,
+      "userRatingCount": 543,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -955,7 +947,7 @@
     },
     "Recess": {
       "rating": 4.7,
-      "userRatingCount": 79,
+      "userRatingCount": 82,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
