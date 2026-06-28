@@ -1,9 +1,9 @@
 {
-  "cached_at": "2026-06-27T08:27:46.595Z",
+  "cached_at": "2026-06-28T08:41:58.240Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.8,
-      "userRatingCount": 696,
+      "userRatingCount": 695,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:30 PM",
         "Tuesday: 7:00 AM – 8:30 PM",
@@ -33,7 +33,7 @@
     },
     "Claypot Coffee House": {
       "rating": 4.9,
-      "userRatingCount": 373,
+      "userRatingCount": 378,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 9:00 PM",
         "Tuesday: 8:00 AM – 9:00 PM",
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3197,
+      "userRatingCount": 3200,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -93,7 +93,7 @@
     },
     "Cafe Patachou - The Stutz": {
       "rating": 4.6,
-      "userRatingCount": 210,
+      "userRatingCount": 212,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -108,7 +108,7 @@
     },
     "MOTW Coffee and Pastries - Carmel": {
       "rating": 4.6,
-      "userRatingCount": 411,
+      "userRatingCount": 412,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:30 PM",
         "Tuesday: 7:00 AM – 8:30 PM",
@@ -123,7 +123,7 @@
     },
     "Mansion Society": {
       "rating": 4.6,
-      "userRatingCount": 269,
+      "userRatingCount": 270,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
@@ -153,7 +153,7 @@
     },
     "Black House Café": {
       "rating": 4.6,
-      "userRatingCount": 350,
+      "userRatingCount": 351,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: 8:00 AM – 5:00 PM",
@@ -168,7 +168,7 @@
     },
     "Bovaconti Coffee - Indy": {
       "rating": 4.8,
-      "userRatingCount": 771,
+      "userRatingCount": 772,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -183,7 +183,7 @@
     },
     "Cafe Patachou - Keystone": {
       "rating": 4.6,
-      "userRatingCount": 936,
+      "userRatingCount": 939,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -213,7 +213,7 @@
     },
     "Leviathan Bakehouse": {
       "rating": 4.7,
-      "userRatingCount": 679,
+      "userRatingCount": 681,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -288,7 +288,7 @@
     },
     "Niyyah Coffee - Fishers": {
       "rating": 4.9,
-      "userRatingCount": 435,
+      "userRatingCount": 436,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -363,7 +363,7 @@
     },
     "Borage": {
       "rating": 4.5,
-      "userRatingCount": 481,
+      "userRatingCount": 484,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 2:00 PM",
@@ -378,7 +378,7 @@
     },
     "The Coffee Haus": {
       "rating": 4.8,
-      "userRatingCount": 67,
+      "userRatingCount": 68,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1313,
+      "userRatingCount": 1314,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 12:00 AM",
         "Tuesday: 6:00 AM – 12:00 AM",
@@ -423,14 +423,14 @@
     },
     "Niyyah Coffee - Indy": {
       "rating": 5,
-      "userRatingCount": 5,
+      "userRatingCount": 24,
       "weekdayDescriptions": [],
       "nationalPhoneNumber": "(512) 566-9552",
       "websiteURI": "https://www.niyyahcoffee.com/"
     },
     "Bovaconti Coffee - Carmel": {
       "rating": 4.7,
-      "userRatingCount": 179,
+      "userRatingCount": 180,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -670,7 +670,7 @@
     },
     "NEVERHOME COFFEE": {
       "rating": 4.8,
-      "userRatingCount": 57,
+      "userRatingCount": 59,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
@@ -872,7 +872,7 @@
     },
     "Cafe Patachou - Fishers": {
       "rating": 4.4,
-      "userRatingCount": 163,
+      "userRatingCount": 164,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -932,7 +932,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 4897,
+      "userRatingCount": 4899,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
@@ -947,7 +947,7 @@
     },
     "Recess": {
       "rating": 4.7,
-      "userRatingCount": 83,
+      "userRatingCount": 85,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
