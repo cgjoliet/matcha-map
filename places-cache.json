@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-07-03T08:51:27.992Z",
+  "cached_at": "2026-07-04T08:26:13.174Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.8,
@@ -33,14 +33,14 @@
     },
     "Claypot Coffee House": {
       "rating": 4.9,
-      "userRatingCount": 381,
+      "userRatingCount": 382,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 9:00 PM",
         "Tuesday: 8:00 AM – 9:00 PM",
         "Wednesday: 8:00 AM – 9:00 PM",
         "Thursday: 8:00 AM – 9:00 PM",
         "Friday: 8:00 AM – 9:00 PM",
-        "Saturday: 8:00 AM – 9:00 PM",
+        "Saturday: 8:00 AM – 4:00 PM",
         "Sunday: Closed"
       ],
       "nationalPhoneNumber": "(317) 300-1346",
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3213,
+      "userRatingCount": 3216,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -78,7 +78,7 @@
     },
     "Mocha House": {
       "rating": 4.5,
-      "userRatingCount": 141,
+      "userRatingCount": 142,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 11:00 PM",
         "Tuesday: 6:00 AM – 11:00 PM",
@@ -123,7 +123,7 @@
     },
     "Mansion Society": {
       "rating": 4.6,
-      "userRatingCount": 270,
+      "userRatingCount": 271,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
@@ -153,7 +153,7 @@
     },
     "Black House Café": {
       "rating": 4.6,
-      "userRatingCount": 355,
+      "userRatingCount": 356,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: 8:00 AM – 5:00 PM",
@@ -213,7 +213,7 @@
     },
     "Leviathan Bakehouse": {
       "rating": 4.7,
-      "userRatingCount": 681,
+      "userRatingCount": 682,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -318,7 +318,7 @@
     },
     "1656 Club": {
       "rating": 4.7,
-      "userRatingCount": 69,
+      "userRatingCount": 70,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -363,7 +363,7 @@
     },
     "Borage": {
       "rating": 4.5,
-      "userRatingCount": 488,
+      "userRatingCount": 489,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 2:00 PM",
@@ -408,7 +408,7 @@
     },
     "Blue Mind Coffee": {
       "rating": 4.9,
-      "userRatingCount": 240,
+      "userRatingCount": 241,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -422,19 +422,19 @@
       "websiteURI": "https://www.bluemindroasting.com/"
     },
     "Niyyah Coffee - Indy": {
-      "rating": 5,
-      "userRatingCount": 37,
+      "rating": 4.7,
+      "userRatingCount": 57,
       "weekdayDescriptions": [
-        "Monday: 6:00 AM – 8:00 PM",
-        "Tuesday: 6:00 AM – 8:00 PM",
-        "Wednesday: 6:00 AM – 8:00 PM",
-        "Thursday: 6:00 AM – 8:00 PM",
-        "Friday: 6:00 AM – 9:00 PM",
-        "Saturday: 6:00 AM – 9:00 PM",
-        "Sunday: 7:00 AM – 8:00 PM"
+        "Monday: 7:00 AM – 5:00 PM",
+        "Tuesday: 7:00 AM – 5:00 PM",
+        "Wednesday: 7:00 AM – 5:00 PM",
+        "Thursday: 7:00 AM – 5:00 PM",
+        "Friday: 7:00 AM – 5:00 PM",
+        "Saturday: 8:00 AM – 5:00 PM",
+        "Sunday: 8:00 AM – 5:00 PM"
       ],
-      "nationalPhoneNumber": "(512) 566-9552",
-      "websiteURI": "https://www.niyyahcoffee.com/"
+      "nationalPhoneNumber": null,
+      "websiteURI": "https://niyyahcoffee.com/"
     },
     "Bovaconti Coffee - Carmel": {
       "rating": 4.7,
@@ -483,7 +483,7 @@
     },
     "Cafe Patachou - East Carmel": {
       "rating": 4.6,
-      "userRatingCount": 803,
+      "userRatingCount": 804,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -558,7 +558,7 @@
     },
     "The Human Bean - Indy": {
       "rating": 4.5,
-      "userRatingCount": 389,
+      "userRatingCount": 391,
       "weekdayDescriptions": [
         "Monday: 5:00 AM – 9:00 PM",
         "Tuesday: 5:00 AM – 9:00 PM",
@@ -603,7 +603,7 @@
     },
     "Eli Coffee Co": {
       "rating": 5,
-      "userRatingCount": 8,
+      "userRatingCount": 9,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 12:00 PM",
@@ -663,7 +663,7 @@
     },
     "Tinker Coffee – The Firehouse": {
       "rating": 4.8,
-      "userRatingCount": 93,
+      "userRatingCount": 94,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 6:00 PM",
         "Tuesday: 6:00 AM – 6:00 PM",
@@ -678,7 +678,7 @@
     },
     "NEVERHOME COFFEE": {
       "rating": 4.8,
-      "userRatingCount": 59,
+      "userRatingCount": 60,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
@@ -693,7 +693,7 @@
     },
     "Mariam Coffee - Fishers": {
       "rating": 4.7,
-      "userRatingCount": 275,
+      "userRatingCount": 276,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -714,7 +714,7 @@
         "Tuesday: 7:00 AM – 4:00 PM",
         "Wednesday: 7:00 AM – 4:00 PM",
         "Thursday: 7:00 AM – 4:00 PM",
-        "Friday: 7:00 AM – 4:00 PM",
+        "Friday: 7:00 AM – 2:00 PM",
         "Saturday: Closed",
         "Sunday: Closed"
       ],
@@ -783,7 +783,7 @@
     },
     "Milk & Honey Coffeehouse": {
       "rating": 4.6,
-      "userRatingCount": 163,
+      "userRatingCount": 164,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 3:00 PM",
         "Tuesday: 6:00 AM – 3:00 PM",
@@ -910,7 +910,7 @@
     },
     "Gold Leaf Indy": {
       "rating": 4.8,
-      "userRatingCount": 450,
+      "userRatingCount": 451,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 9:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
