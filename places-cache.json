@@ -1,9 +1,9 @@
 {
-  "cached_at": "2026-07-12T08:02:35.362Z",
+  "cached_at": "2026-07-13T08:52:15.923Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.8,
-      "userRatingCount": 694,
+      "userRatingCount": 695,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:30 PM",
         "Tuesday: 7:00 AM – 8:30 PM",
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3224,
+      "userRatingCount": 3225,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -78,7 +78,7 @@
     },
     "Mocha House": {
       "rating": 4.5,
-      "userRatingCount": 143,
+      "userRatingCount": 144,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 11:00 PM",
         "Tuesday: 6:00 AM – 11:00 PM",
@@ -93,7 +93,7 @@
     },
     "Cafe Patachou - The Stutz": {
       "rating": 4.6,
-      "userRatingCount": 218,
+      "userRatingCount": 219,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -108,7 +108,7 @@
     },
     "MOTW Coffee and Pastries - Carmel": {
       "rating": 4.6,
-      "userRatingCount": 418,
+      "userRatingCount": 419,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:30 PM",
         "Tuesday: 7:00 AM – 8:30 PM",
@@ -153,7 +153,7 @@
     },
     "Black House Café": {
       "rating": 4.6,
-      "userRatingCount": 360,
+      "userRatingCount": 361,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: 8:00 AM – 5:00 PM",
@@ -168,7 +168,7 @@
     },
     "Bovaconti Coffee - Indy": {
       "rating": 4.8,
-      "userRatingCount": 774,
+      "userRatingCount": 775,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -183,7 +183,7 @@
     },
     "Cafe Patachou - Keystone": {
       "rating": 4.6,
-      "userRatingCount": 943,
+      "userRatingCount": 945,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -213,7 +213,7 @@
     },
     "Leviathan Bakehouse": {
       "rating": 4.7,
-      "userRatingCount": 686,
+      "userRatingCount": 687,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -228,7 +228,7 @@
     },
     "Prufrock Coffee Company - Indy": {
       "rating": 4.5,
-      "userRatingCount": 422,
+      "userRatingCount": 423,
       "weekdayDescriptions": [
         "Monday: 6:30 AM – 6:00 PM",
         "Tuesday: 6:30 AM – 6:00 PM",
@@ -288,7 +288,7 @@
     },
     "Niyyah Coffee - Fishers": {
       "rating": 4.9,
-      "userRatingCount": 436,
+      "userRatingCount": 437,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -408,7 +408,7 @@
     },
     "Blue Mind Coffee": {
       "rating": 4.9,
-      "userRatingCount": 242,
+      "userRatingCount": 243,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -422,8 +422,8 @@
       "websiteURI": "https://www.bluemindroasting.com/"
     },
     "Niyyah Coffee - Indy": {
-      "rating": 5,
-      "userRatingCount": 57,
+      "rating": 4.9,
+      "userRatingCount": 61,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 8:00 PM",
         "Tuesday: 6:00 AM – 8:00 PM",
@@ -438,7 +438,7 @@
     },
     "Bovaconti Coffee - Carmel": {
       "rating": 4.7,
-      "userRatingCount": 182,
+      "userRatingCount": 183,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -513,7 +513,7 @@
     },
     "Cafe Noricha": {
       "rating": 4.8,
-      "userRatingCount": 156,
+      "userRatingCount": 157,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 11:00 AM – 8:00 PM",
@@ -798,7 +798,7 @@
     },
     "Chronic Coffee": {
       "rating": 4.9,
-      "userRatingCount": 798,
+      "userRatingCount": 799,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 4:00 PM",
         "Tuesday: 8:00 AM – 4:00 PM",
@@ -940,7 +940,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 4916,
+      "userRatingCount": 4920,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
