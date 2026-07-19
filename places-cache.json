@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-07-18T07:29:29.033Z",
+  "cached_at": "2026-07-19T08:02:07.510Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.8,
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3231,
+      "userRatingCount": 3232,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -93,7 +93,7 @@
     },
     "Cafe Patachou - The Stutz": {
       "rating": 4.6,
-      "userRatingCount": 221,
+      "userRatingCount": 222,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -213,7 +213,7 @@
     },
     "Leviathan Bakehouse": {
       "rating": 4.7,
-      "userRatingCount": 691,
+      "userRatingCount": 690,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -303,7 +303,7 @@
     },
     "Cafe Patachou - Clay Terrace": {
       "rating": 4.5,
-      "userRatingCount": 541,
+      "userRatingCount": 542,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -363,7 +363,7 @@
     },
     "Borage": {
       "rating": 4.5,
-      "userRatingCount": 496,
+      "userRatingCount": 499,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 2:00 PM",
@@ -408,7 +408,7 @@
     },
     "Blue Mind Coffee": {
       "rating": 4.9,
-      "userRatingCount": 242,
+      "userRatingCount": 243,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -423,7 +423,7 @@
     },
     "Niyyah Coffee - Indy": {
       "rating": 4.9,
-      "userRatingCount": 92,
+      "userRatingCount": 115,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 8:00 PM",
         "Tuesday: 6:00 AM – 8:00 PM",
@@ -468,7 +468,7 @@
     },
     "Parlor Public House": {
       "rating": 4.5,
-      "userRatingCount": 608,
+      "userRatingCount": 610,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: 8:00 AM – 5:00 PM",
@@ -543,7 +543,7 @@
     },
     "Ascend Coffee": {
       "rating": 4.8,
-      "userRatingCount": 334,
+      "userRatingCount": 335,
       "weekdayDescriptions": [
         "Monday: 6:30 AM – 4:00 PM",
         "Tuesday: 6:30 AM – 4:00 PM",
@@ -618,7 +618,7 @@
     },
     "Cafe Patachou - Broad Ripple": {
       "rating": 4.6,
-      "userRatingCount": 1130,
+      "userRatingCount": 1131,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -633,7 +633,7 @@
     },
     "Sidedoor Bagel": {
       "rating": 4.6,
-      "userRatingCount": 532,
+      "userRatingCount": 535,
       "weekdayDescriptions": [
         "Monday: 7:30 AM – 1:30 PM",
         "Tuesday: 7:30 AM – 1:30 PM",
@@ -678,7 +678,7 @@
     },
     "NEVERHOME COFFEE": {
       "rating": 4.8,
-      "userRatingCount": 62,
+      "userRatingCount": 63,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
@@ -783,7 +783,7 @@
     },
     "Milk & Honey Coffeehouse": {
       "rating": 4.6,
-      "userRatingCount": 167,
+      "userRatingCount": 168,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 3:00 PM",
         "Tuesday: 6:00 AM – 3:00 PM",
@@ -813,7 +813,7 @@
     },
     "Quills Coffee": {
       "rating": 4.6,
-      "userRatingCount": 728,
+      "userRatingCount": 729,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 6:00 PM",
         "Tuesday: 6:00 AM – 6:00 PM",
@@ -910,7 +910,7 @@
     },
     "Gold Leaf Indy": {
       "rating": 4.8,
-      "userRatingCount": 452,
+      "userRatingCount": 453,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 9:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -940,7 +940,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 4925,
+      "userRatingCount": 4926,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
@@ -955,7 +955,7 @@
     },
     "Recess": {
       "rating": 4.6,
-      "userRatingCount": 92,
+      "userRatingCount": 93,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
