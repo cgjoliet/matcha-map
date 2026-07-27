@@ -1,9 +1,9 @@
 {
-  "cached_at": "2026-07-26T08:11:00.050Z",
+  "cached_at": "2026-07-27T09:34:10.927Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.8,
-      "userRatingCount": 700,
+      "userRatingCount": 701,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:30 PM",
         "Tuesday: 7:00 AM – 8:30 PM",
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3243,
+      "userRatingCount": 3244,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -78,7 +78,7 @@
     },
     "Mocha House": {
       "rating": 4.5,
-      "userRatingCount": 151,
+      "userRatingCount": 153,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 11:00 PM",
         "Tuesday: 6:00 AM – 11:00 PM",
@@ -93,7 +93,7 @@
     },
     "Cafe Patachou - The Stutz": {
       "rating": 4.6,
-      "userRatingCount": 224,
+      "userRatingCount": 226,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -123,7 +123,7 @@
     },
     "Mansion Society": {
       "rating": 4.6,
-      "userRatingCount": 277,
+      "userRatingCount": 278,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
@@ -138,7 +138,7 @@
     },
     "Prufrock Coffee Company - Carmel": {
       "rating": 4.5,
-      "userRatingCount": 144,
+      "userRatingCount": 145,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -153,7 +153,7 @@
     },
     "Black House Café": {
       "rating": 4.6,
-      "userRatingCount": 363,
+      "userRatingCount": 364,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: 8:00 AM – 5:00 PM",
@@ -198,7 +198,7 @@
     },
     "Provider Café": {
       "rating": 4.6,
-      "userRatingCount": 679,
+      "userRatingCount": 680,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 4:00 PM",
         "Tuesday: 7:00 AM – 4:00 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1330,
+      "userRatingCount": 1331,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 12:00 AM",
         "Tuesday: 6:00 AM – 12:00 AM",
@@ -423,7 +423,7 @@
     },
     "Niyyah Coffee - Indy": {
       "rating": 4.9,
-      "userRatingCount": 161,
+      "userRatingCount": 165,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 8:00 PM",
         "Tuesday: 6:00 AM – 8:00 PM",
@@ -438,7 +438,7 @@
     },
     "Bovaconti Coffee - Carmel": {
       "rating": 4.7,
-      "userRatingCount": 185,
+      "userRatingCount": 186,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -498,7 +498,7 @@
     },
     "Rivet Coffee - Zionsville": {
       "rating": 4.6,
-      "userRatingCount": 105,
+      "userRatingCount": 106,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -573,7 +573,7 @@
     },
     "Mariam Coffee - Indy": {
       "rating": 4.5,
-      "userRatingCount": 149,
+      "userRatingCount": 150,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -663,7 +663,7 @@
     },
     "Tinker Coffee – The Firehouse": {
       "rating": 4.8,
-      "userRatingCount": 97,
+      "userRatingCount": 98,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 6:00 PM",
         "Tuesday: 6:00 AM – 6:00 PM",
@@ -678,7 +678,7 @@
     },
     "NEVERHOME COFFEE": {
       "rating": 4.8,
-      "userRatingCount": 64,
+      "userRatingCount": 65,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
@@ -723,7 +723,7 @@
     },
     "Red Door Cafe": {
       "rating": 4.9,
-      "userRatingCount": 111,
+      "userRatingCount": 112,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 4:00 PM",
         "Tuesday: 8:00 AM – 4:00 PM",
@@ -753,7 +753,7 @@
     },
     "Cafe Patachou - Zionsville": {
       "rating": 4.5,
-      "userRatingCount": 158,
+      "userRatingCount": 161,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -813,7 +813,7 @@
     },
     "Quills Coffee": {
       "rating": 4.6,
-      "userRatingCount": 731,
+      "userRatingCount": 733,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 6:00 PM",
         "Tuesday: 6:00 AM – 6:00 PM",
@@ -828,7 +828,7 @@
     },
     "Illumine Coffee – Nora": {
       "rating": 4.8,
-      "userRatingCount": 161,
+      "userRatingCount": 162,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -843,7 +843,7 @@
     },
     "Coat Check Coffee": {
       "rating": 4.7,
-      "userRatingCount": 1019,
+      "userRatingCount": 1020,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 4:00 PM",
         "Tuesday: 7:00 AM – 4:00 PM",
@@ -940,7 +940,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 4941,
+      "userRatingCount": 4942,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
