@@ -1,9 +1,9 @@
 {
-  "cached_at": "2026-08-01T08:06:03.986Z",
+  "cached_at": "2026-08-02T08:07:48.085Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.8,
-      "userRatingCount": 702,
+      "userRatingCount": 703,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:30 PM",
         "Tuesday: 7:00 AM – 8:30 PM",
@@ -18,7 +18,7 @@
     },
     "Foundry Provisions": {
       "rating": 4.5,
-      "userRatingCount": 429,
+      "userRatingCount": 430,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3255,
+      "userRatingCount": 3258,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -78,7 +78,7 @@
     },
     "Mocha House": {
       "rating": 4.5,
-      "userRatingCount": 158,
+      "userRatingCount": 159,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 11:00 PM",
         "Tuesday: 6:00 AM – 11:00 PM",
@@ -123,7 +123,7 @@
     },
     "Mansion Society": {
       "rating": 4.6,
-      "userRatingCount": 278,
+      "userRatingCount": 277,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
@@ -153,7 +153,7 @@
     },
     "Black House Café": {
       "rating": 4.6,
-      "userRatingCount": 365,
+      "userRatingCount": 366,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: 8:00 AM – 5:00 PM",
@@ -168,7 +168,7 @@
     },
     "Bovaconti Coffee - Indy": {
       "rating": 4.8,
-      "userRatingCount": 776,
+      "userRatingCount": 777,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -228,7 +228,7 @@
     },
     "Prufrock Coffee Company - Indy": {
       "rating": 4.5,
-      "userRatingCount": 423,
+      "userRatingCount": 424,
       "weekdayDescriptions": [
         "Monday: 6:30 AM – 6:00 PM",
         "Tuesday: 6:30 AM – 6:00 PM",
@@ -288,7 +288,7 @@
     },
     "Niyyah Coffee - Fishers": {
       "rating": 4.9,
-      "userRatingCount": 437,
+      "userRatingCount": 438,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1336,
+      "userRatingCount": 1338,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 12:00 AM",
         "Tuesday: 6:00 AM – 12:00 AM",
@@ -407,8 +407,8 @@
       "websiteURI": "https://yafagoldencoffeeusa.com/"
     },
     "Blue Mind Coffee": {
-      "rating": 4.9,
-      "userRatingCount": 247,
+      "rating": 4.8,
+      "userRatingCount": 248,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -423,7 +423,7 @@
     },
     "Niyyah Coffee - Indy": {
       "rating": 4.9,
-      "userRatingCount": 181,
+      "userRatingCount": 185,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 8:00 PM",
         "Tuesday: 6:00 AM – 8:00 PM",
@@ -453,7 +453,7 @@
     },
     "NUTOPIA": {
       "rating": 4.9,
-      "userRatingCount": 109,
+      "userRatingCount": 108,
       "weekdayDescriptions": [
         "Monday: 10:00 AM – 11:00 PM",
         "Tuesday: 10:00 AM – 11:00 PM",
@@ -468,7 +468,7 @@
     },
     "Parlor Public House": {
       "rating": 4.5,
-      "userRatingCount": 613,
+      "userRatingCount": 614,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: 8:00 AM – 5:00 PM",
@@ -498,7 +498,7 @@
     },
     "Rivet Coffee - Zionsville": {
       "rating": 4.6,
-      "userRatingCount": 107,
+      "userRatingCount": 108,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -528,7 +528,7 @@
     },
     "Gaia Coffee": {
       "rating": 4.7,
-      "userRatingCount": 201,
+      "userRatingCount": 202,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 4:00 PM",
         "Tuesday: 7:00 AM – 3:30 PM",
@@ -543,7 +543,7 @@
     },
     "Ascend Coffee": {
       "rating": 4.8,
-      "userRatingCount": 337,
+      "userRatingCount": 338,
       "weekdayDescriptions": [
         "Monday: 6:30 AM – 4:00 PM",
         "Tuesday: 6:30 AM – 4:00 PM",
@@ -573,7 +573,7 @@
     },
     "Mariam Coffee - Indy": {
       "rating": 4.5,
-      "userRatingCount": 151,
+      "userRatingCount": 152,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -708,7 +708,7 @@
     },
     "Georgia Street Grind": {
       "rating": 4.8,
-      "userRatingCount": 399,
+      "userRatingCount": 400,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 4:00 PM",
         "Tuesday: 7:00 AM – 4:00 PM",
@@ -753,7 +753,7 @@
     },
     "Cafe Patachou - Zionsville": {
       "rating": 4.5,
-      "userRatingCount": 163,
+      "userRatingCount": 164,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -798,7 +798,7 @@
     },
     "Chronic Coffee": {
       "rating": 4.9,
-      "userRatingCount": 802,
+      "userRatingCount": 803,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 4:00 PM",
         "Tuesday: 8:00 AM – 4:00 PM",
@@ -828,7 +828,7 @@
     },
     "Illumine Coffee – Nora": {
       "rating": 4.8,
-      "userRatingCount": 164,
+      "userRatingCount": 166,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -880,7 +880,7 @@
     },
     "Cafe Patachou - Fishers": {
       "rating": 4.4,
-      "userRatingCount": 171,
+      "userRatingCount": 172,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -895,7 +895,7 @@
     },
     "MOTW Coffee and Pastries - Fishers": {
       "rating": 4.8,
-      "userRatingCount": 543,
+      "userRatingCount": 544,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -940,7 +940,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 4946,
+      "userRatingCount": 4948,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
@@ -955,7 +955,7 @@
     },
     "Recess": {
       "rating": 4.6,
-      "userRatingCount": 96,
+      "userRatingCount": 99,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
