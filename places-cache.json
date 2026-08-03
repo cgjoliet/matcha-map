@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-08-02T08:07:48.085Z",
+  "cached_at": "2026-08-03T09:26:27.833Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.8,
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3258,
+      "userRatingCount": 3262,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -78,7 +78,7 @@
     },
     "Mocha House": {
       "rating": 4.5,
-      "userRatingCount": 159,
+      "userRatingCount": 160,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 11:00 PM",
         "Tuesday: 6:00 AM – 11:00 PM",
@@ -168,7 +168,7 @@
     },
     "Bovaconti Coffee - Indy": {
       "rating": 4.8,
-      "userRatingCount": 777,
+      "userRatingCount": 778,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -213,7 +213,7 @@
     },
     "Leviathan Bakehouse": {
       "rating": 4.7,
-      "userRatingCount": 692,
+      "userRatingCount": 693,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -288,7 +288,7 @@
     },
     "Niyyah Coffee - Fishers": {
       "rating": 4.9,
-      "userRatingCount": 438,
+      "userRatingCount": 440,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1338,
+      "userRatingCount": 1339,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 12:00 AM",
         "Tuesday: 6:00 AM – 12:00 AM",
@@ -407,8 +407,8 @@
       "websiteURI": "https://yafagoldencoffeeusa.com/"
     },
     "Blue Mind Coffee": {
-      "rating": 4.8,
-      "userRatingCount": 248,
+      "rating": 4.9,
+      "userRatingCount": 247,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -423,7 +423,7 @@
     },
     "Niyyah Coffee - Indy": {
       "rating": 4.9,
-      "userRatingCount": 185,
+      "userRatingCount": 221,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 8:00 PM",
         "Tuesday: 6:00 AM – 8:00 PM",
@@ -468,7 +468,7 @@
     },
     "Parlor Public House": {
       "rating": 4.5,
-      "userRatingCount": 614,
+      "userRatingCount": 616,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: 8:00 AM – 5:00 PM",
@@ -483,7 +483,7 @@
     },
     "Cafe Patachou - East Carmel": {
       "rating": 4.6,
-      "userRatingCount": 811,
+      "userRatingCount": 812,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -513,7 +513,7 @@
     },
     "Cafe Noricha": {
       "rating": 4.8,
-      "userRatingCount": 156,
+      "userRatingCount": 157,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 11:00 AM – 8:00 PM",
@@ -543,7 +543,7 @@
     },
     "Ascend Coffee": {
       "rating": 4.8,
-      "userRatingCount": 338,
+      "userRatingCount": 339,
       "weekdayDescriptions": [
         "Monday: 6:30 AM – 4:00 PM",
         "Tuesday: 6:30 AM – 4:00 PM",
@@ -573,7 +573,7 @@
     },
     "Mariam Coffee - Indy": {
       "rating": 4.5,
-      "userRatingCount": 152,
+      "userRatingCount": 151,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -618,7 +618,7 @@
     },
     "Cafe Patachou - Broad Ripple": {
       "rating": 4.6,
-      "userRatingCount": 1134,
+      "userRatingCount": 1135,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -716,14 +716,14 @@
         "Thursday: 7:00 AM – 7:00 PM",
         "Friday: 7:00 AM – 7:00 PM",
         "Saturday: 7:00 AM – 7:00 PM",
-        "Sunday: 7:00 AM – 2:00 PM"
+        "Sunday: 7:00 – 11:30 AM"
       ],
       "nationalPhoneNumber": "(317) 371-9949",
       "websiteURI": "https://georgiastreetgrind.io/"
     },
     "Red Door Cafe": {
       "rating": 4.9,
-      "userRatingCount": 112,
+      "userRatingCount": 113,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 4:00 PM",
         "Tuesday: 8:00 AM – 4:00 PM",
@@ -783,7 +783,7 @@
     },
     "Milk & Honey Coffeehouse": {
       "rating": 4.6,
-      "userRatingCount": 171,
+      "userRatingCount": 172,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 3:00 PM",
         "Tuesday: 6:00 AM – 3:00 PM",
@@ -940,7 +940,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 4948,
+      "userRatingCount": 4949,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
