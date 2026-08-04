@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-08-03T09:26:27.833Z",
+  "cached_at": "2026-08-04T08:23:28.059Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.8,
@@ -33,7 +33,7 @@
     },
     "Claypot Coffee House": {
       "rating": 4.9,
-      "userRatingCount": 400,
+      "userRatingCount": 401,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 9:00 PM",
         "Tuesday: 8:00 AM – 9:00 PM",
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3262,
+      "userRatingCount": 3265,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -168,7 +168,7 @@
     },
     "Bovaconti Coffee - Indy": {
       "rating": 4.8,
-      "userRatingCount": 778,
+      "userRatingCount": 779,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -288,7 +288,7 @@
     },
     "Niyyah Coffee - Fishers": {
       "rating": 4.9,
-      "userRatingCount": 440,
+      "userRatingCount": 441,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -333,7 +333,7 @@
     },
     "Good Vibes Cafe Indy": {
       "rating": 4.7,
-      "userRatingCount": 255,
+      "userRatingCount": 256,
       "weekdayDescriptions": [
         "Monday: 8:30 AM – 8:30 PM",
         "Tuesday: 8:30 AM – 8:30 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1339,
+      "userRatingCount": 1341,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 12:00 AM",
         "Tuesday: 6:00 AM – 12:00 AM",
@@ -408,7 +408,7 @@
     },
     "Blue Mind Coffee": {
       "rating": 4.9,
-      "userRatingCount": 247,
+      "userRatingCount": 248,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -423,7 +423,7 @@
     },
     "Niyyah Coffee - Indy": {
       "rating": 4.9,
-      "userRatingCount": 221,
+      "userRatingCount": 226,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 8:00 PM",
         "Tuesday: 6:00 AM – 8:00 PM",
@@ -438,7 +438,7 @@
     },
     "Bovaconti Coffee - Carmel": {
       "rating": 4.7,
-      "userRatingCount": 186,
+      "userRatingCount": 187,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -543,7 +543,7 @@
     },
     "Ascend Coffee": {
       "rating": 4.8,
-      "userRatingCount": 339,
+      "userRatingCount": 338,
       "weekdayDescriptions": [
         "Monday: 6:30 AM – 4:00 PM",
         "Tuesday: 6:30 AM – 4:00 PM",
@@ -618,7 +618,7 @@
     },
     "Cafe Patachou - Broad Ripple": {
       "rating": 4.6,
-      "userRatingCount": 1135,
+      "userRatingCount": 1136,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -633,7 +633,7 @@
     },
     "Sidedoor Bagel": {
       "rating": 4.6,
-      "userRatingCount": 536,
+      "userRatingCount": 538,
       "weekdayDescriptions": [
         "Monday: 7:30 AM – 1:30 PM",
         "Tuesday: 7:30 AM – 1:30 PM",
@@ -693,7 +693,7 @@
     },
     "Mariam Coffee - Fishers": {
       "rating": 4.7,
-      "userRatingCount": 279,
+      "userRatingCount": 278,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -783,7 +783,7 @@
     },
     "Milk & Honey Coffeehouse": {
       "rating": 4.6,
-      "userRatingCount": 172,
+      "userRatingCount": 173,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 3:00 PM",
         "Tuesday: 6:00 AM – 3:00 PM",
@@ -880,7 +880,7 @@
     },
     "Cafe Patachou - Fishers": {
       "rating": 4.4,
-      "userRatingCount": 172,
+      "userRatingCount": 173,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -925,7 +925,7 @@
     },
     "Rivet Coffee - Westfield": {
       "rating": 4.7,
-      "userRatingCount": 497,
+      "userRatingCount": 498,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -940,7 +940,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 4949,
+      "userRatingCount": 4950,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
@@ -955,7 +955,7 @@
     },
     "Recess": {
       "rating": 4.6,
-      "userRatingCount": 99,
+      "userRatingCount": 100,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
