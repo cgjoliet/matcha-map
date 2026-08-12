@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-08-11T06:52:09.351Z",
+  "cached_at": "2026-08-12T07:10:41.049Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.8,
@@ -333,7 +333,7 @@
     },
     "Good Vibes Cafe Indy": {
       "rating": 4.7,
-      "userRatingCount": 259,
+      "userRatingCount": 260,
       "weekdayDescriptions": [
         "Monday: 8:30 AM – 8:30 PM",
         "Tuesday: 8:30 AM – 8:30 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1349,
+      "userRatingCount": 1350,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 12:00 AM",
         "Tuesday: 6:00 AM – 12:00 AM",
@@ -588,7 +588,7 @@
     },
     "Indie Coffee Roasters - Noblesville": {
       "rating": 4.8,
-      "userRatingCount": 70,
+      "userRatingCount": 71,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -603,7 +603,7 @@
     },
     "Eli Coffee Co": {
       "rating": 5,
-      "userRatingCount": 12,
+      "userRatingCount": 13,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 12:00 PM",
@@ -618,7 +618,7 @@
     },
     "Cafe Patachou - Broad Ripple": {
       "rating": 4.6,
-      "userRatingCount": 1137,
+      "userRatingCount": 1138,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -633,7 +633,7 @@
     },
     "Sidedoor Bagel": {
       "rating": 4.6,
-      "userRatingCount": 539,
+      "userRatingCount": 540,
       "weekdayDescriptions": [
         "Monday: 7:30 AM – 1:30 PM",
         "Tuesday: 7:30 AM – 1:30 PM",
@@ -753,7 +753,7 @@
     },
     "Cafe Patachou - Zionsville": {
       "rating": 4.5,
-      "userRatingCount": 166,
+      "userRatingCount": 169,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -825,6 +825,148 @@
       ],
       "nationalPhoneNumber": "(317) 426-1431",
       "websiteURI": "http://quillscoffee.com/"
+    },
+    "Illumine Coffee – Nora": {
+      "rating": 4.8,
+      "userRatingCount": 168,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 5:00 PM",
+        "Tuesday: 7:00 AM – 5:00 PM",
+        "Wednesday: 7:00 AM – 5:00 PM",
+        "Thursday: 7:00 AM – 5:00 PM",
+        "Friday: 7:00 AM – 5:00 PM",
+        "Saturday: 8:00 AM – 5:00 PM",
+        "Sunday: Closed"
+      ],
+      "nationalPhoneNumber": "(317) 388-5947",
+      "websiteURI": "http://www.illuminecoffee.com/"
+    },
+    "Coat Check Coffee": {
+      "rating": 4.7,
+      "userRatingCount": 1025,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 4:00 PM",
+        "Tuesday: 7:00 AM – 4:00 PM",
+        "Wednesday: 7:00 AM – 4:00 PM",
+        "Thursday: 7:00 AM – 4:00 PM",
+        "Friday: 7:00 AM – 4:00 PM",
+        "Saturday: 8:00 AM – 5:00 PM",
+        "Sunday: 8:00 AM – 5:00 PM"
+      ],
+      "nationalPhoneNumber": null,
+      "websiteURI": "http://www.coatcheckcoffee.com/"
+    },
+    "Indie Coffee Roasters - Downtown Carmel": {
+      "rating": 4.7,
+      "userRatingCount": 420,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 5:00 PM",
+        "Tuesday: 7:00 AM – 5:00 PM",
+        "Wednesday: 7:00 AM – 5:00 PM",
+        "Thursday: 7:00 AM – 5:00 PM",
+        "Friday: 7:00 AM – 5:00 PM",
+        "Saturday: 7:00 AM – 5:00 PM",
+        "Sunday: 9:00 AM – 3:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 993-3443",
+      "websiteURI": "http://www.indiecoffeeroasters.com/"
+    },
+    "Illumine Coffee – Downtown": {
+      "rating": 4.8,
+      "userRatingCount": 31,
+      "weekdayDescriptions": [],
+      "nationalPhoneNumber": "(317) 388-5676",
+      "websiteURI": "https://illuminecoffee.com/"
+    },
+    "Cafe Patachou - Fishers": {
+      "rating": 4.4,
+      "userRatingCount": 175,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 3:00 PM",
+        "Tuesday: 7:00 AM – 3:00 PM",
+        "Wednesday: 7:00 AM – 3:00 PM",
+        "Thursday: 7:00 AM – 3:00 PM",
+        "Friday: 7:00 AM – 3:00 PM",
+        "Saturday: 8:00 AM – 3:00 PM",
+        "Sunday: 8:00 AM – 3:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 863-7530",
+      "websiteURI": "https://www.cafepatachou.com/"
+    },
+    "MOTW Coffee and Pastries - Fishers": {
+      "rating": 4.8,
+      "userRatingCount": 544,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 5:00 PM",
+        "Tuesday: 7:00 AM – 5:00 PM",
+        "Wednesday: 7:00 AM – 5:00 PM",
+        "Thursday: 7:00 AM – 5:00 PM",
+        "Friday: 7:00 AM – 10:00 PM",
+        "Saturday: 9:00 AM – 10:00 PM",
+        "Sunday: 9:00 AM – 10:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 588-9031",
+      "websiteURI": "https://motw.coffee/"
+    },
+    "Gold Leaf Indy": {
+      "rating": 4.8,
+      "userRatingCount": 460,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 9:00 PM",
+        "Tuesday: 7:00 AM – 3:00 PM",
+        "Wednesday: 7:00 AM – 3:00 PM",
+        "Thursday: 7:00 AM – 3:00 PM",
+        "Friday: 7:00 AM – 7:00 PM",
+        "Saturday: 9:00 AM – 3:00 PM",
+        "Sunday: 10:00 AM – 1:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 600-3542",
+      "websiteURI": "https://www.goldleafindy.com/"
+    },
+    "Rivet Coffee - Westfield": {
+      "rating": 4.7,
+      "userRatingCount": 497,
+      "weekdayDescriptions": [
+        "Monday: 7:00 AM – 3:00 PM",
+        "Tuesday: 7:00 AM – 3:00 PM",
+        "Wednesday: 7:00 AM – 3:00 PM",
+        "Thursday: 7:00 AM – 3:00 PM",
+        "Friday: 7:00 AM – 3:00 PM",
+        "Saturday: 7:00 AM – 3:00 PM",
+        "Sunday: Closed"
+      ],
+      "nationalPhoneNumber": "(317) 763-0007",
+      "websiteURI": "http://www.rivetcoffee.com/"
+    },
+    "Hanger Coffee": {
+      "rating": 4.9,
+      "userRatingCount": 4969,
+      "weekdayDescriptions": [
+        "Monday: Closed",
+        "Tuesday: Closed",
+        "Wednesday: 4:00 – 10:00 PM",
+        "Thursday: 4:00 – 10:00 PM",
+        "Friday: 4:00 – 10:00 PM",
+        "Saturday: 11:00 AM – 10:00 PM",
+        "Sunday: 12:00 – 6:00 PM"
+      ],
+      "nationalPhoneNumber": "(877) 939-9450",
+      "websiteURI": "https://hangarindy.com/"
+    },
+    "Recess": {
+      "rating": 4.6,
+      "userRatingCount": 102,
+      "weekdayDescriptions": [
+        "Monday: Closed",
+        "Tuesday: Closed",
+        "Wednesday: 8:00 AM – 5:00 PM",
+        "Thursday: 8:00 AM – 5:00 PM",
+        "Friday: 8:00 AM – 5:00 PM",
+        "Saturday: 8:00 AM – 5:00 PM",
+        "Sunday: 8:00 AM – 5:00 PM"
+      ],
+      "nationalPhoneNumber": "(317) 318-8858",
+      "websiteURI": "http://recess.love/"
     }
   }
 }
