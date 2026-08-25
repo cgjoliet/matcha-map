@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-08-24T06:38:55.733Z",
+  "cached_at": "2026-08-25T06:31:17.359Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.8,
@@ -33,7 +33,7 @@
     },
     "Claypot Coffee House": {
       "rating": 4.9,
-      "userRatingCount": 432,
+      "userRatingCount": 434,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 9:00 PM",
         "Tuesday: 8:00 AM – 9:00 PM",
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3299,
+      "userRatingCount": 3301,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -63,7 +63,7 @@
     },
     "The Spice & Tea Exchange": {
       "rating": 4.9,
-      "userRatingCount": 52,
+      "userRatingCount": 53,
       "weekdayDescriptions": [
         "Monday: 10:00 AM – 6:00 PM",
         "Tuesday: 10:00 AM – 6:00 PM",
@@ -93,7 +93,7 @@
     },
     "Cafe Patachou - The Stutz": {
       "rating": 4.6,
-      "userRatingCount": 232,
+      "userRatingCount": 233,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -140,20 +140,20 @@
       "rating": 4.5,
       "userRatingCount": 146,
       "weekdayDescriptions": [
-        "Monday: 7:00 AM – 7:00 PM",
-        "Tuesday: 7:00 AM – 7:00 PM",
-        "Wednesday: 7:00 AM – 7:00 PM",
-        "Thursday: 7:00 AM – 7:00 PM",
-        "Friday: 7:00 AM – 7:00 PM",
-        "Saturday: 7:00 AM – 7:00 PM",
-        "Sunday: 7:00 AM – 7:00 PM"
+        "Monday: 6:30 AM – 6:00 PM",
+        "Tuesday: 6:30 AM – 6:00 PM",
+        "Wednesday: 6:30 AM – 6:00 PM",
+        "Thursday: 6:30 AM – 6:00 PM",
+        "Friday: 6:30 AM – 6:00 PM",
+        "Saturday: 8:00 AM – 6:00 PM",
+        "Sunday: 8:00 AM – 6:00 PM"
       ],
       "nationalPhoneNumber": "(317) 602-3004",
       "websiteURI": "https://www.facebook.com/p/Prufrock-Coffee-Company-100063278586049/"
     },
     "Black House Café": {
       "rating": 4.7,
-      "userRatingCount": 371,
+      "userRatingCount": 372,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: 8:00 AM – 5:00 PM",
@@ -168,7 +168,7 @@
     },
     "Bovaconti Coffee - Indy": {
       "rating": 4.8,
-      "userRatingCount": 784,
+      "userRatingCount": 785,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1365,
+      "userRatingCount": 1366,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 12:00 AM",
         "Tuesday: 6:00 AM – 12:00 AM",
@@ -423,7 +423,7 @@
     },
     "Niyyah Coffee - Indy": {
       "rating": 4.9,
-      "userRatingCount": 284,
+      "userRatingCount": 286,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:00 PM",
         "Tuesday: 7:00 AM – 8:00 PM",
@@ -438,7 +438,7 @@
     },
     "Bovaconti Coffee - Carmel": {
       "rating": 4.7,
-      "userRatingCount": 190,
+      "userRatingCount": 191,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -531,12 +531,12 @@
       "userRatingCount": 205,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 4:00 PM",
-        "Tuesday: 7:00 AM – 3:30 PM",
+        "Tuesday: 7:00 AM – 4:00 PM",
         "Wednesday: 7:00 AM – 4:00 PM",
         "Thursday: 7:00 AM – 4:00 PM",
-        "Friday: 7:00 AM – 4:00 PM",
-        "Saturday: 8:00 AM – 3:00 PM",
-        "Sunday: 8:00 AM – 3:00 PM"
+        "Friday: 7:00 AM – 5:00 PM",
+        "Saturday: 8:00 AM – 5:00 PM",
+        "Sunday: 8:00 AM – 5:00 PM"
       ],
       "nationalPhoneNumber": "(317) 756-9995",
       "websiteURI": null
@@ -633,7 +633,7 @@
     },
     "Sidedoor Bagel": {
       "rating": 4.6,
-      "userRatingCount": 579,
+      "userRatingCount": 583,
       "weekdayDescriptions": [
         "Monday: 7:30 AM – 1:30 PM",
         "Tuesday: 7:30 AM – 1:30 PM",
@@ -677,8 +677,8 @@
       "websiteURI": "https://www.tinkercoffee.com/pages/locations"
     },
     "NEVERHOME COFFEE": {
-      "rating": 4.8,
-      "userRatingCount": 69,
+      "rating": 4.7,
+      "userRatingCount": 70,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
@@ -723,7 +723,7 @@
     },
     "Red Door Cafe": {
       "rating": 4.9,
-      "userRatingCount": 118,
+      "userRatingCount": 119,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 4:00 PM",
         "Tuesday: 8:00 AM – 4:00 PM",
@@ -940,7 +940,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 4980,
+      "userRatingCount": 4981,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
