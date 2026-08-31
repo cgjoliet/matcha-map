@@ -1,9 +1,9 @@
 {
-  "cached_at": "2026-08-30T10:57:22.161Z",
+  "cached_at": "2026-08-31T12:15:03.611Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.7,
-      "userRatingCount": 705,
+      "userRatingCount": 706,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:30 PM",
         "Tuesday: 7:00 AM – 8:30 PM",
@@ -33,7 +33,7 @@
     },
     "Claypot Coffee House": {
       "rating": 4.9,
-      "userRatingCount": 439,
+      "userRatingCount": 440,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 9:00 PM",
         "Tuesday: 8:00 AM – 9:00 PM",
@@ -138,7 +138,7 @@
     },
     "Prufrock Coffee Company - Carmel": {
       "rating": 4.5,
-      "userRatingCount": 146,
+      "userRatingCount": 147,
       "weekdayDescriptions": [
         "Monday: 6:30 AM – 6:00 PM",
         "Tuesday: 6:30 AM – 6:00 PM",
@@ -153,7 +153,7 @@
     },
     "Black House Café": {
       "rating": 4.7,
-      "userRatingCount": 373,
+      "userRatingCount": 374,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: 8:00 AM – 5:00 PM",
@@ -288,7 +288,7 @@
     },
     "Niyyah Coffee - Fishers": {
       "rating": 4.9,
-      "userRatingCount": 448,
+      "userRatingCount": 449,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -317,8 +317,8 @@
       "websiteURI": "https://www.cafepatachou.com/"
     },
     "1656 Club": {
-      "rating": 4.7,
-      "userRatingCount": 70,
+      "rating": 4.6,
+      "userRatingCount": 71,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -333,7 +333,7 @@
     },
     "Good Vibes Cafe Indy": {
       "rating": 4.7,
-      "userRatingCount": 265,
+      "userRatingCount": 266,
       "weekdayDescriptions": [
         "Monday: 8:30 AM – 8:30 PM",
         "Tuesday: 8:30 AM – 8:30 PM",
@@ -363,7 +363,7 @@
     },
     "Borage": {
       "rating": 4.5,
-      "userRatingCount": 518,
+      "userRatingCount": 519,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 2:00 PM",
@@ -423,7 +423,7 @@
     },
     "Niyyah Coffee - Indy": {
       "rating": 5,
-      "userRatingCount": 308,
+      "userRatingCount": 311,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:00 PM",
         "Tuesday: 7:00 AM – 8:00 PM",
@@ -438,7 +438,7 @@
     },
     "Bovaconti Coffee - Carmel": {
       "rating": 4.7,
-      "userRatingCount": 191,
+      "userRatingCount": 192,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -483,7 +483,7 @@
     },
     "Cafe Patachou - East Carmel": {
       "rating": 4.6,
-      "userRatingCount": 815,
+      "userRatingCount": 816,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -632,8 +632,8 @@
       "websiteURI": "https://www.cafepatachou.com/"
     },
     "Sidedoor Bagel": {
-      "rating": 4.6,
-      "userRatingCount": 609,
+      "rating": 4.7,
+      "userRatingCount": 616,
       "weekdayDescriptions": [
         "Monday: 7:30 AM – 1:30 PM",
         "Tuesday: 7:30 AM – 1:30 PM",
@@ -767,8 +767,8 @@
       "websiteURI": "https://www.cafepatachou.com/"
     },
     "Command Coffee - Indy": {
-      "rating": 4.4,
-      "userRatingCount": 123,
+      "rating": 4.5,
+      "userRatingCount": 124,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 4:00 PM",
         "Tuesday: 6:00 AM – 4:00 PM",
@@ -843,7 +843,7 @@
     },
     "Coat Check Coffee": {
       "rating": 4.7,
-      "userRatingCount": 1028,
+      "userRatingCount": 1029,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 4:00 PM",
         "Tuesday: 7:00 AM – 4:00 PM",
@@ -880,7 +880,7 @@
     },
     "Cafe Patachou - Fishers": {
       "rating": 4.4,
-      "userRatingCount": 182,
+      "userRatingCount": 183,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -940,7 +940,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 4985,
+      "userRatingCount": 4988,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
