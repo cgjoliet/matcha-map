@@ -1,9 +1,9 @@
 {
-  "cached_at": "2026-08-31T12:15:03.611Z",
+  "cached_at": "2026-09-01T10:50:46.352Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.7,
-      "userRatingCount": 706,
+      "userRatingCount": 707,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:30 PM",
         "Tuesday: 7:00 AM – 8:30 PM",
@@ -33,7 +33,7 @@
     },
     "Claypot Coffee House": {
       "rating": 4.9,
-      "userRatingCount": 440,
+      "userRatingCount": 442,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 9:00 PM",
         "Tuesday: 8:00 AM – 9:00 PM",
@@ -65,7 +65,7 @@
       "rating": 4.9,
       "userRatingCount": 53,
       "weekdayDescriptions": [
-        "Monday: 10:00 AM – 6:00 PM",
+        "Monday: Closed",
         "Tuesday: 10:00 AM – 6:00 PM",
         "Wednesday: 10:00 AM – 6:00 PM",
         "Thursday: 10:00 AM – 6:00 PM",
@@ -78,7 +78,7 @@
     },
     "Mocha House": {
       "rating": 4.5,
-      "userRatingCount": 168,
+      "userRatingCount": 170,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 11:00 PM",
         "Tuesday: 6:00 AM – 11:00 PM",
@@ -93,7 +93,7 @@
     },
     "Cafe Patachou - The Stutz": {
       "rating": 4.6,
-      "userRatingCount": 234,
+      "userRatingCount": 235,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -363,7 +363,7 @@
     },
     "Borage": {
       "rating": 4.5,
-      "userRatingCount": 519,
+      "userRatingCount": 520,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 2:00 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1373,
+      "userRatingCount": 1374,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 12:00 AM",
         "Tuesday: 6:00 AM – 12:00 AM",
@@ -408,7 +408,7 @@
     },
     "Blue Mind Coffee": {
       "rating": 4.8,
-      "userRatingCount": 255,
+      "userRatingCount": 257,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -423,7 +423,7 @@
     },
     "Niyyah Coffee - Indy": {
       "rating": 5,
-      "userRatingCount": 311,
+      "userRatingCount": 313,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:00 PM",
         "Tuesday: 7:00 AM – 8:00 PM",
@@ -543,7 +543,7 @@
     },
     "Ascend Coffee": {
       "rating": 4.8,
-      "userRatingCount": 342,
+      "userRatingCount": 341,
       "weekdayDescriptions": [
         "Monday: 6:30 AM – 4:00 PM",
         "Tuesday: 6:30 AM – 4:00 PM",
@@ -693,7 +693,7 @@
     },
     "Mariam Coffee - Fishers": {
       "rating": 4.7,
-      "userRatingCount": 278,
+      "userRatingCount": 279,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -710,13 +710,13 @@
       "rating": 4.8,
       "userRatingCount": 404,
       "weekdayDescriptions": [
-        "Monday: 7:00 AM – 4:00 PM",
+        "Monday: Closed",
         "Tuesday: 7:00 AM – 4:00 PM",
         "Wednesday: 7:00 AM – 4:00 PM",
         "Thursday: 7:00 AM – 4:00 PM",
         "Friday: 7:00 AM – 4:00 PM",
         "Saturday: 8:00 AM – 12:00 PM",
-        "Sunday: 8:00 AM – 12:00 PM"
+        "Sunday: Closed"
       ],
       "nationalPhoneNumber": "(317) 371-9949",
       "websiteURI": "https://georgiastreetgrind.io/"
@@ -798,7 +798,7 @@
     },
     "Chronic Coffee": {
       "rating": 4.9,
-      "userRatingCount": 810,
+      "userRatingCount": 809,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 4:00 PM",
         "Tuesday: 8:00 AM – 4:00 PM",
@@ -910,7 +910,7 @@
     },
     "Gold Leaf Indy": {
       "rating": 4.8,
-      "userRatingCount": 467,
+      "userRatingCount": 468,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 9:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -940,7 +940,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 4988,
+      "userRatingCount": 4989,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
