@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-09-01T10:50:46.352Z",
+  "cached_at": "2026-09-02T10:15:27.847Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.7,
@@ -33,7 +33,7 @@
     },
     "Claypot Coffee House": {
       "rating": 4.9,
-      "userRatingCount": 442,
+      "userRatingCount": 443,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 9:00 PM",
         "Tuesday: 8:00 AM – 9:00 PM",
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3304,
+      "userRatingCount": 3306,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -78,7 +78,7 @@
     },
     "Mocha House": {
       "rating": 4.5,
-      "userRatingCount": 170,
+      "userRatingCount": 173,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 11:00 PM",
         "Tuesday: 6:00 AM – 11:00 PM",
@@ -258,7 +258,7 @@
     },
     "Top Out Cafe": {
       "rating": 4.6,
-      "userRatingCount": 138,
+      "userRatingCount": 139,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 10:00 PM",
         "Tuesday: 7:00 AM – 10:00 PM",
@@ -317,8 +317,8 @@
       "websiteURI": "https://www.cafepatachou.com/"
     },
     "1656 Club": {
-      "rating": 4.6,
-      "userRatingCount": 71,
+      "rating": 4.7,
+      "userRatingCount": 72,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -363,7 +363,7 @@
     },
     "Borage": {
       "rating": 4.5,
-      "userRatingCount": 520,
+      "userRatingCount": 521,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 2:00 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1374,
+      "userRatingCount": 1376,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 12:00 AM",
         "Tuesday: 6:00 AM – 12:00 AM",
@@ -512,7 +512,7 @@
       "websiteURI": "https://www.rivetcoffee.com/"
     },
     "Cafe Noricha": {
-      "rating": 4.8,
+      "rating": 4.7,
       "userRatingCount": 158,
       "weekdayDescriptions": [
         "Monday: 11:00 AM – 7:00 PM",
@@ -633,7 +633,7 @@
     },
     "Sidedoor Bagel": {
       "rating": 4.7,
-      "userRatingCount": 616,
+      "userRatingCount": 617,
       "weekdayDescriptions": [
         "Monday: 7:30 AM – 1:30 PM",
         "Tuesday: 7:30 AM – 1:30 PM",
@@ -738,7 +738,7 @@
     },
     "The Selene by Ova": {
       "rating": 4.3,
-      "userRatingCount": 31,
+      "userRatingCount": 32,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 9:00 AM – 1:00 PM",
@@ -783,7 +783,7 @@
     },
     "Milk & Honey Coffeehouse": {
       "rating": 4.6,
-      "userRatingCount": 181,
+      "userRatingCount": 182,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 3:00 PM",
         "Tuesday: 6:00 AM – 3:00 PM",
