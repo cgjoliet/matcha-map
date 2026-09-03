@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-09-02T10:15:27.847Z",
+  "cached_at": "2026-09-03T10:26:25.796Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.7,
@@ -33,7 +33,7 @@
     },
     "Claypot Coffee House": {
       "rating": 4.9,
-      "userRatingCount": 443,
+      "userRatingCount": 444,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 9:00 PM",
         "Tuesday: 8:00 AM – 9:00 PM",
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3306,
+      "userRatingCount": 3309,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -78,7 +78,7 @@
     },
     "Mocha House": {
       "rating": 4.5,
-      "userRatingCount": 173,
+      "userRatingCount": 175,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 11:00 PM",
         "Tuesday: 6:00 AM – 11:00 PM",
@@ -138,7 +138,7 @@
     },
     "Prufrock Coffee Company - Carmel": {
       "rating": 4.5,
-      "userRatingCount": 147,
+      "userRatingCount": 148,
       "weekdayDescriptions": [
         "Monday: 6:30 AM – 6:00 PM",
         "Tuesday: 6:30 AM – 6:00 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1376,
+      "userRatingCount": 1379,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 12:00 AM",
         "Tuesday: 6:00 AM – 12:00 AM",
@@ -423,7 +423,7 @@
     },
     "Niyyah Coffee - Indy": {
       "rating": 5,
-      "userRatingCount": 313,
+      "userRatingCount": 317,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:00 PM",
         "Tuesday: 7:00 AM – 8:00 PM",
@@ -604,15 +604,7 @@
     "Eli Coffee Co": {
       "rating": 5,
       "userRatingCount": 16,
-      "weekdayDescriptions": [
-        "Monday: Closed",
-        "Tuesday: 7:00 AM – 12:00 PM",
-        "Wednesday: 7:00 AM – 12:00 PM",
-        "Thursday: 7:00 AM – 12:00 PM",
-        "Friday: 7:00 AM – 12:00 PM",
-        "Saturday: 8:00 AM – 12:00 PM",
-        "Sunday: Closed"
-      ],
+      "weekdayDescriptions": [],
       "nationalPhoneNumber": null,
       "websiteURI": "http://elicoffeeco.com/"
     },
@@ -633,7 +625,7 @@
     },
     "Sidedoor Bagel": {
       "rating": 4.7,
-      "userRatingCount": 617,
+      "userRatingCount": 620,
       "weekdayDescriptions": [
         "Monday: 7:30 AM – 1:30 PM",
         "Tuesday: 7:30 AM – 1:30 PM",
@@ -895,7 +887,7 @@
     },
     "MOTW Coffee and Pastries - Fishers": {
       "rating": 4.8,
-      "userRatingCount": 546,
+      "userRatingCount": 545,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 1:00 PM",
         "Tuesday: 7:00 AM – 1:00 PM",
@@ -910,7 +902,7 @@
     },
     "Gold Leaf Indy": {
       "rating": 4.8,
-      "userRatingCount": 468,
+      "userRatingCount": 469,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 9:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
