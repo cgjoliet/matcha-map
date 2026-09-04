@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-09-03T10:26:25.796Z",
+  "cached_at": "2026-09-04T10:13:46.986Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.7,
@@ -32,8 +32,8 @@
       "websiteURI": "http://foundryprovisions.com/"
     },
     "Claypot Coffee House": {
-      "rating": 4.9,
-      "userRatingCount": 444,
+      "rating": 4.8,
+      "userRatingCount": 449,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 9:00 PM",
         "Tuesday: 8:00 AM – 9:00 PM",
@@ -78,7 +78,7 @@
     },
     "Mocha House": {
       "rating": 4.5,
-      "userRatingCount": 175,
+      "userRatingCount": 176,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 11:00 PM",
         "Tuesday: 6:00 AM – 11:00 PM",
@@ -93,7 +93,7 @@
     },
     "Cafe Patachou - The Stutz": {
       "rating": 4.6,
-      "userRatingCount": 235,
+      "userRatingCount": 236,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -198,7 +198,7 @@
     },
     "Provider Café": {
       "rating": 4.6,
-      "userRatingCount": 685,
+      "userRatingCount": 686,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 4:00 PM",
         "Tuesday: 7:00 AM – 4:00 PM",
@@ -288,7 +288,7 @@
     },
     "Niyyah Coffee - Fishers": {
       "rating": 4.9,
-      "userRatingCount": 449,
+      "userRatingCount": 450,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -423,7 +423,7 @@
     },
     "Niyyah Coffee - Indy": {
       "rating": 5,
-      "userRatingCount": 317,
+      "userRatingCount": 323,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:00 PM",
         "Tuesday: 7:00 AM – 8:00 PM",
@@ -604,7 +604,15 @@
     "Eli Coffee Co": {
       "rating": 5,
       "userRatingCount": 16,
-      "weekdayDescriptions": [],
+      "weekdayDescriptions": [
+        "Monday: Closed",
+        "Tuesday: 7:00 AM – 12:00 PM",
+        "Wednesday: 7:00 AM – 12:00 PM",
+        "Thursday: 7:00 AM – 12:00 PM",
+        "Friday: 7:00 AM – 12:00 PM",
+        "Saturday: 8:00 AM – 12:00 PM",
+        "Sunday: Closed"
+      ],
       "nationalPhoneNumber": null,
       "websiteURI": "http://elicoffeeco.com/"
     },
@@ -625,7 +633,7 @@
     },
     "Sidedoor Bagel": {
       "rating": 4.7,
-      "userRatingCount": 620,
+      "userRatingCount": 623,
       "weekdayDescriptions": [
         "Monday: 7:30 AM – 1:30 PM",
         "Tuesday: 7:30 AM – 1:30 PM",
@@ -700,7 +708,7 @@
     },
     "Georgia Street Grind": {
       "rating": 4.8,
-      "userRatingCount": 404,
+      "userRatingCount": 405,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 4:00 PM",
@@ -745,7 +753,7 @@
     },
     "Cafe Patachou - Zionsville": {
       "rating": 4.5,
-      "userRatingCount": 178,
+      "userRatingCount": 179,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -775,7 +783,7 @@
     },
     "Milk & Honey Coffeehouse": {
       "rating": 4.6,
-      "userRatingCount": 182,
+      "userRatingCount": 183,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 3:00 PM",
         "Tuesday: 6:00 AM – 3:00 PM",
@@ -932,7 +940,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 4989,
+      "userRatingCount": 4990,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
