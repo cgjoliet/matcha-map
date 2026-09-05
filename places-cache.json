@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-09-04T10:13:46.986Z",
+  "cached_at": "2026-09-05T09:42:44.270Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.7,
@@ -18,7 +18,7 @@
     },
     "Foundry Provisions": {
       "rating": 4.5,
-      "userRatingCount": 431,
+      "userRatingCount": 432,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -33,7 +33,7 @@
     },
     "Claypot Coffee House": {
       "rating": 4.8,
-      "userRatingCount": 449,
+      "userRatingCount": 451,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 9:00 PM",
         "Tuesday: 8:00 AM – 9:00 PM",
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3309,
+      "userRatingCount": 3311,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -65,7 +65,7 @@
       "rating": 4.9,
       "userRatingCount": 53,
       "weekdayDescriptions": [
-        "Monday: Closed",
+        "Monday: 10:00 AM – 6:00 PM",
         "Tuesday: 10:00 AM – 6:00 PM",
         "Wednesday: 10:00 AM – 6:00 PM",
         "Thursday: 10:00 AM – 6:00 PM",
@@ -78,7 +78,7 @@
     },
     "Mocha House": {
       "rating": 4.5,
-      "userRatingCount": 176,
+      "userRatingCount": 177,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 11:00 PM",
         "Tuesday: 6:00 AM – 11:00 PM",
@@ -153,7 +153,7 @@
     },
     "Black House Café": {
       "rating": 4.7,
-      "userRatingCount": 374,
+      "userRatingCount": 375,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: 8:00 AM – 5:00 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1379,
+      "userRatingCount": 1382,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 12:00 AM",
         "Tuesday: 6:00 AM – 12:00 AM",
@@ -423,7 +423,7 @@
     },
     "Niyyah Coffee - Indy": {
       "rating": 5,
-      "userRatingCount": 323,
+      "userRatingCount": 324,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:00 PM",
         "Tuesday: 7:00 AM – 8:00 PM",
@@ -468,7 +468,7 @@
     },
     "Parlor Public House": {
       "rating": 4.5,
-      "userRatingCount": 621,
+      "userRatingCount": 622,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: 8:00 AM – 5:00 PM",
@@ -558,7 +558,7 @@
     },
     "The Human Bean - Indy": {
       "rating": 4.5,
-      "userRatingCount": 397,
+      "userRatingCount": 396,
       "weekdayDescriptions": [
         "Monday: 5:00 AM – 9:00 PM",
         "Tuesday: 5:00 AM – 9:00 PM",
@@ -633,7 +633,7 @@
     },
     "Sidedoor Bagel": {
       "rating": 4.7,
-      "userRatingCount": 623,
+      "userRatingCount": 624,
       "weekdayDescriptions": [
         "Monday: 7:30 AM – 1:30 PM",
         "Tuesday: 7:30 AM – 1:30 PM",
@@ -779,7 +779,7 @@
         "Sunday: 6:00 AM – 5:00 PM"
       ],
       "nationalPhoneNumber": null,
-      "websiteURI": "https://commandcoffee.com/"
+      "websiteURI": "https://commandcoffee.com/pages/monument-circle-coffee-shop"
     },
     "Milk & Honey Coffeehouse": {
       "rating": 4.6,
@@ -879,8 +879,8 @@
       "websiteURI": "https://illuminecoffee.com/"
     },
     "Cafe Patachou - Fishers": {
-      "rating": 4.4,
-      "userRatingCount": 183,
+      "rating": 4.3,
+      "userRatingCount": 184,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
