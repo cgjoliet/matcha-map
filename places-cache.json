@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-09-15T10:44:21.711Z",
+  "cached_at": "2026-09-16T10:32:33.692Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.7,
@@ -33,7 +33,7 @@
     },
     "Claypot Coffee House": {
       "rating": 4.8,
-      "userRatingCount": 459,
+      "userRatingCount": 460,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 9:00 PM",
         "Tuesday: 8:00 AM – 9:00 PM",
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3316,
+      "userRatingCount": 3317,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -108,7 +108,7 @@
     },
     "MOTW Coffee and Pastries - Carmel": {
       "rating": 4.6,
-      "userRatingCount": 427,
+      "userRatingCount": 428,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:30 PM",
         "Tuesday: 7:00 AM – 8:30 PM",
@@ -153,7 +153,7 @@
     },
     "Black House Café": {
       "rating": 4.7,
-      "userRatingCount": 376,
+      "userRatingCount": 377,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: 8:00 AM – 5:00 PM",
@@ -183,7 +183,7 @@
     },
     "Cafe Patachou - Keystone": {
       "rating": 4.6,
-      "userRatingCount": 957,
+      "userRatingCount": 958,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -258,7 +258,7 @@
     },
     "Top Out Cafe": {
       "rating": 4.6,
-      "userRatingCount": 139,
+      "userRatingCount": 140,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 10:00 PM",
         "Tuesday: 7:00 AM – 10:00 PM",
@@ -333,7 +333,7 @@
     },
     "Good Vibes Cafe Indy": {
       "rating": 4.7,
-      "userRatingCount": 269,
+      "userRatingCount": 268,
       "weekdayDescriptions": [
         "Monday: 8:30 AM – 8:30 PM",
         "Tuesday: 8:30 AM – 8:30 PM",
@@ -363,7 +363,7 @@
     },
     "Borage": {
       "rating": 4.5,
-      "userRatingCount": 526,
+      "userRatingCount": 525,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 2:00 PM",
@@ -378,7 +378,7 @@
     },
     "The Coffee Haus": {
       "rating": 4.8,
-      "userRatingCount": 78,
+      "userRatingCount": 79,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -423,7 +423,7 @@
     },
     "Niyyah Coffee - Indy": {
       "rating": 5,
-      "userRatingCount": 341,
+      "userRatingCount": 344,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:00 PM",
         "Tuesday: 7:00 AM – 8:00 PM",
@@ -483,7 +483,7 @@
     },
     "Cafe Patachou - East Carmel": {
       "rating": 4.6,
-      "userRatingCount": 818,
+      "userRatingCount": 819,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -512,8 +512,8 @@
       "websiteURI": "https://www.rivetcoffee.com/"
     },
     "Cafe Noricha": {
-      "rating": 4.7,
-      "userRatingCount": 158,
+      "rating": 4.8,
+      "userRatingCount": 157,
       "weekdayDescriptions": [
         "Monday: 11:00 AM – 7:00 PM",
         "Tuesday: 11:00 AM – 7:00 PM",
@@ -543,7 +543,7 @@
     },
     "Ascend Coffee": {
       "rating": 4.8,
-      "userRatingCount": 346,
+      "userRatingCount": 347,
       "weekdayDescriptions": [
         "Monday: 6:30 AM – 4:00 PM",
         "Tuesday: 6:30 AM – 4:00 PM",
@@ -633,7 +633,7 @@
     },
     "Sidedoor Bagel": {
       "rating": 4.7,
-      "userRatingCount": 653,
+      "userRatingCount": 656,
       "weekdayDescriptions": [
         "Monday: 7:30 AM – 1:30 PM",
         "Tuesday: 7:30 AM – 1:30 PM",
@@ -663,7 +663,7 @@
     },
     "Tinker Coffee – The Firehouse": {
       "rating": 4.7,
-      "userRatingCount": 102,
+      "userRatingCount": 103,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 6:00 PM",
         "Tuesday: 6:00 AM – 6:00 PM",
@@ -693,7 +693,7 @@
     },
     "Mariam Coffee - Fishers": {
       "rating": 4.7,
-      "userRatingCount": 279,
+      "userRatingCount": 280,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -723,7 +723,7 @@
     },
     "Red Door Cafe": {
       "rating": 4.9,
-      "userRatingCount": 122,
+      "userRatingCount": 123,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 4:00 PM",
         "Tuesday: 8:00 AM – 4:00 PM",
@@ -783,7 +783,7 @@
     },
     "Milk & Honey Coffeehouse": {
       "rating": 4.6,
-      "userRatingCount": 183,
+      "userRatingCount": 182,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 3:00 PM",
         "Tuesday: 6:00 AM – 3:00 PM",
@@ -872,19 +872,11 @@
       "websiteURI": "http://www.indiecoffeeroasters.com/"
     },
     "Illumine Coffee – Downtown": {
-      "rating": 4.5,
-      "userRatingCount": 36,
-      "weekdayDescriptions": [
-        "Monday: 6:30 AM – 4:00 PM",
-        "Tuesday: 6:30 AM – 4:00 PM",
-        "Wednesday: 6:30 AM – 4:00 PM",
-        "Thursday: 6:30 AM – 4:00 PM",
-        "Friday: 6:30 AM – 4:00 PM",
-        "Saturday: Closed",
-        "Sunday: Closed"
-      ],
-      "nationalPhoneNumber": null,
-      "websiteURI": "https://www.cupscoffeeindy.com/"
+      "rating": 4.8,
+      "userRatingCount": 31,
+      "weekdayDescriptions": [],
+      "nationalPhoneNumber": "(317) 388-5676",
+      "websiteURI": "https://illuminecoffee.com/"
     },
     "Cafe Patachou - Fishers": {
       "rating": 4.4,
@@ -903,7 +895,7 @@
     },
     "MOTW Coffee and Pastries - Fishers": {
       "rating": 4.8,
-      "userRatingCount": 544,
+      "userRatingCount": 545,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 1:00 PM",
         "Tuesday: 7:00 AM – 1:00 PM",
@@ -948,7 +940,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 4999,
+      "userRatingCount": 5000,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
@@ -963,7 +955,7 @@
     },
     "Recess": {
       "rating": 4.6,
-      "userRatingCount": 105,
+      "userRatingCount": 106,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
