@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-09-27T11:05:22.160Z",
+  "cached_at": "2026-09-28T12:27:07.279Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.7,
@@ -33,7 +33,7 @@
     },
     "Claypot Coffee House": {
       "rating": 4.8,
-      "userRatingCount": 469,
+      "userRatingCount": 468,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 9:00 PM",
         "Tuesday: 8:00 AM – 9:00 PM",
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3327,
+      "userRatingCount": 3328,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -78,7 +78,7 @@
     },
     "Mocha House": {
       "rating": 4.5,
-      "userRatingCount": 191,
+      "userRatingCount": 194,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 11:00 PM",
         "Tuesday: 6:00 AM – 11:00 PM",
@@ -93,7 +93,7 @@
     },
     "Cafe Patachou - The Stutz": {
       "rating": 4.6,
-      "userRatingCount": 240,
+      "userRatingCount": 241,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -108,7 +108,7 @@
     },
     "MOTW Coffee and Pastries - Carmel": {
       "rating": 4.6,
-      "userRatingCount": 428,
+      "userRatingCount": 430,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:30 PM",
         "Tuesday: 7:00 AM – 8:30 PM",
@@ -152,7 +152,7 @@
       "websiteURI": "https://www.facebook.com/p/Prufrock-Coffee-Company-100063278586049/"
     },
     "Black House Café": {
-      "rating": 4.7,
+      "rating": 4.6,
       "userRatingCount": 378,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
@@ -198,7 +198,7 @@
     },
     "Provider Café": {
       "rating": 4.6,
-      "userRatingCount": 686,
+      "userRatingCount": 687,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 4:00 PM",
         "Tuesday: 7:00 AM – 4:00 PM",
@@ -213,7 +213,7 @@
     },
     "Leviathan Bakehouse": {
       "rating": 4.7,
-      "userRatingCount": 700,
+      "userRatingCount": 701,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -273,7 +273,7 @@
     },
     "Blue Collar Coffee Co.": {
       "rating": 4.2,
-      "userRatingCount": 170,
+      "userRatingCount": 171,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 4:00 PM",
         "Tuesday: 6:00 AM – 4:00 PM",
@@ -363,7 +363,7 @@
     },
     "Borage": {
       "rating": 4.5,
-      "userRatingCount": 530,
+      "userRatingCount": 531,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 2:00 PM",
@@ -378,7 +378,7 @@
     },
     "The Coffee Haus": {
       "rating": 4.8,
-      "userRatingCount": 80,
+      "userRatingCount": 81,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1399,
+      "userRatingCount": 1400,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 12:00 AM",
         "Tuesday: 6:00 AM – 12:00 AM",
@@ -468,7 +468,7 @@
     },
     "Parlor Public House": {
       "rating": 4.5,
-      "userRatingCount": 628,
+      "userRatingCount": 627,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: 8:00 AM – 5:00 PM",
@@ -543,7 +543,7 @@
     },
     "Ascend Coffee": {
       "rating": 4.8,
-      "userRatingCount": 348,
+      "userRatingCount": 349,
       "weekdayDescriptions": [
         "Monday: 6:30 AM – 4:00 PM",
         "Tuesday: 6:30 AM – 4:00 PM",
@@ -573,7 +573,7 @@
     },
     "Mariam Coffee - Indy": {
       "rating": 4.5,
-      "userRatingCount": 152,
+      "userRatingCount": 151,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -610,7 +610,7 @@
     },
     "Cafe Patachou - Broad Ripple": {
       "rating": 4.6,
-      "userRatingCount": 1147,
+      "userRatingCount": 1148,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -625,7 +625,7 @@
     },
     "Sidedoor Bagel": {
       "rating": 4.7,
-      "userRatingCount": 690,
+      "userRatingCount": 697,
       "weekdayDescriptions": [
         "Monday: 7:30 AM – 1:30 PM",
         "Tuesday: 7:30 AM – 1:30 PM",
@@ -640,7 +640,7 @@
     },
     "Indie Coffee Roasters - Carmel Smoky Row": {
       "rating": 4.7,
-      "userRatingCount": 425,
+      "userRatingCount": 426,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -715,7 +715,7 @@
     },
     "Red Door Cafe": {
       "rating": 4.9,
-      "userRatingCount": 125,
+      "userRatingCount": 126,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 4:00 PM",
         "Tuesday: 8:00 AM – 4:00 PM",
@@ -745,7 +745,7 @@
     },
     "Cafe Patachou - Zionsville": {
       "rating": 4.5,
-      "userRatingCount": 181,
+      "userRatingCount": 182,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -850,7 +850,7 @@
     },
     "Indie Coffee Roasters - Downtown Carmel": {
       "rating": 4.7,
-      "userRatingCount": 425,
+      "userRatingCount": 426,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -932,7 +932,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 5028,
+      "userRatingCount": 5031,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
