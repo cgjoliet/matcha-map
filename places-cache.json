@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-09-28T12:27:07.279Z",
+  "cached_at": "2026-09-29T11:51:39.648Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.7,
@@ -228,7 +228,7 @@
     },
     "Prufrock Coffee Company - Indy": {
       "rating": 4.5,
-      "userRatingCount": 427,
+      "userRatingCount": 428,
       "weekdayDescriptions": [
         "Monday: 6:30 AM – 6:00 PM",
         "Tuesday: 6:30 AM – 6:00 PM",
@@ -363,7 +363,7 @@
     },
     "Borage": {
       "rating": 4.5,
-      "userRatingCount": 531,
+      "userRatingCount": 532,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 2:00 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1400,
+      "userRatingCount": 1402,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 12:00 AM",
         "Tuesday: 6:00 AM – 12:00 AM",
@@ -423,7 +423,7 @@
     },
     "Niyyah Coffee - Indy": {
       "rating": 5,
-      "userRatingCount": 354,
+      "userRatingCount": 355,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:00 PM",
         "Tuesday: 7:00 AM – 8:00 PM",
@@ -528,7 +528,7 @@
     },
     "Gaia Coffee": {
       "rating": 4.7,
-      "userRatingCount": 211,
+      "userRatingCount": 212,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 4:00 PM",
         "Tuesday: 7:00 AM – 4:00 PM",
@@ -625,7 +625,7 @@
     },
     "Sidedoor Bagel": {
       "rating": 4.7,
-      "userRatingCount": 697,
+      "userRatingCount": 698,
       "weekdayDescriptions": [
         "Monday: 7:30 AM – 1:30 PM",
         "Tuesday: 7:30 AM – 1:30 PM",
@@ -640,7 +640,7 @@
     },
     "Indie Coffee Roasters - Carmel Smoky Row": {
       "rating": 4.7,
-      "userRatingCount": 426,
+      "userRatingCount": 112,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -650,8 +650,8 @@
         "Saturday: 7:00 AM – 5:00 PM",
         "Sunday: 9:00 AM – 3:00 PM"
       ],
-      "nationalPhoneNumber": "(317) 993-3443",
-      "websiteURI": "http://www.indiecoffeeroasters.com/"
+      "nationalPhoneNumber": "(317) 795-0201",
+      "websiteURI": "https://www.indiecoffeeroasters.com/"
     },
     "Tinker Coffee – The Firehouse": {
       "rating": 4.7,
@@ -887,7 +887,7 @@
     },
     "MOTW Coffee and Pastries - Fishers": {
       "rating": 4.8,
-      "userRatingCount": 547,
+      "userRatingCount": 546,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 1:00 PM",
         "Tuesday: 7:00 AM – 1:00 PM",
@@ -932,7 +932,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 5031,
+      "userRatingCount": 5032,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
