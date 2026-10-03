@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-02T11:38:10.831Z",
+  "cached_at": "2026-10-03T10:51:37.102Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.7,
@@ -18,7 +18,7 @@
     },
     "Foundry Provisions": {
       "rating": 4.5,
-      "userRatingCount": 434,
+      "userRatingCount": 435,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -33,7 +33,7 @@
     },
     "Claypot Coffee House": {
       "rating": 4.8,
-      "userRatingCount": 471,
+      "userRatingCount": 472,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 9:00 PM",
         "Tuesday: 8:00 AM – 9:00 PM",
@@ -63,7 +63,7 @@
     },
     "The Spice & Tea Exchange": {
       "rating": 4.9,
-      "userRatingCount": 56,
+      "userRatingCount": 57,
       "weekdayDescriptions": [
         "Monday: 10:00 AM – 6:00 PM",
         "Tuesday: 10:00 AM – 6:00 PM",
@@ -78,7 +78,7 @@
     },
     "Mocha House": {
       "rating": 4.5,
-      "userRatingCount": 195,
+      "userRatingCount": 196,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 11:00 PM",
         "Tuesday: 6:00 AM – 11:00 PM",
@@ -153,7 +153,7 @@
     },
     "Black House Café": {
       "rating": 4.6,
-      "userRatingCount": 377,
+      "userRatingCount": 378,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: 8:00 AM – 5:00 PM",
@@ -288,7 +288,7 @@
     },
     "Niyyah Coffee - Fishers": {
       "rating": 4.9,
-      "userRatingCount": 452,
+      "userRatingCount": 453,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -348,7 +348,7 @@
     },
     "Tinker Coffee at The AMP": {
       "rating": 4.7,
-      "userRatingCount": 54,
+      "userRatingCount": 55,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -363,7 +363,7 @@
     },
     "Borage": {
       "rating": 4.5,
-      "userRatingCount": 533,
+      "userRatingCount": 532,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 2:00 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1404,
+      "userRatingCount": 1405,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 12:00 AM",
         "Tuesday: 6:00 AM – 12:00 AM",
@@ -468,7 +468,7 @@
     },
     "Parlor Public House": {
       "rating": 4.5,
-      "userRatingCount": 629,
+      "userRatingCount": 630,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: 8:00 AM – 5:00 PM",
@@ -498,7 +498,7 @@
     },
     "Rivet Coffee - Zionsville": {
       "rating": 4.6,
-      "userRatingCount": 121,
+      "userRatingCount": 122,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -512,8 +512,8 @@
       "websiteURI": "https://www.rivetcoffee.com/"
     },
     "Cafe Noricha": {
-      "rating": 4.8,
-      "userRatingCount": 157,
+      "rating": 4.7,
+      "userRatingCount": 158,
       "weekdayDescriptions": [
         "Monday: 11:00 AM – 7:00 PM",
         "Tuesday: 11:00 AM – 7:00 PM",
@@ -610,7 +610,7 @@
     },
     "Cafe Patachou - Broad Ripple": {
       "rating": 4.6,
-      "userRatingCount": 1148,
+      "userRatingCount": 1149,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -625,7 +625,7 @@
     },
     "Sidedoor Bagel": {
       "rating": 4.7,
-      "userRatingCount": 702,
+      "userRatingCount": 704,
       "weekdayDescriptions": [
         "Monday: 7:30 AM – 1:30 PM",
         "Tuesday: 7:30 AM – 1:30 PM",
@@ -640,7 +640,7 @@
     },
     "Indie Coffee Roasters - Carmel Smoky Row": {
       "rating": 4.7,
-      "userRatingCount": 426,
+      "userRatingCount": 113,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -650,8 +650,8 @@
         "Saturday: 7:00 AM – 5:00 PM",
         "Sunday: 9:00 AM – 3:00 PM"
       ],
-      "nationalPhoneNumber": "(317) 993-3443",
-      "websiteURI": "http://www.indiecoffeeroasters.com/"
+      "nationalPhoneNumber": "(317) 795-0201",
+      "websiteURI": "https://www.indiecoffeeroasters.com/"
     },
     "Tinker Coffee – The Firehouse": {
       "rating": 4.7,
@@ -745,7 +745,7 @@
     },
     "Cafe Patachou - Zionsville": {
       "rating": 4.5,
-      "userRatingCount": 183,
+      "userRatingCount": 184,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -805,7 +805,7 @@
     },
     "Quills Coffee": {
       "rating": 4.6,
-      "userRatingCount": 738,
+      "userRatingCount": 739,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 6:00 PM",
         "Tuesday: 6:00 AM – 6:00 PM",
@@ -887,7 +887,7 @@
     },
     "MOTW Coffee and Pastries - Fishers": {
       "rating": 4.8,
-      "userRatingCount": 546,
+      "userRatingCount": 547,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 1:00 PM",
         "Tuesday: 7:00 AM – 1:00 PM",
@@ -932,7 +932,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 5033,
+      "userRatingCount": 5034,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
