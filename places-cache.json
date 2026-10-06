@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-05T13:07:14.618Z",
+  "cached_at": "2026-10-06T12:29:00.717Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.7,
@@ -153,7 +153,7 @@
     },
     "Black House Café": {
       "rating": 4.6,
-      "userRatingCount": 378,
+      "userRatingCount": 379,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: 8:00 AM – 5:00 PM",
@@ -258,7 +258,7 @@
     },
     "Top Out Cafe": {
       "rating": 4.6,
-      "userRatingCount": 140,
+      "userRatingCount": 141,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 10:00 PM",
         "Tuesday: 7:00 AM – 10:00 PM",
@@ -273,7 +273,7 @@
     },
     "Blue Collar Coffee Co.": {
       "rating": 4.2,
-      "userRatingCount": 171,
+      "userRatingCount": 172,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 4:00 PM",
         "Tuesday: 6:00 AM – 4:00 PM",
@@ -408,7 +408,7 @@
     },
     "Blue Mind Coffee": {
       "rating": 4.8,
-      "userRatingCount": 262,
+      "userRatingCount": 263,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -423,7 +423,7 @@
     },
     "Niyyah Coffee - Indy": {
       "rating": 5,
-      "userRatingCount": 358,
+      "userRatingCount": 359,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:00 PM",
         "Tuesday: 7:00 AM – 8:00 PM",
@@ -527,8 +527,8 @@
       "websiteURI": "https://cafenoricha.com/"
     },
     "Gaia Coffee": {
-      "rating": 4.6,
-      "userRatingCount": 217,
+      "rating": 4.7,
+      "userRatingCount": 220,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 4:00 PM",
         "Tuesday: 7:00 AM – 4:00 PM",
@@ -932,7 +932,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 5048,
+      "userRatingCount": 5050,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
