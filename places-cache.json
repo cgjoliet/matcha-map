@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-14T10:54:19.713Z",
+  "cached_at": "2026-10-15T10:36:25.504Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.7,
@@ -33,7 +33,7 @@
     },
     "Claypot Coffee House": {
       "rating": 4.8,
-      "userRatingCount": 483,
+      "userRatingCount": 485,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 9:00 PM",
         "Tuesday: 8:00 AM – 9:00 PM",
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3339,
+      "userRatingCount": 3340,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -123,7 +123,7 @@
     },
     "Mansion Society": {
       "rating": 4.6,
-      "userRatingCount": 286,
+      "userRatingCount": 287,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
@@ -333,7 +333,7 @@
     },
     "Good Vibes Cafe Indy": {
       "rating": 4.7,
-      "userRatingCount": 279,
+      "userRatingCount": 280,
       "weekdayDescriptions": [
         "Monday: 8:30 AM – 8:30 PM",
         "Tuesday: 8:30 AM – 8:30 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1424,
+      "userRatingCount": 1435,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 12:00 AM",
         "Tuesday: 6:00 AM – 12:00 AM",
@@ -408,7 +408,7 @@
     },
     "Blue Mind Coffee": {
       "rating": 4.8,
-      "userRatingCount": 265,
+      "userRatingCount": 266,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -423,7 +423,7 @@
     },
     "Niyyah Coffee - Indy": {
       "rating": 5,
-      "userRatingCount": 374,
+      "userRatingCount": 375,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:00 PM",
         "Tuesday: 7:00 AM – 8:00 PM",
@@ -498,7 +498,7 @@
     },
     "Rivet Coffee - Zionsville": {
       "rating": 4.6,
-      "userRatingCount": 124,
+      "userRatingCount": 125,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -604,7 +604,15 @@
     "Eli Coffee Co": {
       "rating": 5,
       "userRatingCount": 19,
-      "weekdayDescriptions": [],
+      "weekdayDescriptions": [
+        "Monday: Closed",
+        "Tuesday: 7:00 AM – 12:00 PM",
+        "Wednesday: 7:00 AM – 12:00 PM",
+        "Thursday: 7:00 AM – 12:00 PM",
+        "Friday: 7:00 AM – 12:00 PM",
+        "Saturday: 8:00 AM – 12:00 PM",
+        "Sunday: Closed"
+      ],
       "nationalPhoneNumber": null,
       "websiteURI": "http://elicoffeeco.com/"
     },
@@ -625,7 +633,7 @@
     },
     "Sidedoor Bagel": {
       "rating": 4.7,
-      "userRatingCount": 736,
+      "userRatingCount": 738,
       "weekdayDescriptions": [
         "Monday: 7:30 AM – 1:30 PM",
         "Tuesday: 7:30 AM – 1:30 PM",
@@ -640,7 +648,7 @@
     },
     "Indie Coffee Roasters - Carmel Smoky Row": {
       "rating": 4.7,
-      "userRatingCount": 113,
+      "userRatingCount": 114,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -655,7 +663,7 @@
     },
     "Tinker Coffee – The Firehouse": {
       "rating": 4.7,
-      "userRatingCount": 107,
+      "userRatingCount": 108,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 6:00 PM",
         "Tuesday: 6:00 AM – 6:00 PM",
@@ -687,10 +695,10 @@
       "rating": 4.7,
       "userRatingCount": 281,
       "weekdayDescriptions": [
-        "Monday: 7:00 AM – 7:00 PM",
-        "Tuesday: 7:00 AM – 7:00 PM",
-        "Wednesday: 7:00 AM – 7:00 PM",
-        "Thursday: 7:00 AM – 7:00 PM",
+        "Monday: 7:00 AM – 9:00 PM",
+        "Tuesday: 7:00 AM – 9:00 PM",
+        "Wednesday: 7:00 AM – 9:00 PM",
+        "Thursday: 7:00 AM – 9:00 PM",
         "Friday: 7:00 AM – 9:00 PM",
         "Saturday: 7:00 AM – 9:00 PM",
         "Sunday: 7:00 AM – 9:00 PM"
@@ -715,7 +723,7 @@
     },
     "Red Door Cafe": {
       "rating": 4.9,
-      "userRatingCount": 127,
+      "userRatingCount": 128,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 4:00 PM",
         "Tuesday: 8:00 AM – 4:00 PM",
@@ -745,7 +753,7 @@
     },
     "Cafe Patachou - Zionsville": {
       "rating": 4.5,
-      "userRatingCount": 185,
+      "userRatingCount": 186,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -760,7 +768,7 @@
     },
     "Command Coffee - Indy": {
       "rating": 4.4,
-      "userRatingCount": 128,
+      "userRatingCount": 129,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 4:00 PM",
         "Tuesday: 6:00 AM – 4:00 PM",
@@ -872,7 +880,7 @@
     },
     "Cafe Patachou - Fishers": {
       "rating": 4.4,
-      "userRatingCount": 197,
+      "userRatingCount": 198,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
