@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-10-20T10:42:17.951Z",
+  "cached_at": "2026-10-21T10:53:25.261Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.7,
@@ -22,7 +22,7 @@
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
-        "Wednesday: 7:00 AM – 8:00 PM",
+        "Wednesday: 7:00 AM – 5:00 PM",
         "Thursday: 7:00 AM – 5:00 PM",
         "Friday: 7:00 AM – 5:00 PM",
         "Saturday: 8:00 AM – 3:00 PM",
@@ -33,7 +33,7 @@
     },
     "Claypot Coffee House": {
       "rating": 4.8,
-      "userRatingCount": 486,
+      "userRatingCount": 487,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 9:00 PM",
         "Tuesday: 8:00 AM – 9:00 PM",
@@ -93,7 +93,7 @@
     },
     "Cafe Patachou - The Stutz": {
       "rating": 4.6,
-      "userRatingCount": 245,
+      "userRatingCount": 246,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -205,15 +205,15 @@
         "Wednesday: 7:00 AM – 4:00 PM",
         "Thursday: 7:00 AM – 4:00 PM",
         "Friday: 7:00 AM – 4:00 PM",
-        "Saturday: 8:00 AM – 4:00 PM",
-        "Sunday: 8:00 AM – 4:00 PM"
+        "Saturday: 8:00 AM – 2:00 PM",
+        "Sunday: 8:00 AM – 2:00 PM"
       ],
       "nationalPhoneNumber": null,
       "websiteURI": "http://www.providerindy.com/"
     },
     "Leviathan Bakehouse": {
       "rating": 4.7,
-      "userRatingCount": 703,
+      "userRatingCount": 704,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -258,7 +258,7 @@
     },
     "Top Out Cafe": {
       "rating": 4.6,
-      "userRatingCount": 141,
+      "userRatingCount": 142,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 10:00 PM",
         "Tuesday: 7:00 AM – 10:00 PM",
@@ -303,7 +303,7 @@
     },
     "Cafe Patachou - Clay Terrace": {
       "rating": 4.5,
-      "userRatingCount": 554,
+      "userRatingCount": 555,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -423,7 +423,7 @@
     },
     "Niyyah Coffee - Indy": {
       "rating": 5,
-      "userRatingCount": 387,
+      "userRatingCount": 398,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:00 PM",
         "Tuesday: 7:00 AM – 8:00 PM",
@@ -498,7 +498,7 @@
     },
     "Rivet Coffee - Zionsville": {
       "rating": 4.6,
-      "userRatingCount": 126,
+      "userRatingCount": 127,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -543,7 +543,7 @@
     },
     "Ascend Coffee": {
       "rating": 4.8,
-      "userRatingCount": 351,
+      "userRatingCount": 352,
       "weekdayDescriptions": [
         "Monday: 6:30 AM – 4:00 PM",
         "Tuesday: 6:30 AM – 4:00 PM",
@@ -633,7 +633,7 @@
     },
     "Sidedoor Bagel": {
       "rating": 4.7,
-      "userRatingCount": 744,
+      "userRatingCount": 747,
       "weekdayDescriptions": [
         "Monday: 7:30 AM – 1:30 PM",
         "Tuesday: 7:30 AM – 1:30 PM",
@@ -813,7 +813,7 @@
     },
     "Quills Coffee": {
       "rating": 4.6,
-      "userRatingCount": 739,
+      "userRatingCount": 740,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 6:00 PM",
         "Tuesday: 6:00 AM – 6:00 PM",
@@ -843,7 +843,7 @@
     },
     "Coat Check Coffee": {
       "rating": 4.7,
-      "userRatingCount": 1035,
+      "userRatingCount": 1036,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 4:00 PM",
         "Tuesday: 7:00 AM – 4:00 PM",
@@ -858,7 +858,7 @@
     },
     "Indie Coffee Roasters - Downtown Carmel": {
       "rating": 4.7,
-      "userRatingCount": 428,
+      "userRatingCount": 429,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -910,7 +910,7 @@
     },
     "Gold Leaf Indy": {
       "rating": 4.8,
-      "userRatingCount": 477,
+      "userRatingCount": 478,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 9:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
