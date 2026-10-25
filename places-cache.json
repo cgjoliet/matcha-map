@@ -1,9 +1,9 @@
 {
-  "cached_at": "2026-10-24T10:01:55.236Z",
+  "cached_at": "2026-10-25T10:27:03.617Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.7,
-      "userRatingCount": 711,
+      "userRatingCount": 710,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:30 PM",
         "Tuesday: 7:00 AM – 8:30 PM",
@@ -33,7 +33,7 @@
     },
     "Claypot Coffee House": {
       "rating": 4.8,
-      "userRatingCount": 487,
+      "userRatingCount": 488,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 9:00 PM",
         "Tuesday: 8:00 AM – 9:00 PM",
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3344,
+      "userRatingCount": 3345,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -93,7 +93,7 @@
     },
     "Cafe Patachou - The Stutz": {
       "rating": 4.6,
-      "userRatingCount": 246,
+      "userRatingCount": 247,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -123,7 +123,7 @@
     },
     "Mansion Society": {
       "rating": 4.6,
-      "userRatingCount": 287,
+      "userRatingCount": 285,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
@@ -138,7 +138,7 @@
     },
     "Prufrock Coffee Company - Carmel": {
       "rating": 4.5,
-      "userRatingCount": 155,
+      "userRatingCount": 154,
       "weekdayDescriptions": [
         "Monday: 6:30 AM – 6:00 PM",
         "Tuesday: 6:30 AM – 6:00 PM",
@@ -168,7 +168,7 @@
     },
     "Bovaconti Coffee - Indy": {
       "rating": 4.8,
-      "userRatingCount": 797,
+      "userRatingCount": 799,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -183,7 +183,7 @@
     },
     "Cafe Patachou - Keystone": {
       "rating": 4.6,
-      "userRatingCount": 961,
+      "userRatingCount": 962,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -213,7 +213,7 @@
     },
     "Leviathan Bakehouse": {
       "rating": 4.7,
-      "userRatingCount": 704,
+      "userRatingCount": 706,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -228,7 +228,7 @@
     },
     "Prufrock Coffee Company - Indy": {
       "rating": 4.5,
-      "userRatingCount": 430,
+      "userRatingCount": 431,
       "weekdayDescriptions": [
         "Monday: 6:30 AM – 6:00 PM",
         "Tuesday: 6:30 AM – 6:00 PM",
@@ -243,7 +243,7 @@
     },
     "Tinker Coffee on Market": {
       "rating": 4.5,
-      "userRatingCount": 105,
+      "userRatingCount": 106,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 4:00 PM",
         "Tuesday: 6:00 AM – 4:00 PM",
@@ -273,7 +273,7 @@
     },
     "Blue Collar Coffee Co.": {
       "rating": 4.2,
-      "userRatingCount": 176,
+      "userRatingCount": 175,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 4:00 PM",
         "Tuesday: 6:00 AM – 4:00 PM",
@@ -288,7 +288,7 @@
     },
     "Niyyah Coffee - Fishers": {
       "rating": 4.9,
-      "userRatingCount": 458,
+      "userRatingCount": 457,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -318,7 +318,7 @@
     },
     "1656 Club": {
       "rating": 4.6,
-      "userRatingCount": 74,
+      "userRatingCount": 75,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -363,7 +363,7 @@
     },
     "Borage": {
       "rating": 4.5,
-      "userRatingCount": 539,
+      "userRatingCount": 541,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 2:00 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1443,
+      "userRatingCount": 1444,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 12:00 AM",
         "Tuesday: 6:00 AM – 12:00 AM",
@@ -438,7 +438,7 @@
     },
     "Bovaconti Coffee - Carmel": {
       "rating": 4.7,
-      "userRatingCount": 203,
+      "userRatingCount": 204,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -468,7 +468,7 @@
     },
     "Parlor Public House": {
       "rating": 4.5,
-      "userRatingCount": 635,
+      "userRatingCount": 636,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: 8:00 AM – 5:00 PM",
@@ -520,7 +520,7 @@
     },
     "Gaia Coffee": {
       "rating": 4.6,
-      "userRatingCount": 223,
+      "userRatingCount": 224,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 4:00 PM",
         "Tuesday: 7:00 AM – 4:00 PM",
@@ -550,7 +550,7 @@
     },
     "The Human Bean - Indy": {
       "rating": 4.5,
-      "userRatingCount": 398,
+      "userRatingCount": 397,
       "weekdayDescriptions": [
         "Monday: 5:00 AM – 9:00 PM",
         "Tuesday: 5:00 AM – 9:00 PM",
@@ -565,7 +565,7 @@
     },
     "Mariam Coffee - Indy": {
       "rating": 4.5,
-      "userRatingCount": 153,
+      "userRatingCount": 152,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -625,7 +625,7 @@
     },
     "Sidedoor Bagel": {
       "rating": 4.7,
-      "userRatingCount": 751,
+      "userRatingCount": 756,
       "weekdayDescriptions": [
         "Monday: 7:30 AM – 1:30 PM",
         "Tuesday: 7:30 AM – 1:30 PM",
@@ -685,7 +685,7 @@
     },
     "Mariam Coffee - Fishers": {
       "rating": 4.7,
-      "userRatingCount": 280,
+      "userRatingCount": 281,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 9:00 PM",
         "Tuesday: 7:00 AM – 9:00 PM",
@@ -775,7 +775,7 @@
     },
     "Milk & Honey Coffeehouse": {
       "rating": 4.6,
-      "userRatingCount": 187,
+      "userRatingCount": 188,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 3:00 PM",
         "Tuesday: 6:00 AM – 3:00 PM",
@@ -850,7 +850,7 @@
     },
     "Indie Coffee Roasters - Downtown Carmel": {
       "rating": 4.7,
-      "userRatingCount": 429,
+      "userRatingCount": 430,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -887,7 +887,7 @@
     },
     "MOTW Coffee and Pastries - Fishers": {
       "rating": 4.8,
-      "userRatingCount": 547,
+      "userRatingCount": 545,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 1:00 PM",
         "Tuesday: 7:00 AM – 1:00 PM",
@@ -917,7 +917,7 @@
     },
     "Rivet Coffee - Westfield": {
       "rating": 4.7,
-      "userRatingCount": 507,
+      "userRatingCount": 506,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -932,7 +932,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 5073,
+      "userRatingCount": 5074,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
@@ -947,7 +947,7 @@
     },
     "Recess": {
       "rating": 4.6,
-      "userRatingCount": 108,
+      "userRatingCount": 109,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
