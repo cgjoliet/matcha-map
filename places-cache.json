@@ -1,9 +1,9 @@
 {
-  "cached_at": "2026-11-01T12:22:54.200Z",
+  "cached_at": "2026-11-02T14:18:39.461Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.7,
-      "userRatingCount": 711,
+      "userRatingCount": 710,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:00 PM",
         "Tuesday: 7:00 AM – 8:00 PM",
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3347,
+      "userRatingCount": 3348,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -78,22 +78,22 @@
     },
     "Mocha House": {
       "rating": 4.6,
-      "userRatingCount": 213,
+      "userRatingCount": 215,
       "weekdayDescriptions": [
-        "Monday: 6:00 AM – 11:00 PM",
-        "Tuesday: 6:00 AM – 11:00 PM",
-        "Wednesday: 6:00 AM – 11:00 PM",
-        "Thursday: 6:00 AM – 11:00 PM",
-        "Friday: 6:00 AM – 1:00 AM",
-        "Saturday: 6:00 AM – 1:00 AM",
-        "Sunday: 6:00 AM – 11:00 PM"
+        "Monday: 6:00 AM – 10:00 PM",
+        "Tuesday: 6:00 AM – 10:00 PM",
+        "Wednesday: 6:00 AM – 10:00 PM",
+        "Thursday: 6:00 AM – 10:00 PM",
+        "Friday: 6:00 AM – 12:00 AM",
+        "Saturday: 7:00 AM – 12:00 AM",
+        "Sunday: 7:00 AM – 10:00 PM"
       ],
       "nationalPhoneNumber": "(317) 436-3800",
       "websiteURI": "https://baytalmocha.com/?utm_source=gbp"
     },
     "Cafe Patachou - The Stutz": {
       "rating": 4.6,
-      "userRatingCount": 247,
+      "userRatingCount": 248,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -183,7 +183,7 @@
     },
     "Cafe Patachou - Keystone": {
       "rating": 4.6,
-      "userRatingCount": 962,
+      "userRatingCount": 963,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -333,7 +333,7 @@
     },
     "Good Vibes Cafe Indy": {
       "rating": 4.7,
-      "userRatingCount": 289,
+      "userRatingCount": 290,
       "weekdayDescriptions": [
         "Monday: 8:30 AM – 8:30 PM",
         "Tuesday: 8:30 AM – 8:30 PM",
@@ -363,7 +363,7 @@
     },
     "Borage": {
       "rating": 4.5,
-      "userRatingCount": 542,
+      "userRatingCount": 544,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 2:00 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1454,
+      "userRatingCount": 1456,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 12:00 AM",
         "Tuesday: 6:00 AM – 12:00 AM",
@@ -423,7 +423,7 @@
     },
     "Niyyah Coffee - Indy": {
       "rating": 5,
-      "userRatingCount": 409,
+      "userRatingCount": 414,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:00 PM",
         "Tuesday: 7:00 AM – 8:00 PM",
@@ -468,7 +468,7 @@
     },
     "Parlor Public House": {
       "rating": 4.5,
-      "userRatingCount": 636,
+      "userRatingCount": 638,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: 8:00 AM – 5:00 PM",
@@ -595,7 +595,7 @@
     },
     "Eli Coffee Co": {
       "rating": 5,
-      "userRatingCount": 20,
+      "userRatingCount": 21,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 12:00 PM",
@@ -625,7 +625,7 @@
     },
     "Sidedoor Bagel": {
       "rating": 4.7,
-      "userRatingCount": 769,
+      "userRatingCount": 774,
       "weekdayDescriptions": [
         "Monday: 7:30 AM – 1:30 PM",
         "Tuesday: 7:30 AM – 1:30 PM",
@@ -715,7 +715,7 @@
     },
     "Red Door Cafe": {
       "rating": 4.9,
-      "userRatingCount": 130,
+      "userRatingCount": 131,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 4:00 PM",
         "Tuesday: 8:00 AM – 4:00 PM",
@@ -872,7 +872,7 @@
     },
     "Cafe Patachou - Fishers": {
       "rating": 4.4,
-      "userRatingCount": 201,
+      "userRatingCount": 202,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -932,7 +932,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 5082,
+      "userRatingCount": 5083,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
