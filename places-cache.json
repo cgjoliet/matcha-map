@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-02T14:18:39.461Z",
+  "cached_at": "2026-11-03T13:18:59.464Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.7,
@@ -35,20 +35,20 @@
       "rating": 4.8,
       "userRatingCount": 489,
       "weekdayDescriptions": [
-        "Monday: 8:00 AM – 9:00 PM",
-        "Tuesday: 8:00 AM – 9:00 PM",
-        "Wednesday: 8:00 AM – 9:00 PM",
-        "Thursday: 8:00 AM – 9:00 PM",
-        "Friday: 8:00 AM – 9:00 PM",
-        "Saturday: 8:00 AM – 9:00 PM",
-        "Sunday: Closed"
+        "Monday: 8:00 AM – 7:00 PM",
+        "Tuesday: 8:00 AM – 7:00 PM",
+        "Wednesday: 8:00 AM – 7:00 PM",
+        "Thursday: 8:00 AM – 7:00 PM",
+        "Friday: 8:00 AM – 7:00 PM",
+        "Saturday: 8:00 AM – 7:00 PM",
+        "Sunday: 8:00 AM – 7:00 PM"
       ],
       "nationalPhoneNumber": "(317) 300-1346",
       "websiteURI": "https://online.skytab.com/1960128eaf501649f03c18a93b48ba98/order-settings"
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3348,
+      "userRatingCount": 3349,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -108,7 +108,7 @@
     },
     "MOTW Coffee and Pastries - Carmel": {
       "rating": 4.6,
-      "userRatingCount": 435,
+      "userRatingCount": 436,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:00 PM",
         "Tuesday: 7:00 AM – 8:00 PM",
@@ -198,7 +198,7 @@
     },
     "Provider Café": {
       "rating": 4.6,
-      "userRatingCount": 687,
+      "userRatingCount": 686,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 4:00 PM",
         "Tuesday: 7:00 AM – 4:00 PM",
@@ -258,7 +258,7 @@
     },
     "Top Out Cafe": {
       "rating": 4.6,
-      "userRatingCount": 142,
+      "userRatingCount": 143,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 10:00 PM",
         "Tuesday: 7:00 AM – 10:00 PM",
@@ -363,7 +363,7 @@
     },
     "Borage": {
       "rating": 4.5,
-      "userRatingCount": 544,
+      "userRatingCount": 545,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 2:00 PM",
@@ -438,7 +438,7 @@
     },
     "Bovaconti Coffee - Carmel": {
       "rating": 4.7,
-      "userRatingCount": 207,
+      "userRatingCount": 208,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -483,7 +483,7 @@
     },
     "Cafe Patachou - East Carmel": {
       "rating": 4.6,
-      "userRatingCount": 827,
+      "userRatingCount": 828,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -498,7 +498,7 @@
     },
     "Rivet Coffee - Zionsville": {
       "rating": 4.6,
-      "userRatingCount": 131,
+      "userRatingCount": 132,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -932,12 +932,12 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 5083,
+      "userRatingCount": 5084,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
-        "Wednesday: 4:00 – 10:00 PM",
-        "Thursday: 4:00 – 10:00 PM",
+        "Wednesday: Closed",
+        "Thursday: Closed",
         "Friday: 4:00 – 10:00 PM",
         "Saturday: 11:00 AM – 10:00 PM",
         "Sunday: 12:00 – 6:00 PM"
