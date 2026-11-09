@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-08T12:30:29.710Z",
+  "cached_at": "2026-11-09T14:46:01.460Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.7,
@@ -41,7 +41,7 @@
         "Thursday: 8:00 AM – 7:00 PM",
         "Friday: 8:00 AM – 7:00 PM",
         "Saturday: 8:00 AM – 7:00 PM",
-        "Sunday: 8:00 AM – 7:00 PM"
+        "Sunday: Closed"
       ],
       "nationalPhoneNumber": "(317) 300-1346",
       "websiteURI": "https://online.skytab.com/1960128eaf501649f03c18a93b48ba98/order-settings"
@@ -78,7 +78,7 @@
     },
     "Mocha House": {
       "rating": 4.6,
-      "userRatingCount": 228,
+      "userRatingCount": 229,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 10:00 PM",
         "Tuesday: 6:00 AM – 10:00 PM",
@@ -108,7 +108,7 @@
     },
     "MOTW Coffee and Pastries - Carmel": {
       "rating": 4.6,
-      "userRatingCount": 437,
+      "userRatingCount": 438,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:00 PM",
         "Tuesday: 7:00 AM – 8:00 PM",
@@ -138,7 +138,7 @@
     },
     "Prufrock Coffee Company - Carmel": {
       "rating": 4.5,
-      "userRatingCount": 154,
+      "userRatingCount": 155,
       "weekdayDescriptions": [
         "Monday: 6:30 AM – 6:00 PM",
         "Tuesday: 6:30 AM – 6:00 PM",
@@ -153,7 +153,7 @@
     },
     "Black House Café": {
       "rating": 4.6,
-      "userRatingCount": 385,
+      "userRatingCount": 386,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: 8:00 AM – 5:00 PM",
@@ -288,7 +288,7 @@
     },
     "Niyyah Coffee - Fishers": {
       "rating": 4.9,
-      "userRatingCount": 458,
+      "userRatingCount": 459,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -333,7 +333,7 @@
     },
     "Good Vibes Cafe Indy": {
       "rating": 4.7,
-      "userRatingCount": 291,
+      "userRatingCount": 293,
       "weekdayDescriptions": [
         "Monday: 8:30 AM – 8:30 PM",
         "Tuesday: 8:30 AM – 8:30 PM",
@@ -363,7 +363,7 @@
     },
     "Borage": {
       "rating": 4.5,
-      "userRatingCount": 547,
+      "userRatingCount": 548,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 2:00 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1460,
+      "userRatingCount": 1463,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 12:00 AM",
         "Tuesday: 6:00 AM – 12:00 AM",
@@ -438,7 +438,7 @@
     },
     "Bovaconti Coffee - Carmel": {
       "rating": 4.7,
-      "userRatingCount": 209,
+      "userRatingCount": 210,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -535,7 +535,7 @@
     },
     "Ascend Coffee": {
       "rating": 4.8,
-      "userRatingCount": 359,
+      "userRatingCount": 360,
       "weekdayDescriptions": [
         "Monday: 6:30 AM – 4:00 PM",
         "Tuesday: 6:30 AM – 4:00 PM",
@@ -625,7 +625,7 @@
     },
     "Sidedoor Bagel": {
       "rating": 4.7,
-      "userRatingCount": 798,
+      "userRatingCount": 801,
       "weekdayDescriptions": [
         "Monday: 7:30 AM – 1:30 PM",
         "Tuesday: 7:30 AM – 1:30 PM",
@@ -655,7 +655,7 @@
     },
     "Tinker Coffee – The Firehouse": {
       "rating": 4.7,
-      "userRatingCount": 113,
+      "userRatingCount": 114,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 6:00 PM",
         "Tuesday: 6:00 AM – 6:00 PM",
@@ -700,7 +700,7 @@
     },
     "Georgia Street Grind": {
       "rating": 4.8,
-      "userRatingCount": 410,
+      "userRatingCount": 411,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 12:00 PM",
         "Tuesday: 7:00 AM – 4:00 PM",
@@ -932,7 +932,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 5084,
+      "userRatingCount": 5085,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
