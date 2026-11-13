@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-12T14:19:58.612Z",
+  "cached_at": "2026-11-13T13:41:12.706Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.7,
@@ -78,7 +78,7 @@
     },
     "Mocha House": {
       "rating": 4.6,
-      "userRatingCount": 235,
+      "userRatingCount": 236,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 10:00 PM",
         "Tuesday: 6:00 AM – 10:00 PM",
@@ -183,7 +183,7 @@
     },
     "Cafe Patachou - Keystone": {
       "rating": 4.6,
-      "userRatingCount": 964,
+      "userRatingCount": 965,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -393,11 +393,11 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1463,
+      "userRatingCount": 1466,
       "weekdayDescriptions": [
-        "Monday: 6:00 AM – 12:00 AM",
-        "Tuesday: 6:00 AM – 12:00 AM",
-        "Wednesday: 6:00 AM – 12:00 AM",
+        "Monday: 6:00 AM – 11:00 PM",
+        "Tuesday: 6:00 AM – 11:00 PM",
+        "Wednesday: 6:00 AM – 11:00 PM",
         "Thursday: 6:00 AM – 12:00 AM",
         "Friday: 6:00 AM – 1:00 AM",
         "Saturday: 8:00 AM – 1:00 AM",
@@ -423,7 +423,7 @@
     },
     "Niyyah Coffee - Indy": {
       "rating": 5,
-      "userRatingCount": 428,
+      "userRatingCount": 429,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:00 PM",
         "Tuesday: 7:00 AM – 8:00 PM",
@@ -483,7 +483,7 @@
     },
     "Cafe Patachou - East Carmel": {
       "rating": 4.6,
-      "userRatingCount": 829,
+      "userRatingCount": 830,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -498,7 +498,7 @@
     },
     "Rivet Coffee - Zionsville": {
       "rating": 4.6,
-      "userRatingCount": 133,
+      "userRatingCount": 135,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -596,13 +596,21 @@
     "Eli Coffee Co": {
       "rating": 5,
       "userRatingCount": 22,
-      "weekdayDescriptions": [],
+      "weekdayDescriptions": [
+        "Monday: Closed",
+        "Tuesday: 7:00 AM – 12:00 PM",
+        "Wednesday: 7:00 AM – 12:00 PM",
+        "Thursday: 7:00 AM – 12:00 PM",
+        "Friday: 7:00 AM – 12:00 PM",
+        "Saturday: 8:00 AM – 12:00 PM",
+        "Sunday: Closed"
+      ],
       "nationalPhoneNumber": null,
       "websiteURI": "http://elicoffeeco.com/"
     },
     "Cafe Patachou - Broad Ripple": {
       "rating": 4.6,
-      "userRatingCount": 1158,
+      "userRatingCount": 1159,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -617,7 +625,7 @@
     },
     "Sidedoor Bagel": {
       "rating": 4.7,
-      "userRatingCount": 810,
+      "userRatingCount": 811,
       "weekdayDescriptions": [
         "Monday: 7:30 AM – 1:30 PM",
         "Tuesday: 7:30 AM – 1:30 PM",
@@ -692,7 +700,7 @@
     },
     "Georgia Street Grind": {
       "rating": 4.8,
-      "userRatingCount": 411,
+      "userRatingCount": 413,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 12:00 PM",
         "Tuesday: 7:00 AM – 4:00 PM",
@@ -797,7 +805,7 @@
     },
     "Quills Coffee": {
       "rating": 4.6,
-      "userRatingCount": 745,
+      "userRatingCount": 746,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 6:00 PM",
         "Tuesday: 6:00 AM – 6:00 PM",
@@ -894,7 +902,7 @@
     },
     "Gold Leaf Indy": {
       "rating": 4.8,
-      "userRatingCount": 480,
+      "userRatingCount": 479,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 9:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -924,7 +932,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 5085,
+      "userRatingCount": 5084,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
