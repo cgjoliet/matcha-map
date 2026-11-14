@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-13T13:41:12.706Z",
+  "cached_at": "2026-11-14T12:45:19.719Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.7,
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3354,
+      "userRatingCount": 3355,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -78,7 +78,7 @@
     },
     "Mocha House": {
       "rating": 4.6,
-      "userRatingCount": 236,
+      "userRatingCount": 237,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 10:00 PM",
         "Tuesday: 6:00 AM – 10:00 PM",
@@ -93,7 +93,7 @@
     },
     "Cafe Patachou - The Stutz": {
       "rating": 4.6,
-      "userRatingCount": 249,
+      "userRatingCount": 250,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -213,7 +213,7 @@
     },
     "Leviathan Bakehouse": {
       "rating": 4.7,
-      "userRatingCount": 707,
+      "userRatingCount": 708,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -243,7 +243,7 @@
     },
     "Tinker Coffee on Market": {
       "rating": 4.5,
-      "userRatingCount": 110,
+      "userRatingCount": 111,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 4:00 PM",
         "Tuesday: 6:00 AM – 4:00 PM",
@@ -398,7 +398,7 @@
         "Monday: 6:00 AM – 11:00 PM",
         "Tuesday: 6:00 AM – 11:00 PM",
         "Wednesday: 6:00 AM – 11:00 PM",
-        "Thursday: 6:00 AM – 12:00 AM",
+        "Thursday: 6:00 AM – 11:00 PM",
         "Friday: 6:00 AM – 1:00 AM",
         "Saturday: 8:00 AM – 1:00 AM",
         "Sunday: 8:00 AM – 12:00 AM"
@@ -408,7 +408,7 @@
     },
     "Blue Mind Coffee": {
       "rating": 4.9,
-      "userRatingCount": 271,
+      "userRatingCount": 270,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -625,7 +625,7 @@
     },
     "Sidedoor Bagel": {
       "rating": 4.7,
-      "userRatingCount": 811,
+      "userRatingCount": 816,
       "weekdayDescriptions": [
         "Monday: 7:30 AM – 1:30 PM",
         "Tuesday: 7:30 AM – 1:30 PM",
@@ -932,7 +932,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 5084,
+      "userRatingCount": 5085,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
