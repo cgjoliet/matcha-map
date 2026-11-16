@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-15T13:12:52.967Z",
+  "cached_at": "2026-11-16T14:22:16.206Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.7,
@@ -33,7 +33,7 @@
     },
     "Claypot Coffee House": {
       "rating": 4.8,
-      "userRatingCount": 497,
+      "userRatingCount": 498,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 7:00 PM",
         "Tuesday: 8:00 AM – 7:00 PM",
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3358,
+      "userRatingCount": 3360,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -78,7 +78,7 @@
     },
     "Mocha House": {
       "rating": 4.6,
-      "userRatingCount": 237,
+      "userRatingCount": 238,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 10:00 PM",
         "Tuesday: 6:00 AM – 10:00 PM",
@@ -123,7 +123,7 @@
     },
     "Mansion Society": {
       "rating": 4.6,
-      "userRatingCount": 285,
+      "userRatingCount": 286,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
@@ -138,7 +138,7 @@
     },
     "Prufrock Coffee Company - Carmel": {
       "rating": 4.5,
-      "userRatingCount": 157,
+      "userRatingCount": 158,
       "weekdayDescriptions": [
         "Monday: 6:30 AM – 6:00 PM",
         "Tuesday: 6:30 AM – 6:00 PM",
@@ -183,7 +183,7 @@
     },
     "Cafe Patachou - Keystone": {
       "rating": 4.6,
-      "userRatingCount": 966,
+      "userRatingCount": 967,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -213,7 +213,7 @@
     },
     "Leviathan Bakehouse": {
       "rating": 4.7,
-      "userRatingCount": 708,
+      "userRatingCount": 709,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -288,7 +288,7 @@
     },
     "Niyyah Coffee - Fishers": {
       "rating": 4.9,
-      "userRatingCount": 460,
+      "userRatingCount": 461,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -303,7 +303,7 @@
     },
     "Cafe Patachou - Clay Terrace": {
       "rating": 4.5,
-      "userRatingCount": 559,
+      "userRatingCount": 561,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -363,7 +363,7 @@
     },
     "Borage": {
       "rating": 4.5,
-      "userRatingCount": 549,
+      "userRatingCount": 550,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 2:00 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1467,
+      "userRatingCount": 1470,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 11:00 PM",
         "Tuesday: 6:00 AM – 11:00 PM",
@@ -423,7 +423,7 @@
     },
     "Niyyah Coffee - Indy": {
       "rating": 5,
-      "userRatingCount": 435,
+      "userRatingCount": 437,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:00 PM",
         "Tuesday: 7:00 AM – 8:00 PM",
@@ -483,7 +483,7 @@
     },
     "Cafe Patachou - East Carmel": {
       "rating": 4.6,
-      "userRatingCount": 831,
+      "userRatingCount": 833,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -520,7 +520,7 @@
     },
     "Gaia Coffee": {
       "rating": 4.6,
-      "userRatingCount": 223,
+      "userRatingCount": 224,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 4:00 PM",
         "Tuesday: 7:00 AM – 4:00 PM",
@@ -625,7 +625,7 @@
     },
     "Sidedoor Bagel": {
       "rating": 4.7,
-      "userRatingCount": 817,
+      "userRatingCount": 819,
       "weekdayDescriptions": [
         "Monday: 7:30 AM – 1:30 PM",
         "Tuesday: 7:30 AM – 1:30 PM",
@@ -715,7 +715,7 @@
     },
     "Red Door Cafe": {
       "rating": 4.9,
-      "userRatingCount": 132,
+      "userRatingCount": 133,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 4:00 PM",
         "Tuesday: 8:00 AM – 4:00 PM",
@@ -745,7 +745,7 @@
     },
     "Cafe Patachou - Zionsville": {
       "rating": 4.5,
-      "userRatingCount": 190,
+      "userRatingCount": 191,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -872,7 +872,7 @@
     },
     "Cafe Patachou - Fishers": {
       "rating": 4.4,
-      "userRatingCount": 204,
+      "userRatingCount": 205,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -902,7 +902,7 @@
     },
     "Gold Leaf Indy": {
       "rating": 4.8,
-      "userRatingCount": 479,
+      "userRatingCount": 480,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 9:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -932,7 +932,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 5086,
+      "userRatingCount": 5088,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
@@ -947,7 +947,7 @@
     },
     "Recess": {
       "rating": 4.6,
-      "userRatingCount": 111,
+      "userRatingCount": 113,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
