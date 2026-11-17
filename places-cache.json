@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-16T14:22:16.206Z",
+  "cached_at": "2026-11-17T15:14:24.390Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.7,
@@ -48,7 +48,7 @@
     },
     "Cafe Patachou - Downtown": {
       "rating": 4.6,
-      "userRatingCount": 3360,
+      "userRatingCount": 3361,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -78,7 +78,7 @@
     },
     "Mocha House": {
       "rating": 4.6,
-      "userRatingCount": 238,
+      "userRatingCount": 240,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 10:00 PM",
         "Tuesday: 6:00 AM – 10:00 PM",
@@ -93,7 +93,7 @@
     },
     "Cafe Patachou - The Stutz": {
       "rating": 4.6,
-      "userRatingCount": 250,
+      "userRatingCount": 251,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -168,7 +168,7 @@
     },
     "Bovaconti Coffee - Indy": {
       "rating": 4.8,
-      "userRatingCount": 801,
+      "userRatingCount": 802,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -183,7 +183,7 @@
     },
     "Cafe Patachou - Keystone": {
       "rating": 4.6,
-      "userRatingCount": 967,
+      "userRatingCount": 966,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -258,7 +258,7 @@
     },
     "Top Out Cafe": {
       "rating": 4.6,
-      "userRatingCount": 144,
+      "userRatingCount": 145,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 10:00 PM",
         "Tuesday: 7:00 AM – 10:00 PM",
@@ -288,7 +288,7 @@
     },
     "Niyyah Coffee - Fishers": {
       "rating": 4.9,
-      "userRatingCount": 461,
+      "userRatingCount": 462,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -363,7 +363,7 @@
     },
     "Borage": {
       "rating": 4.5,
-      "userRatingCount": 550,
+      "userRatingCount": 552,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: 7:00 AM – 2:00 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1470,
+      "userRatingCount": 1472,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 11:00 PM",
         "Tuesday: 6:00 AM – 11:00 PM",
@@ -407,8 +407,8 @@
       "websiteURI": "https://yafagoldencoffeeusa.com/"
     },
     "Blue Mind Coffee": {
-      "rating": 4.9,
-      "userRatingCount": 271,
+      "rating": 4.8,
+      "userRatingCount": 272,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -423,7 +423,7 @@
     },
     "Niyyah Coffee - Indy": {
       "rating": 5,
-      "userRatingCount": 437,
+      "userRatingCount": 438,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:00 PM",
         "Tuesday: 7:00 AM – 8:00 PM",
@@ -483,7 +483,7 @@
     },
     "Cafe Patachou - East Carmel": {
       "rating": 4.6,
-      "userRatingCount": 833,
+      "userRatingCount": 834,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -550,7 +550,7 @@
     },
     "The Human Bean - Indy": {
       "rating": 4.5,
-      "userRatingCount": 399,
+      "userRatingCount": 400,
       "weekdayDescriptions": [
         "Monday: 5:00 AM – 9:00 PM",
         "Tuesday: 5:00 AM – 9:00 PM",
@@ -610,7 +610,7 @@
     },
     "Cafe Patachou - Broad Ripple": {
       "rating": 4.6,
-      "userRatingCount": 1159,
+      "userRatingCount": 1160,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -625,7 +625,7 @@
     },
     "Sidedoor Bagel": {
       "rating": 4.7,
-      "userRatingCount": 819,
+      "userRatingCount": 820,
       "weekdayDescriptions": [
         "Monday: 7:30 AM – 1:30 PM",
         "Tuesday: 7:30 AM – 1:30 PM",
@@ -775,7 +775,7 @@
     },
     "Milk & Honey Coffeehouse": {
       "rating": 4.6,
-      "userRatingCount": 188,
+      "userRatingCount": 189,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 3:00 PM",
         "Tuesday: 6:00 AM – 3:00 PM",
@@ -835,7 +835,7 @@
     },
     "Coat Check Coffee": {
       "rating": 4.7,
-      "userRatingCount": 1038,
+      "userRatingCount": 1039,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 4:00 PM",
         "Tuesday: 7:00 AM – 4:00 PM",
@@ -850,7 +850,7 @@
     },
     "Indie Coffee Roasters - Downtown Carmel": {
       "rating": 4.7,
-      "userRatingCount": 432,
+      "userRatingCount": 433,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -872,7 +872,7 @@
     },
     "Cafe Patachou - Fishers": {
       "rating": 4.4,
-      "userRatingCount": 205,
+      "userRatingCount": 204,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -932,7 +932,7 @@
     },
     "Hanger Coffee": {
       "rating": 4.9,
-      "userRatingCount": 5088,
+      "userRatingCount": 5087,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
