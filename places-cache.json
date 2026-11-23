@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-22T13:49:43.833Z",
+  "cached_at": "2026-11-23T16:55:41.643Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.7,
@@ -18,7 +18,7 @@
     },
     "Foundry Provisions": {
       "rating": 4.5,
-      "userRatingCount": 438,
+      "userRatingCount": 437,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -70,7 +70,7 @@
         "Wednesday: 10:00 AM – 6:00 PM",
         "Thursday: 10:00 AM – 6:00 PM",
         "Friday: 10:00 AM – 6:00 PM",
-        "Saturday: 10:00 AM – 6:00 PM",
+        "Saturday: 10:00 AM – 7:00 PM",
         "Sunday: 11:00 AM – 5:00 PM"
       ],
       "nationalPhoneNumber": "(317) 526-6836",
@@ -123,7 +123,7 @@
     },
     "Mansion Society": {
       "rating": 4.6,
-      "userRatingCount": 287,
+      "userRatingCount": 288,
       "weekdayDescriptions": [
         "Monday: Closed",
         "Tuesday: Closed",
@@ -288,7 +288,7 @@
     },
     "Niyyah Coffee - Fishers": {
       "rating": 4.9,
-      "userRatingCount": 463,
+      "userRatingCount": 466,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -423,7 +423,7 @@
     },
     "Niyyah Coffee - Indy": {
       "rating": 5,
-      "userRatingCount": 457,
+      "userRatingCount": 458,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:00 PM",
         "Tuesday: 7:00 AM – 8:00 PM",
@@ -468,7 +468,7 @@
     },
     "Parlor Public House": {
       "rating": 4.5,
-      "userRatingCount": 639,
+      "userRatingCount": 640,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: 8:00 AM – 5:00 PM",
@@ -483,7 +483,7 @@
     },
     "Cafe Patachou - East Carmel": {
       "rating": 4.6,
-      "userRatingCount": 833,
+      "userRatingCount": 834,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -498,7 +498,7 @@
     },
     "Rivet Coffee - Zionsville": {
       "rating": 4.4,
-      "userRatingCount": 147,
+      "userRatingCount": 145,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -520,7 +520,7 @@
     },
     "Gaia Coffee": {
       "rating": 4.6,
-      "userRatingCount": 224,
+      "userRatingCount": 225,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 4:00 PM",
         "Tuesday: 7:00 AM – 4:00 PM",
@@ -535,7 +535,7 @@
     },
     "Ascend Coffee": {
       "rating": 4.8,
-      "userRatingCount": 361,
+      "userRatingCount": 362,
       "weekdayDescriptions": [
         "Monday: 6:30 AM – 4:00 PM",
         "Tuesday: 6:30 AM – 4:00 PM",
@@ -565,7 +565,7 @@
     },
     "Mariam Coffee - Indy": {
       "rating": 4.5,
-      "userRatingCount": 154,
+      "userRatingCount": 155,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -625,7 +625,7 @@
     },
     "Sidedoor Bagel": {
       "rating": 4.7,
-      "userRatingCount": 826,
+      "userRatingCount": 831,
       "weekdayDescriptions": [
         "Monday: 7:30 AM – 1:30 PM",
         "Tuesday: 7:30 AM – 1:30 PM",
@@ -640,7 +640,7 @@
     },
     "Indie Coffee Roasters - Carmel Smoky Row": {
       "rating": 4.7,
-      "userRatingCount": 118,
+      "userRatingCount": 434,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -650,8 +650,8 @@
         "Saturday: 7:00 AM – 5:00 PM",
         "Sunday: 9:00 AM – 3:00 PM"
       ],
-      "nationalPhoneNumber": "(317) 795-0201",
-      "websiteURI": "https://www.indiecoffeeroasters.com/"
+      "nationalPhoneNumber": "(317) 993-3443",
+      "websiteURI": "http://www.indiecoffeeroasters.com/"
     },
     "Tinker Coffee – The Firehouse": {
       "rating": 4.7,
@@ -745,7 +745,7 @@
     },
     "Cafe Patachou - Zionsville": {
       "rating": 4.5,
-      "userRatingCount": 193,
+      "userRatingCount": 194,
       "weekdayDescriptions": [
         "Monday: 8:00 AM – 3:00 PM",
         "Tuesday: 8:00 AM – 3:00 PM",
@@ -760,7 +760,7 @@
     },
     "Command Coffee - Indy": {
       "rating": 4.4,
-      "userRatingCount": 129,
+      "userRatingCount": 130,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 4:00 PM",
         "Tuesday: 6:00 AM – 4:00 PM",
@@ -775,7 +775,7 @@
     },
     "Milk & Honey Coffeehouse": {
       "rating": 4.6,
-      "userRatingCount": 190,
+      "userRatingCount": 191,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 3:00 PM",
         "Tuesday: 6:00 AM – 3:00 PM",
@@ -850,7 +850,7 @@
     },
     "Indie Coffee Roasters - Downtown Carmel": {
       "rating": 4.7,
-      "userRatingCount": 433,
+      "userRatingCount": 434,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -872,7 +872,7 @@
     },
     "Cafe Patachou - Fishers": {
       "rating": 4.4,
-      "userRatingCount": 206,
+      "userRatingCount": 207,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -949,7 +949,7 @@
       "rating": 4.6,
       "userRatingCount": 113,
       "weekdayDescriptions": [
-        "Monday: Closed",
+        "Monday: 8:00 AM – 5:00 PM",
         "Tuesday: Closed",
         "Wednesday: 8:00 AM – 5:00 PM",
         "Thursday: 8:00 AM – 5:00 PM",
