@@ -1,5 +1,5 @@
 {
-  "cached_at": "2026-11-26T16:04:09.350Z",
+  "cached_at": "2026-11-27T15:52:59.129Z",
   "spots": {
     "MOTW Coffee and Pastries - W 38th": {
       "rating": 4.7,
@@ -78,7 +78,7 @@
     },
     "Mocha House": {
       "rating": 4.6,
-      "userRatingCount": 248,
+      "userRatingCount": 249,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 10:00 PM",
         "Tuesday: 6:00 AM – 10:00 PM",
@@ -168,7 +168,7 @@
     },
     "Bovaconti Coffee - Indy": {
       "rating": 4.8,
-      "userRatingCount": 804,
+      "userRatingCount": 805,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 7:00 PM",
         "Tuesday: 7:00 AM – 7:00 PM",
@@ -393,7 +393,7 @@
     },
     "Yafa's Golden Coffee": {
       "rating": 4.8,
-      "userRatingCount": 1491,
+      "userRatingCount": 1493,
       "weekdayDescriptions": [
         "Monday: 6:00 AM – 11:00 PM",
         "Tuesday: 6:00 AM – 11:00 PM",
@@ -423,7 +423,7 @@
     },
     "Niyyah Coffee - Indy": {
       "rating": 5,
-      "userRatingCount": 462,
+      "userRatingCount": 463,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 8:00 PM",
         "Tuesday: 7:00 AM – 8:00 PM",
@@ -498,7 +498,7 @@
     },
     "Rivet Coffee - Zionsville": {
       "rating": 4.5,
-      "userRatingCount": 140,
+      "userRatingCount": 141,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -520,7 +520,7 @@
     },
     "Gaia Coffee": {
       "rating": 4.6,
-      "userRatingCount": 225,
+      "userRatingCount": 226,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 4:00 PM",
         "Tuesday: 7:00 AM – 4:00 PM",
@@ -602,7 +602,7 @@
     },
     "Cafe Patachou - Broad Ripple": {
       "rating": 4.6,
-      "userRatingCount": 1161,
+      "userRatingCount": 1162,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 3:00 PM",
         "Tuesday: 7:00 AM – 3:00 PM",
@@ -632,7 +632,7 @@
     },
     "Indie Coffee Roasters - Carmel Smoky Row": {
       "rating": 4.7,
-      "userRatingCount": 434,
+      "userRatingCount": 118,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -642,8 +642,8 @@
         "Saturday: 7:00 AM – 5:00 PM",
         "Sunday: 9:00 AM – 3:00 PM"
       ],
-      "nationalPhoneNumber": "(317) 993-3443",
-      "websiteURI": "http://www.indiecoffeeroasters.com/"
+      "nationalPhoneNumber": "(317) 795-0201",
+      "websiteURI": "https://www.indiecoffeeroasters.com/"
     },
     "Tinker Coffee – The Firehouse": {
       "rating": 4.7,
@@ -751,19 +751,19 @@
       "websiteURI": "https://www.cafepatachou.com/"
     },
     "Command Coffee - Indy": {
-      "rating": 4.3,
-      "userRatingCount": 682,
+      "rating": 4.4,
+      "userRatingCount": 130,
       "weekdayDescriptions": [
-        "Monday: 6:00 AM – 6:00 PM",
-        "Tuesday: 6:00 AM – 6:00 PM",
-        "Wednesday: 6:00 AM – 6:00 PM",
-        "Thursday: 6:00 AM – 6:00 PM",
-        "Friday: 6:00 AM – 6:00 PM",
-        "Saturday: 6:00 AM – 6:00 PM",
-        "Sunday: 6:00 AM – 6:00 PM"
+        "Monday: 6:00 AM – 4:00 PM",
+        "Tuesday: 6:00 AM – 4:00 PM",
+        "Wednesday: 6:00 AM – 4:00 PM",
+        "Thursday: 6:00 AM – 4:00 PM",
+        "Friday: 6:00 AM – 5:00 PM",
+        "Saturday: 6:00 AM – 5:00 PM",
+        "Sunday: 6:00 AM – 5:00 PM"
       ],
       "nationalPhoneNumber": null,
-      "websiteURI": "https://commandcoffee.com/pages/fall-creek-coffee-shop"
+      "websiteURI": "https://commandcoffee.com/pages/monument-circle-coffee-shop"
     },
     "Milk & Honey Coffeehouse": {
       "rating": 4.6,
@@ -842,7 +842,7 @@
     },
     "Indie Coffee Roasters - Downtown Carmel": {
       "rating": 4.7,
-      "userRatingCount": 434,
+      "userRatingCount": 435,
       "weekdayDescriptions": [
         "Monday: 7:00 AM – 5:00 PM",
         "Tuesday: 7:00 AM – 5:00 PM",
@@ -856,11 +856,19 @@
       "websiteURI": "http://www.indiecoffeeroasters.com/"
     },
     "Illumine Coffee – Downtown": {
-      "rating": 4.8,
-      "userRatingCount": 31,
-      "weekdayDescriptions": [],
-      "nationalPhoneNumber": "(317) 388-5676",
-      "websiteURI": "https://illuminecoffee.com/"
+      "rating": 4.7,
+      "userRatingCount": 295,
+      "weekdayDescriptions": [
+        "Monday: 8:30 AM – 8:30 PM",
+        "Tuesday: 8:30 AM – 8:30 PM",
+        "Wednesday: 8:30 AM – 8:30 PM",
+        "Thursday: 8:30 AM – 8:30 PM",
+        "Friday: 8:30 AM – 8:30 PM",
+        "Saturday: 8:30 AM – 8:30 PM",
+        "Sunday: 8:30 AM – 8:30 PM"
+      ],
+      "nationalPhoneNumber": "(463) 202-2117",
+      "websiteURI": "https://cash.app/order/$goodvibescafeindy"
     },
     "Cafe Patachou - Fishers": {
       "rating": 4.4,
@@ -949,7 +957,7 @@
         "Saturday: 8:00 AM – 5:00 PM",
         "Sunday: 8:00 AM – 5:00 PM"
       ],
-      "nationalPhoneNumber": "(208) 906-5480",
+      "nationalPhoneNumber": "(463) 223-7605",
       "websiteURI": "https://recess.love/"
     }
   }
